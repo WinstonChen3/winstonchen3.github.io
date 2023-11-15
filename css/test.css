@@ -353,3 +353,6 @@ footer {
   background-color: #000;
   color: #fff;
 }
+    .navbar .right {
+      margin-left: auto;
+    }
