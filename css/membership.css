@@ -84,8 +84,9 @@ footer img{
 
 .footer-bottom {
   text-align: center;
-  margin-top: 20px;
   color: #fff;
+  position:absolute;
+  margin-top:200px;
 }
 .sitemap {
   font-family: 'Raleway','Montserrat' ;
