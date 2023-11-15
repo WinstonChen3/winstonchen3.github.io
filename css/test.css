@@ -354,9 +354,7 @@ footer {
   color: #fff;
 }
     .navbar .right {
-  float:right;	    
-  display: inline-block;
-  padding: 10px 20px;
+  float:right;
   background-color: #007bff;
   color: #fff;
   text-decoration: none;
