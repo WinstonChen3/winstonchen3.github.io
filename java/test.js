@@ -20,23 +20,24 @@ function showSlides() {
 }
 const signupBtn = document.getElementById('signupBtn');
 const loginBtn = document.getElementById('loginBtn');
-const popup = document.getElementById('popup');
-const popupTitle = document.getElementById('popupTitle');
-const popupForm = document.getElementById('popupForm');
-const closeBtn = document.getElementById('closeBtn');
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password');
+const popupOverlay = document.querySelector('.popup-overlay');
+const popup = document.querySelector('.popup');
+const popupTitle = popup.querySelector('h2');
+const popupForm = popup.querySelector('form');
+const closeBtn = popup.querySelector('.close-btn');
+const usernameInput = popup.querySelector('#name');
+const emailInput = popup.querySelector('#email');
 
 signupBtn.addEventListener('click', () => {
   popupTitle.textContent = 'Sign Up';
   popupForm.addEventListener('submit', handleSignup);
-  popup.style.display = 'block';
+  popupOverlay.style.display = 'block';
 });
 
 loginBtn.addEventListener('click', () => {
   popupTitle.textContent = 'Login';
   popupForm.addEventListener('submit', handleLogin);
-  popup.style.display = 'block';
+  popupOverlay.style.display = 'block';
 });
 
 closeBtn.addEventListener('click', () => {
@@ -46,13 +47,13 @@ closeBtn.addEventListener('click', () => {
 function handleSignup(event) {
   event.preventDefault();
   const username = usernameInput.value;
-  const password = passwordInput.value;
-  
+  const email = emailInput.value;
+
   // Perform signup logic here
   // You can send the data to a server or perform client-side processing
-  
-  console.log('Sign up:', username, password);
-  
+
+  console.log('Sign up:', username, email);
+
   // Close the popup
   closePopup();
 }
@@ -60,13 +61,13 @@ function handleSignup(event) {
 function handleLogin(event) {
   event.preventDefault();
   const username = usernameInput.value;
-  const password = passwordInput.value;
-  
+  const email = emailInput.value;
+
   // Perform login logic here
   // You can send the data to a server or perform client-side processing
-  
-  console.log('Login:', username, password);
-  
+
+  console.log('Login:', username, email);
+
   // Close the popup
   closePopup();
 }
@@ -74,7 +75,7 @@ function handleLogin(event) {
 function closePopup() {
   popupForm.removeEventListener('submit', handleSignup);
   popupForm.removeEventListener('submit', handleLogin);
-  popup.style.display = 'none';
+  popupOverlay.style.display = 'none';
   usernameInput.value = '';
-  passwordInput.value = '';
+  emailInput.value = '';
 }

@@ -379,7 +379,46 @@ footer {
   height:600px;
   align-items:center;
 }
-#closeBtn {
+
+.popup h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.popup p {
+  margin-bottom: 20px;
+}
+
+.popup form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.popup form input,
+.popup form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.popup form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.popup form button:hover {
+  background-color: #555;
+}
+
+.close-signup-btn {
   background-color: #ccc;
   color: #333;
   border: none;
@@ -393,14 +432,18 @@ footer {
   margin-top:100px;
 }
 
-#popupContent {
-  background-color: #fff;
-  width: 300px;
-  margin: 100px auto;
-  padding: 20px;
-  text-align: center;
+.close-btn{
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top:50px;
 }
-
-#popupTitle {
-  margin-bottom: 10px;
+/* Show/hide the popup */
+.popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
