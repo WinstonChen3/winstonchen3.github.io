@@ -17,7 +17,7 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 3500); // Change image every 3.5 seconds
-}
+} 
 const signupBtn = document.getElementById('signupBtn');
 const loginBtn = document.getElementById('loginBtn');
 const popupOverlay = document.querySelector('.popup-overlay');
