@@ -20,8 +20,35 @@
     <li class="nav-item" style="font-family:'Raleway';"><a href="pages/contacts.html" class="nav-link">Contact</a></li>
     <li class="nav-item" style="font-family:'Raleway';"><a href="pages/aboutus.html" class="nav-link">About Us</a></li>
     <li class="nav-right" style="font-family:'Raleway';"><button href="#" id="signupBtn" class="nav-link">Sign In</button></li>
-      <li style="font-family:'Raleway';" ><button href="#" id="loginBtn" class="nav-link">Login</button></li>
-    </ul>
+    <li style="font-family:'Raleway';" ><button href="#" id="loginBtn" class="nav-link">Login</button></li>
+    <div class="popup-overlay">
+      <div class="popup">
+        <h2>Sign Up</h2>
+        <p>Fill out the form below to join our wonderful Community!</p>
+        <form>
+          <!-- Include your membership sign-up form fields here -->
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="credit-card">Credit Card:</label>
+          <input type="text" id="credit-card" required>
+          
+          <label for="membership">Membership Plan:</label>
+          <select id="membership" name="membership" required>
+            <option value="basic">Basic</option>
+            <option value="pro">Pro</option>
+            <option value="premium">Premium</option>
+          </select>
+          
+          <button type="submit">Submit</button>
+        </form>
+        <button class="close-btn">Close</button>
+      </div>
+    </div>
+  </ul>
 </nav>
         
    </header>
@@ -80,33 +107,6 @@
         <p>Our makerspace offers Expert Guidance, connecting members with experienced staff and mentors who provide personalized assistance, advice, and troubleshooting support. Our experts have diverse expertise in woodworking, electronics, 3D printing, and more, helping you enhance your skills and achieve your creative goals with confidence.</p>
       </div>
     </section>
-    <div class="popup-overlay">
-      <div class="popup">
-        <h2>Sign Up</h2>
-        <p>Fill out the form below to join our wonderful Community!</p>
-        <form>
-          <!-- Include your membership sign-up form fields here -->
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="credit-card">Credit Card:</label>
-          <input type="text" id="credit-card" required>
-          
-          <label for="membership">Membership Plan:</label>
-          <select id="membership" name="membership" required>
-            <option value="basic">Basic</option>
-            <option value="pro">Pro</option>
-            <option value="premium">Premium</option>
-          </select>
-          
-          <button type="submit">Submit</button>
-        </form>
-        <button class="close-btn">Close</button>
-      </div>
-    </div>
   </main>
 <footer>
   <div class="footer-content">
