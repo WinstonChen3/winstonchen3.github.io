@@ -326,7 +326,6 @@ footer {
 .navbar {
   padding: 10px;
   font-family:'Raleway','Montserrat';
-  text-align: left;
   color:#333;
 }
 
@@ -338,12 +337,13 @@ footer {
 }
 
 .nav-item {
-  margin: 0 10px;
+  margin: 0 15px;
+  text-align: left;
 }
 
 .nav-link {
   text-decoration: none;
-  color: #333;
+  color: #000000;
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -352,11 +352,13 @@ footer {
   background-color: #000;
   color: #fff;
 }
-    .navbar-right {
-  text-align:right;
+    .nav-right {
+      margin-left: auto;
+      
+    }
+ 
+ .nav-right:hover{
+  background-color: #000;
   color: #fff;
-  text-decoration: none;
-  text-decoration: none;
-  color: #333;
-  border-radius: 5px;
+
  }
