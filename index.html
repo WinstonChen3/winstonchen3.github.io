@@ -1,131 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <link rel="icon" href="/images/3.png" type="image/png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechLab</title>
-    <link rel="stylesheet" href="/css/test.css">
+  <meta charset="UTF-8">
+  <title>Techlab</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/test.css">
+  <link rel="icon" href="images/3.png" type="image/png">
+  <style>
+    @font-face {
+      font-family: 'Raleway';
+      src: url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+      /* Add more src declarations if you have different font formats */
+      font-weight: bold;
+      font-style: italic;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+      /* Add more src declarations if you have different font formats */
+      font-weight: bold;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
-    <header>
+  <header>
     <nav class="navbar">
-  <ul class="navbar-nav">
-    <li class="nav-item" style="font-family:'Raleway';"><a href="index.html" class="nav-link">Home</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="pages/hours.html" class="nav-link">Hours</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="pages/locations.html" class="nav-link">Locations</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="pages/equipment.html" class="nav-link">Equipment</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="pages/membership.html" class="nav-link">Membership</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="pages/events.html" class="nav-link">Events</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="pages/contacts.html" class="nav-link">Contact</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="pages/aboutus.html" class="nav-link">About Us</a></li>
-    <button href="#" class="nav-right" id="signupBtn" class="nav-link">Sign In</button>
-    <button href="#" id="loginBtn" class="nav-link">Login</button>
-  </ul>
-</nav>
-<div class="popup-overlay">
-  <div class="popup">
-    <h2>Membership Sign Up</h2>
-    <p>Fill out the form below to join our membership:</p>
-    <form>
-      <!-- Include your membership sign-up form fields here -->
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="credit-card">Credit Card:</label>
-      <input type="text" id="credit-card" required>
-      
-      <label for="membership">Membership Plan:</label>
-      <select id="membership" name="membership" required>
-        <option value="basic">Basic</option>
-        <option value="pro">Pro</option>
-        <option value="premium">Premium</option>
-      </select>
-      
-      <button type="submit">Submit</button>
-    </form>
-    <button class="close-btn">Close</button>
-  </div>
-</div>
-   </header>
-        <div class="slideshow-container">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-right">
+          <a class="navright" href="#">Login</a>
+          <a class="navright" href="#">Sign Up</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Your Website</h1>
+      <p>Welcome to your website.</p>
+      <a class="btn" href="#">Get Started</a>
+    </div>
+  </header>
 
-          <div class="mySlides fade">
-            <div class="slide-img">
-              <img src="images/background2.png">
-              <div class="slide-text" style="text-align:left"></div>
-            </div>
-          </div>
-        
-          <div class="mySlides fade">
-            <div class="slide-img">
-              <img src="images/background3.png">
-              <div class="slide-text" style="text-align:left"></div>
-            </div>
-          </div>
-        
-          <div class="mySlides fade">
-            <div class="slide-img">
-              <img src="images/background1.png">
-              <div class="slide-text" style="text-align:left"></div>
-            </div>
-          </div>
-        
-        </div>
-        
-        
-        <br>
-        
-        <div style="text-align: center">
-          <span class="dot"></span> 
-          <span class="dot"></span> 
-          <span class="dot"></span>
-        </div>
-          <h1></h1>
- <main>
-              <!-- Hero Section -->
-    <section class="hero">
-      <h2>Welcome to TechLab</h2>
-      <p>Welcome to Techlab, your community's creative hub! We provide a supportive environment for makers of all levels to explore their passions. Our makerspace is equipped with cutting-edge tools and machinery, including 3D printers, laser cutters, and more. With a vibrant community of like-minded individuals, workshops, and expert guidance, Techlab is the place to bring your ideas to life. Join us and unleash your creativity!</p>
-    </section>
-   
-
-    <!-- Features Section -->
+  <main>
     <section class="features">
-      <h2>Our Services</h2>
+      <h2>Features</h2>
       <div class="feature">
-        <h3>Classes</h3>
-        <p>Our makerspace offers diverse classes where members can learn woodworking techniques, 3D printing and design, electronics prototyping, laser cutting, sewing and textiles, coding and programming, digital design and fabrication, and business and entrepreneurship. These classes provide hands-on learning experiences to acquire practical skills and knowledge, empowering members to pursue their creative projects within our vibrant makerspace community.
-</p>
+        <img src="image1.jpg" alt="Feature 1">
+        <h3>Feature 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <div class="feature">
-        <h3>Expert Guidance</h3>
-        <p>Our makerspace offers Expert Guidance, connecting members with experienced staff and mentors who provide personalized assistance, advice, and troubleshooting support. Our experts have diverse expertise in woodworking, electronics, 3D printing, and more, helping you enhance your skills and achieve your creative goals with confidence.</p>
+        <img src="image2.jpg" alt="Feature 2">
+        <h3>Feature 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="feature">
+        <img src="image3.jpg" alt="Feature 3">
+        <h3>Feature 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonial">
+        <img src="testimonial1.jpg" alt="Testimonial 1">
+        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
+        <cite>John Doe</cite>
+      </div>
+      <div class="testimonial">
+        <img src="testimonial2.jpg" alt="Testimonial 2">
+        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
+        <cite>Jane Smith</cite>
       </div>
     </section>
   </main>
-<footer>
-  <div class="footer-content">
-    <div class="footer-section">
-     <img src="images/3.png">
-    </div>
-  
-    <div class="footer-section">
-      <h3>Contact Information</h3>
-      <p>Email: eugene.choi738@cfbmail.com</p>
-      <p>Phone: +1 123-456-7890</p>
-      <p>Address: 848 Innovation Street, Irving, US</p>
-    </div>
-  
 
-  <div class="footer-bottom">
-    <p class="lead">&copy; 2023 TechLab. All rights reserved.</p>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Section 1</h3>
+        <p>Content for section 1.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Section 2</h3>
+        <p>Content for section 2.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Section 3</h3>
+        <p>Content for section 3.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="popup-overlay">
+    <div class="popup">
+      <h2>Sign Up</h2>
+      <p>Fill out the form below to sign up.</p>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <span class="close-signup-btn">&times;</span>
+    </div>
   </div>
-</div>
-</footer>
-  <script src="java/test.js"></script>
-</body>
-</html>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
