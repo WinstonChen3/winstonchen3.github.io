@@ -219,8 +219,9 @@ footer {
 }
 
 .footer-bottom {
-  margin-top: 20px;
+  margin-top: 50px;
   text-align: center;
+  position:fixed;
 }
 
 /* Popup */
