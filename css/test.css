@@ -20,7 +20,8 @@ header {
 
 .navbar-brand img {
   width: 30%;
-  height: 80%;  
+  height: 80%; 
+  margin: 0; 
 }
 
 .navbar-toggler {
