@@ -14,33 +14,89 @@ body {
 header {
   background-color: #333;
   color: #fff;
-  padding: 20px;
 }
 
+/* Add your existing CSS styles here */
+
+/* Example styles for the navigation bar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  background-color: #333;
+  height: 100px;
 }
+
+.navbar-brand img {
+  width: 30%;
+  height: 80%;  
+}
+
+.navbar-toggler {
+  color: #fff;
+  border-color: #fff;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+.hero {
+  background-color: #f2f2f2;
+  padding: 50px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.hero p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #666;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+/* Add more CSS styles for the rest of your website */
 
 .navbar-nav {
-  display: flex;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-item {
-  margin-right: 10px;
+  text-align: center;
+  fill-opacity: inherit;
 }
 
 .nav-link {
+  font-size: 18px;
   color: #fff;
   text-decoration: none;
-  padding: 5px;
+  padding: 10px;
 }
 
 .navright {
+  font-size: 18px;
   color: #fff;
   text-decoration: none;
-  padding: 5px;
+  padding: 10px;
   margin-left: 10px;
 }
 
@@ -149,6 +205,10 @@ footer {
   justify-content: space-between;
 }
 
+.footer-section img{
+  width: 30%;
+  height: 80%;
+}
 .footer-section {
   flex: 1;
   margin-right: 20px;
