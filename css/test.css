@@ -4,12 +4,6 @@ body {
   padding: 0;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 /* Header */
 header {
   background-color: #333;
@@ -96,8 +90,7 @@ header {
   font-size: 18px;
   color: #fff;
   text-decoration: none;
-  padding: 10px;
-  margin-left: 10px;
+  text-align: right;
 }
 
 .hero {
@@ -206,8 +199,8 @@ footer {
 }
 
 .footer-section img{
-  width: 30%;
-  height: 80%;
+  width: 15%;
+  height: 80%;  
 }
 .footer-section {
   flex: 1;
