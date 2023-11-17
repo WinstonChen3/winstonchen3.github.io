@@ -23,7 +23,33 @@
     <button href="#" id="loginBtn" class="nav-link">Login</button>
   </ul>
 </nav>
-        
+<div class="popup-overlay">
+  <div class="popup">
+    <h2>Membership Sign Up</h2>
+    <p>Fill out the form below to join our membership:</p>
+    <form>
+      <!-- Include your membership sign-up form fields here -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="credit-card">Credit Card:</label>
+      <input type="text" id="credit-card" required>
+      
+      <label for="membership">Membership Plan:</label>
+      <select id="membership" name="membership" required>
+        <option value="basic">Basic</option>
+        <option value="pro">Pro</option>
+        <option value="premium">Premium</option>
+      </select>
+      
+      <button type="submit">Submit</button>
+    </form>
+    <button class="close-btn">Close</button>
+  </div>
+</div>
    </header>
         <div class="slideshow-container">
 
