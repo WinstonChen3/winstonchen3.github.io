@@ -86,7 +86,18 @@ header {
   text-decoration: none;
   padding: 10px;
 }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
 
+  /* Transition effect */
+}
 .navright {
   font-size: 18px;
   color: #fff;
@@ -109,12 +120,8 @@ header {
   margin-bottom: 20px;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #333;
+button a {
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
   text-decoration: none;
 }
 
