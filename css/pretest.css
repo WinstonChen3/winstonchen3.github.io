@@ -1,107 +1,104 @@
 #hs_cos_wrapper_dnd_areahome-module-8 .wrap {
-    display:flex;
-    flex-wrap:wrap;
-    gap:44px;
-    }
+  display:flex;
+  flex-wrap:wrap;
+  gap:44px;
+  }
 
 #hs_cos_wrapper_dnd_areahome-module-8 .price_sec {
-        flex:1 1 30%;
-        text-align:center;
-        padding:0 24px 24px 24px;
-        box-shadow:0 4px 20px hsl(0deg 0% 0%/10%);
-        border-radius:10px;
-        border:solid 1px #ffffff;
-        }
+      flex:1 1 30%;
+      text-align:center;
+      padding:0 24px 24px 24px;
+      box-shadow:0 4px 20px hsl(0deg 0% 0%/10%);
+      border-radius:10px;
+      border:solid 1px #ffffff;
+      }
 
 #hs_cos_wrapper_dnd_areahome-module-8 .price_sec:nth-child(2) {
-            padding:0 40px 40px 40px;
-            transform:scale(1.1);
-            }
+          padding:0 40px 40px 40px;
+          transform:scale(1.1);
+          }
 
 #hs_cos_wrapper_dnd_areahome-module-8 .price_title {
-                background:#ffffff;
-                padding:16px 24px;
-                border-radius:0 0 10px 10px;
-                font-size:32px;
-                color:#E72404;
-                font-weight:600;
-                }
+              background:#ffffff;
+              padding:16px 24px;
+              border-radius:0 0 10px 10px;
+              font-size:32px;
+              color:#E72404;
+              font-weight:600;
+              }
 
 #hs_cos_wrapper_dnd_areahome-module-8 .price__img img {
-                    height:180px !important;
-                    object-fit:contain;
-                    margin:24px auto 8px;
-                    }
+                  height:180px !important;
+                  object-fit:contain;
+                  margin:24px auto 8px;
+                  }
 
-                    #hs_cos_wrapper_dnd_areahome-module-8 .middle_cta {
-                        display:flex;
-                        justify-content:center;
-                        gap:8px;
-                        width:fit-content;
-                        margin:0 auto 24px;
-                        padding:8px 16px;
-                        border-radius:30px;
-                        font-weight:bold;
-                        color:#000000;
-                        }
+                  #hs_cos_wrapper_dnd_areahome-module-8 .middle_cta {
+                      display:flex;
+                      justify-content:center;
+                      gap:8px;
+                      width:fit-content;
+                      margin:0 auto 24px;
+                      padding:8px 16px;
+                      border-radius:30px;
+                      font-weight:bold;
+                      color:#000000;
+                      }
 
-                        #hs_cos_wrapper_dnd_areahome-module-8 .price__inner_list ul {
-                            padding:0;
-                            margin:0;
-                            list-style:none;
-                            display:flex;
-                            justify-content:space-between;
-                            gap:16px;
-                            flex-wrap:wrap;
+                      #hs_cos_wrapper_dnd_areahome-module-8 .price__inner_list ul {
+                          padding:0;
+                          margin:0;
+                          list-style:none;
+                          display:flex;
+                          justify-content:space-between;
+                          gap:16px;
+                          flex-wrap:wrap;
+                          }
+
+                          #hs_cos_wrapper_dnd_areahome-module-8 .small-price { font-size:24px; }
+
+                          #hs_cos_wrapper_dnd_areahome-module-8 .bottom__Cta a.button.button-animation { display:block; }
+
+                          .dnd-section > .row-fluid {
+                              margin: 0 auto;
+                              max-width: 1200px;
                             }
 
-                            #hs_cos_wrapper_dnd_areahome-module-8 .small-price { font-size:24px; }
+                             /* animation */
+                            
+                             .button-animation {
+                              overflow: hidden;
+                              position: relative;
+                              transition: all 0.3s cubic-bezier(0.1, 0.3, 0.3, 0.1);
+                              z-index: 9;
+                            }
 
-                            #hs_cos_wrapper_dnd_areahome-module-8 .bottom__Cta a.button.button-animation { display:block; }
+                            .button-animation::before{
+                              bottom: 0;
+                              content: '';
+                              width: 100%;
+                              right: 0;
+                              position: absolute;
+                              top: 0;
+                              transition: all 0.3s cubic-bezier(0.1, 0.3, 0.3, 0.1);
+                              height: 0;
+                              z-index: -1;
+                            }
 
-                            .dnd-section > .row-fluid {
-                                margin: 0 auto;
-                                max-width: 1200px;
-                              }
+                            .button-animation:hover::before{
+                              bottom: 0;
+                              transition: all 0.3s cubic-bezier(0.1, 0.3, 0.3, 0.1);
+                              height: 100%;
+                            }
 
-                               /* animation */
-                              
-                               .button-animation {
-                                overflow: hidden;
-                                position: relative;
-                                transition: all 0.3s cubic-bezier(0.1, 0.3, 0.3, 0.1);
-                                z-index: 9;
-                              }
+                            a,body,p{font-family:Roboto,sans-serif;font-style:normal;font-weight:400;text-decoration:none}
 
-                              .button-animation::before{
-                                bottom: 0;
-                                content: '';
-                                width: 100%;
-                                right: 0;
-                                position: absolute;
-                                top: 0;
-                                transition: all 0.3s cubic-bezier(0.1, 0.3, 0.3, 0.1);
-                                height: 0;
-                                z-index: -1;
-                              }
+                            .footer h2,.h2,h2{font-size:48px}.footer h3,.h3,h3{font-size:40px}
 
-                              .button-animation:hover::before{
-                                bottom: 0;
-                                transition: all 0.3s cubic-bezier(0.1, 0.3, 0.3, 0.1);
-                                height: 100%;
-                              }
-
-                              
-                              .footer h2,.h2,h2{font-size:48px}.footer h3,.h3,h3{font-size:40px}
-
-                           .button,.button-2,button{fill:#fff;background-color:#e72404;border:3px solid #e72404;border-radius:5px;color:#fff;font-family:Roboto,sans-serif;font-style:normal;font-weight:700;padding:16px;text-decoration:none;text-transform:none}
-                              .button-2:active,.button-2:focus,.button-2:hover,.button:active,.button:focus,.button:hover,button:active,button:focus,button:hover{fill:#e72404;background-color:#f3f4f6;border:3px solid #e72404;color:#e72404;font-family:Roboto,sans-serif;font-style:normal;font-weight:700;text-decoration:none}
-                              
-                              .button-2.button-animation:before,.button.button-animation:before{background-color:#f3f4f6}
-
-
-
-
+                         .button,.button-2,button{fill:#fff;background-color:#e72404;border:3px solid #e72404;border-radius:5px;color:#fff;font-family:Roboto,sans-serif;font-style:normal;font-weight:700;padding:16px;text-decoration:none;text-transform:none}
+                            .button-2:active,.button-2:focus,.button-2:hover,.button:active,.button:focus,.button:hover,button:active,button:focus,button:hover{fill:#e72404;background-color:#f3f4f6;border:3px solid #e72404;color:#e72404;font-family:Roboto,sans-serif;font-style:normal;font-weight:700;text-decoration:none}
+                            
+                            .button-2.button-animation:before,.button.button-animation:before{background-color:#f3f4f6}
                            
                              
                             
