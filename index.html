@@ -25,19 +25,27 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="index.html"><img src="images/3.png" alt="Logo" style="height: 60%; width: 30%;" ></a>
+    <nav class="navbar navbar-expand-lg ">
+      <a class="navbar-brand" href="index.html"><img src="images/3.png" alt="Logo" ></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
       </button>
       <nav class="navbar .bg-dark">
-        <form style="margin-right:25px;"  class=" justify-content-start">
-          <button class=".bg-dark btn btn-sm"><a href="/pages/index.html">Home</a></button>
-          <button class=".bg-dark btn btn-sm"><a href="/pages/aboutus.html">About Us</a></button>
+        <form style="align-items: center;" class=" justify-content-start">
+          <button style="margin-left: 100px;" class=".bg-dark btn btn-sm"><a href="/pages/index.html">Home</a></button>
+          <div class="btn-group">
+            <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: none;">
+              About Us
+            </button>
+            <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Contact Us</a></li>
+        <li><a class="dropdown-item" href="#">Hours</a></li>
+        <li><a class="dropdown-item" href="#">Locations</a></li>
+        <li><a class="dropdown-item" href="#">Hours</a></li>
+            </ul>
+          </div>
           <button class=".bg-dark btn btn-sm "><a href="/pages/events.html">Events</a></button>
-          <button class=".bg-dark btn btn-sm "><a href="/pages/membership.html">Membership</a></button>
           <button class=".bg-dark btn btn-sm "><a href="/pages/equipment.html">Equipment</a></button>
-          <button style="margin-left:100px;" class=".bg-dark btn btn-sm "><a href="/pages/aboutus.html">Sign Up</a></button>
+          <button style="margin-left: 200px;" class=".bg-dark btn btn-sm "><a href="/pages/aboutus.html">Sign Up</a></button>
           <button class=".bg-dark btn btn-sm "><a href="/pages/aboutus.html">Login</a></button>
         </form>
       </nav>
@@ -72,7 +80,7 @@
   <footer>
     <div class="footer-content">
       <div class="footer-section">
-       <img src="./images/3.png">
+       <img src="/images/3.png">
       </div>
     
       <div class="footer-section">

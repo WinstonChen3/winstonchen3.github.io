@@ -29,10 +29,20 @@ header {
   height: 100px;
 }
 
+.btn{
+  border-color: #333;
+}
 .navbar-brand img {
-  width: 30%;
-  height: 80%; 
-  margin: 0; 
+  max-width: 25%;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+}
+.navbar-brand{
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-toggler {
@@ -44,6 +54,10 @@ header {
   color: #fff;
 }
 
+.dropdown-toggle:focus {
+  box-shadow: none;
+  outline: none;
+}
 .hero {
   background-color: #f2f2f2;
   padding: 50px;
@@ -63,9 +77,12 @@ header {
   color: #666;
 }
 
+.btn{
+  background-color:#333;
+  color: #fff;
+}
 button {
   display: none;
-  background-color: #333;
   color: #fff;
   border: none;
   padding: 10px 20px;
