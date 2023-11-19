@@ -26,7 +26,8 @@ header {
 /* Example styles for the navigation bar */
 .navbar {
   background-color: #333;
-  height: 100px;
+  height: 100px; 
+  
 }
 
 .btn{
