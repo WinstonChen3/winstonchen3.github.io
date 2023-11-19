@@ -1,119 +1,123 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership</title>
-    <link rel="stylesheet" href="../css/membership.css">
-    <link rel="icon" href="../images/3.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership</title>
+  <link rel="stylesheet" href="../css/membership.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="icon" href="/images/3.png" type="image/png">
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-  <ul class="navbar-nav">
-    <li class="nav-item" style="font-family:'Raleway';"><a href="./index.html" class="nav-link">Home</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="pages/contacts.html" class="nav-link">Hours</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="pages/contacts.html" class="nav-link">Locations</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="pages/equipment.html" class="nav-link">Equipment</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="membership.html" class="nav-link">Membership</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="pages/events.html" class="nav-link">Events</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="pages/contacts.html" class="nav-link">Contact</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="pages/aboutus.html" class="nav-link">About Us</a></li>
-    <li class="nav-right" style="font-family:'Raleway';"><a href="#" class="nav-link">Sign In</a></li>
-      <li style="font-family:'Raleway';" ><a href="#" class="nav-link">Login</a></li>
-  </ul>
-</nav>
-  
-    </header>
-    <main>
-        <section class="membership">
-      <h1>Membership Plans</h1>
-      <p>Choose the membership plan that suits your needs.</p>
-      
-      <!-- Membership Plans -->
-      <div class="membership-plans">
-        <div class="plan">
-          <h2>Basic</h2>
-          <p class="price">$9.99/month</p>
-          <ul>
-            <li>Basic safety training and orientation</li>
-            <li>Opportunity to attend introductory workshops and classes</li>
-            <li>Discounted rates for additional workshops and events</li>
-          </ul>
-            
-          <button class="signup-btn">Sign Up</button>
-        </div>
-        
-        <div class="plan">
-          <h2>Pro</h2>
-          <p class="price">$19.99/month</p>
-          <ul>
-            <li>Advanced safety training and certifications</li>
-            <li>Opportunity to lead workshops and mentor other members</li>
-            <li>Exclusive access to member-only events and networking opportunities</li>
-          </ul>
-          <button class="signup-btn" >Sign Up</button>
-        </div>
-        
-        <div class="plan">
-          <h2>Premium</h2>
-          <p class="price">$29.99/month</p>
-          <ul>
-            <li>Dedicated storage space for personal projects</li>
-            <li>Personalized training and assistance from expert staff</li>
-            <li>Specialized workshops and advanced skill-building classes</li>
-            <li>Collaboration opportunities with other premium members</li>
-            <li>Showcase or exhibition opportunities for completed projects</li>
-          </ul>
-          <button class="signup-btn">Sign Up</button>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="index.html"><img src="/images/3.png" alt="Logo" style="height: 60%; width: 30%;" ></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="navbar .bg-dark">
+        <form style="margin-right:25px;"  class=" justify-content-start">
+          <button class=".bg-dark btn btn-sm"><a href="./pages/index.html">Home</a></button>
+          <button class=".bg-dark btn btn-sm"><a href="/pages/aboutus.html">About Us</a></button>
+          <button class=".bg-dark btn btn-sm "><a href="/pages/events.html">Events</a></button>
+          <button class=".bg-dark btn btn-sm "><a href="/pages/membership.html">Membership</a></button>
+          <button class=".bg-dark btn btn-sm "><a href="/pages/equipment.html">Equipment</a></button>
+          <button style="margin-left:100px;" class=".bg-dark btn btn-sm "><a href="/pages/aboutus.html">Sign Up</a></button>
+          <button class=".bg-dark btn btn-sm "><a href="/pages/aboutus.html">Login</a></button>
+        </form>
+      </nav>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="membership">
+      <div class="container">
+        <h1 class="text-center">Membership Plans</h1>
+        <p class="text-center">Choose the membership plan that suits your needs.</p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h2>Basic</h2>
+                <p class="price">$9.99/month</p>
+                <ul>
+                  <li>Basic safety training and orientation</li>
+                  <li>Opportunity to attend introductory workshops and classes</li>
+                  <li>Discounted rates for additional workshops and events</li>
+                </ul>
+                <button class="btn btn-secondary">Sign Up</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h2>Pro</h2>
+                <p class="price">$19.99/month</p>
+                <ul>
+                  <li>Advanced safety training and certifications</li>
+                  <li>Opportunity to lead workshops and mentor other members</li>
+                  <li>Exclusive access to member-only events and networking opportunities</li>
+                </ul>
+                <button class="btn btn-secondary">Sign Up</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h2>Premium</h2>
+                <p class="price">$29.99/month</p>
+                <ul>
+                  <li>Dedicated storage space for personal projects</li>
+                  <li>Personalized training and assistance from expert staff</li>
+                  <li>Specialized workshops and advanced skill-building classes</li>
+                  <li>Collaboration opportunities with other premium members</li>
+                  <li>Showcase or exhibition opportunities for completed projects</li>
+                </ul>
+                <button class="btn btn-secondary">Sign Up</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-            <div class="popup-overlay">
-  <div class="popup">
-    <h2>Membership Sign Up</h2>
-    <p>Fill out the form below to join our membership:</p>
-    <form>
-      <!-- Include your membership sign-up form fields here -->
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="credit-card">Credit Card:</label>
-      <input type="text" id="credit-card" required>
-      
-      <label for="membership">Membership Plan:</label>
-      <select id="membership" name="membership" required>
-        <option value="basic">Basic</option>
-        <option value="pro">Pro</option>
-        <option value="premium">Premium</option>
-      </select>
-      
-      <button type="submit">Submit</button>
-    </form>
-    <button class="close-btn">Close</button>
-  </div>
-</div>
     </section>
-  </main>
-<!-- Popup -->
-<footer>
-  <div class="footer-content">
-    <div class="footer-section">
-     <img src="../images/3.png">
-    </div>
-  
-    <div class="footer-section">
-      <h3>Contact Information</h3>
-      <p>Email: eugene.choi738@cfbmail.com</p>
-      <p>Phone: +1 123-456-7890</p>
-      <p>Address: 848 Innovation Street, Irving, US</p>
-    </div>
-  <div class="footer-bottom">
-    <p class="lead">&copy; 2023 TechLab. All rights reserved.</p>
-  </div>
-</div>
-      <script src="../java/membership.js"></script>
-</body>
-</html>
+
+    <div class="popup-overlay">
+      <div class="popup">
+        <h2>Membership Sign Up</h2>
+        <p>Fill out the form below to join our membership:</p>
+        <form>
+          <!-- Include your membership sign-up form fields here -->
+          <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <footer class="bg-dark">
+              <div class="footer-content">
+                <div class="footer-section">
+                 <img src="./images/3.png">
+                </div>
+              
+                <div class="footer-section">
+                  <h3>Contact Information</h3>
+                  <p>Email: eugene.choi738@cfbmail.com</p>
+                  <p>Phone: +1 123-456-7890</p>
+                  <p>Address: 848 Innovation Street, Irving, US</p>
+                </div>
+              
+          
+              <div class="footer-bottom">
+                <p class="lead">&copy; 2023 TechLab. All rights reserved.</p>
+              </div>
+            </div>
+            <br><br>
+            </footer>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+          </body>
+          </html>
