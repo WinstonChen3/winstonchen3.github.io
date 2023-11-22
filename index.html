@@ -1,102 +1,60 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Techlab</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/test.css">
-  <link rel="icon" href="../images/3.png" type="image/png">
-  <style> 
-    @font-face {
-      font-family: 'Raleway';
-      src: url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
-      /* Add more src declarations if you have different font formats */
-      font-weight: bold;
-      font-style: italic;
-    }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
-      /* Add more src declarations if you have different font formats */
-      font-weight: bold;
-      font-style: italic;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg ">
-      <a class="navbar-brand" href="index.html"><img src="images/3.png" alt="Logo" ></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      </button>
-      <nav class="navbar .bg-dark">
-        <form style="align-items: center;" class=" justify-content-start">
-          <button style="margin-left: 100px;" class=".bg-dark btn btn-sm"><a href="/pages/index.html">Home</a></button>
-          <div class="btn-group">
-            <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: none;">
-              About Us
-            </button>
-            <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Contact Us</a></li>
-        <li><a class="dropdown-item" href="#">Hours</a></li>
-        <li><a class="dropdown-item" href="#">Locations</a></li>
-        <li><a class="dropdown-item" href="#">Hours</a></li>
-            </ul>
-          </div>
-          <button class=".bg-dark btn btn-sm "><a href="/pages/events.html">Events</a></button>
-          <button class=".bg-dark btn btn-sm "><a href="/pages/equipment.html">Equipment</a></button>
-          <button style="margin-left: 200px;" class=".bg-dark btn btn-sm "><a href="./pages/membership.html">Sign Up</a></button>
-          <button class=".bg-dark btn btn-sm "><a href="/pages/login.html">Login</a></button>
-        </form>
-      </nav>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <img class="container" src="images/background2.png" type="image/png">
-  <div class="hero">
-    <h1>Techlab</h1>
-    <p>Welcome to Techlab, your community's creative hub! We provide a supportive environment for makers of all levels to explore their passions. Our makerspace is equipped with cutting-edge tools and machinery, including 3D printers, laser cutters, and more. With a vibrant community of like-minded individuals, workshops, and expert guidance, Techlab is the place to bring your ideas to life. Join us and unleash your creativity!</p</p>
-    <br><a class="btn" href="pages/membership.html">Get Started</a>
-  </div>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
 
-  <main>
-        <!-- Features Section -->
-        <section class="features">
-          <h2>Our Services</h2>
-          <div class="feature">
-            <h3>Classes</h3>
-            <p>Our makerspace offers diverse classes where members can learn woodworking techniques, 3D printing and design, electronics prototyping, laser cutting, sewing and textiles, coding and programming, digital design and fabrication, and business and entrepreneurship. These classes provide hands-on learning experiences to acquire practical skills and knowledge, empowering members to pursue their creative projects within our vibrant makerspace community.
-    </p>
-          </div>
-          <div class="feature">
-            <h3>Expert Guidance</h3>
-            <p>Our makerspace offers Expert Guidance, connecting members with experienced staff and mentors who provide personalized assistance, advice, and troubleshooting support. Our experts have diverse expertise in woodworking, electronics, 3D printing, and more, helping you enhance your skills and achieve your creative goals with confidence.</p>
-          </div>
-        </section>
-    
-  </main>
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-       <img src="../images/3.png">
-      </div>
-    
-      <div class="footer-section">
-        <h3>Contact Information</h3>
-        <p>Email: eugene.choi738@cfbmail.com</p>
-        <p>Phone: +1 123-456-7890</p>
-        <p>Address: 848 Innovation Street, Irving, US</p>
-      </div>
-    
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
 
-    <div class="footer-bottom">
-      <p class="lead">&copy; 2023 TechLab. All rights reserved.</p>
-    </div>
-  </div>
-  <br><br>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
-</html>
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 0 auto 10px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-top: 5px;
+    font-size: 14px;
+}
