@@ -34,11 +34,11 @@ router.post('/register', async (req, res) => {
 router.get('/login', (req, resp) =>{
     if (req.session.passport && req.session.passport.user) {
         // resp.render('../makerspace/views/index.ejs');
-        resp.render('index.ejs');
+        resp.render('index.html');
     }
     else {
         // resp.render('../makerspace/views/login.ejs');
-        resp.render('login.ejs');
+        resp.render('login.html');
     }
 })
 
