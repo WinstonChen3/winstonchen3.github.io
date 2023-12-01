@@ -45,7 +45,7 @@ router.get('/login', (req, resp) =>{
 // POST /api/auth/login
 router.post('/login', passport.authenticate('local', 
     { 
-        successRedirect: '/', 
+        successRedirect: 'index.html', 
         failureRedirect:'/api/auth/login', 
         failureFlash:true 
     }
