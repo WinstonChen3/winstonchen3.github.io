@@ -160,7 +160,16 @@ button a {
 .btn:hover {
   background-color: #555;
 }
+.dropdown {
+  position: relative;
+}
 
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
 /* Main */
 .features {
   margin: 50px 0;
