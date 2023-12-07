@@ -4,9 +4,17 @@ body {
     margin: 0;
     padding: 0;
 }
+.nav-centered{
+  margin:auto;
+}
 .navbar {
     background-color: #333;
     height: 100px;
+    text-decoration: none;
+  }
+  .navbar nav {
+    background-color: #333;
+    position: center;
     text-decoration: none;
   }
   button a {
@@ -113,6 +121,10 @@ h2 {
 form {
     margin-top: 20px;
     align-items: center;
+    text-align: center;
+}
+form input{
+  text-align: left;
 }
 
 label {

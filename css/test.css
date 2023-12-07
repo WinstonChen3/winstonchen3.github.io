@@ -31,13 +31,14 @@ header {
 }
 
 .btn{
-  border-color: #333;
+  border-color: #222;
 }
 .navbar-brand img {
   max-width: 25%;
   height: auto;
   object-fit: contain;
   position: relative;
+  padding: 0;
 }
 .navbar-brand{
   width: fit-content;
@@ -55,6 +56,9 @@ header {
   color: #fff;
 }
 
+.mr-0{
+  margin-right: 0;
+}
 .dropdown-toggle:focus {
   box-shadow: none;
   outline: none;
@@ -165,10 +169,10 @@ button a {
 }
 
 .dropdown-menu {
-  position: absolute;
   top: 100%;
   left: 0;
   z-index: 1000;
+  align-items: right;
 }
 /* Main */
 .features {
@@ -367,14 +371,4 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #555;
-}
-
-.error-message {
-  color: #ff0000;
-  margin-top: 5px;
-  font-size: 14px;
 }

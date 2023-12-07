@@ -25,47 +25,41 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg ">
-      <a class="navbar-brand" href="../index.html"><img src="../images/3.png" alt="Logo" ></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark">
+      <div class="container-fluid bg-dark">
+        <a class="navbar-brand bg-dark" style="margin-right: 0;" href="#"><img src="images/3.png" alt="image/png"></a>
+        <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       </button>
-      <nav class="navbar .bg-dark">
-        <form style="align-items: center;" class=" justify-content-start">
-          <button style="margin-left: 100px;" class=".bg-dark btn btn-sm"><a href="../pages/index.html">Home</a></button>
-          <div class="btn-group">
-            <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: none;">
+        </button>
+        <nav class="navbar bg-dark">
+          <div class="d-flex flex-wrap text-center">
+            <button class="bg-dark btn btn-md border-0"><a href="/pages/index.html">Home</a></button>
+            <button class="bg-dark btn btn-md border-0"><a href="/pages/events.html">Events</a></button>
+            <button class="bg-dark btn btn-md border-0"><a href="/pages/equipment.html">Equipment</a></button>
+            <button class="bg-dark btn btn-md border-0 "><a href="/pages/index.html">Services</a></button>
+            <button class="bg-dark btn btn-dark border-0 btn-md dropdown-toggle" style="padding-right: 350px;" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: none;">
               About Us
             </button>
-            <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Contact Us</a></li>
-        <li><a class="dropdown-item" href="#">Hours</a></li>
-        <li><a class="dropdown-item" href="#">Locations</a></li>
-        <li><a class="dropdown-item" href="#">Hours</a></li>
+            <ul class="dropdown-menu ">
+        <li><a class="dropdown-item" href="/pages/contacts.html">Contact Us</a></li>
+        <li><a class="dropdown-item" href="/pages/locations.html">Locations</a></li>
             </ul>
           </div>
-          <button class=".bg-dark btn btn-sm "><a href="/pages/events.html">Events</a></button>
-          <button class=".bg-dark btn btn-sm "><a href="/pages/equipment.html">Equipment</a></button>
-          <button style="margin-left: 200px;" class=".bg-dark btn btn-sm "><a href="./pages/membership.html">Sign Up</a></button>
-          <button class=".bg-dark btn btn-sm "><a href="/pages/login.html">Login</a></button>
-        </form>
-      </nav>
-        </ul>
+          </ul>
+          <button class="bg-dark btn btn-md border-0 "><a href="/pages/signup.html">Sign Up</a></button>
+          <button class="bg-dark btn btn-md border-0 "><a href="/pages/login.html">Login</a></button>
+        </div>
       </div>
     </nav>
   </header>
-  <div>
-    <% if (messages.error) { %>
-        <%= messages.error %>
-    <% } %>
-</div>
-<form action="/api/auth/login" method="POST">
+<form style="align-items: center;">
     <div>
         <label for="email">Email</label>
-        <input type="text" id="email" name="email" required />
+        <input style="text-align: left;" type="text" id="email" name="email" required />
     </div>
     <div>
         <label for="password">Password</label>
-        <input type="text" id="password" name="password" required />
+        <input style="text-align: left;" type="text" id="password" name="password" required />
     </div>
     <button type="submit">Login</button>
 </form>
@@ -80,7 +74,7 @@
     
       <div class="footer-section">
         <h3>Contact Information</h3>
-        <p>Email: eugene.choi738@cfbmail.com</p>
+        <p>Email: bestcompany.gmail.com</p>
         <p>Phone: +1 123-456-7890</p>
         <p>Address: 848 Innovation Street, Irving, US</p>
       </div>
