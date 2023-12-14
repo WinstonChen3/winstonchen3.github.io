@@ -5,6 +5,7 @@
   <title>Techlab</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/test.css">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <link rel="icon" href="../images/3.png" type="image/png">
   <style> 
     @font-face {
@@ -32,38 +33,46 @@
       </button>
         </button>
         <nav class="navbar bg-dark bg-gradient">
-          <div class="d-flex flex-wrap text-center" style="align-items: center;">
-            <button class="bg-transparent btn btn-md border-0"><a href="/pages/checkout.html">Home</a></button>
-            <button class="bg-transparent btn btn-md border-0"><a href="/pages/events.html">Events</a></button>
-            <button class="bg-transparent btn btn-md border-0"><a href="/pages/equipment.html">Equipment</a></button>
-            <button class="bg-transparent btn btn-md border-0 "><a href="/pages/index.html">Services</a></button>
-            <button class="bg-transparent btn btn-dark border-0 btn-md dropdown-toggle" style="padding-right: 150px;" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: none; ">
+          <div class="d-flex flex-wrap text-center">
+            <button class="bg-transparent btn btn-md border-0"><a href="../pages/checkout.html">Home</a></button>
+            <button class="bg-transparent btn btn-md border-0"><a href="../pages/events.html">Events</a></button>
+            <button class="bg-transparent btn btn-md border-0"><a href="../pages/equipment.html">Equipment</a></button>
+            <button class="bg-transparent btn btn-md border-0 "><a href="../pages/services.html">Services</a></button>
+            <button class="bg-transparent btn btn-dark border-0 btn-md dropdown-toggle" style="padding-right: 450px;" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: none; ">
               About Us
             </button>
             <ul class="dropdown-menu ">
-        <li><a class="dropdown-item bg-transparent" href="/pages/contacts.html">Contact Us</a></li>
-        <li><a class="dropdown-item bg-transparent" href="/pages/locations.html">Locations</a></li>
+        <li><a class="dropdown-item bg-transparent" href="../pages/contacts.html">Contact Us</a></li>
+        <li><a class="dropdown-item bg-transparent" href="../pages/locations.html">Locations</a></li>
             </ul>
           </div>
           </ul>
-          <button class="bg-transparent btn btn-md border-0 "><a href="/pages/signup.html">Sign Up</a></button>
-          <button class="bg-transparent btn btn-md border-0 "><a href="/pages/login.html">Login</a></button>
+          <button class="bg-transparent btn btn-md border-0 "><a href="../pages/signup.html">Sign Up</a></button>
+          <button class="bg-transparent btn btn-md border-0 "><a href="../pages/login.html">Login</a></button>
         </div>
       </div>
     </nav>
   </header>
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="/images/background1.png" alt="First slide">
+        <img src="images/background1.png" style="height:auto;" alt="...">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="/images/background2.png" alt="Second slide">
+        <img src="images/background2.png" class="d-block w-150" style="height: fit-content;" alt="...">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="/images/background3.png" alt="Third slide">
+        <img src="images/background3.png" class="d-block w-150" style="height: fit-content;" alt="...">
       </div>
     </div>
+    <button class="carousel-control-prev h-100 d-inline-block" style="margin-top: 0.1px;" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next h-100 d-inline-block" style="margin-top: 0.1px;" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
   <div class="hero">
     <h1>Techlab</h1>

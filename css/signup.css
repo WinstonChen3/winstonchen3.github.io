@@ -21,9 +21,6 @@ header {
   object-fit: contain;
   position: relative;
 }
-/* Add your existing CSS styles here */
-
-/* Example styles for the navigation bar */
 .navbar {
   background-color: #333;
   height: 100px; 
@@ -341,6 +338,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
+  
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;

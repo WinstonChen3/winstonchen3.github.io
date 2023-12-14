@@ -6,14 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Signin Template · Bootstrap v5.0</title>
-
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
-
-    
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -28,61 +23,34 @@
           font-size: 3.5rem;
         }
       }
+
     </style>
 
     
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+    <link href="/css/login.css" rel="stylesheet">
   </head>
-  <body class="text-center">
-    <header>
-      <nav class="navbar navbar-expand-lg bg-dark bg-gradient">
-          <div class="container-fluid bg-dark bg-gradient">
-            <a class="navbar-brand bg-dark bg-gradient" style="margin-right: 0;" href="#"><img src="images/3.png" alt="image/png"></a>
-            <button class="navbar-toggler bg-dark bg-gradient" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          </button>
-            </button>
-            <nav class="navbar bg-dark bg-gradient">
-              <div class="d-flex flex-wrap text-center" style="align-items: center;">
-                <button class="bg-transparent btn btn-md border-0"><a href="/pages/index.html">Home</a></button>
-                <button class="bg-transparent btn btn-md border-0"><a href="/pages/events.html">Events</a></button>
-                <button class="bg-transparent btn btn-md border-0"><a href="/pages/equipment.html">Equipment</a></button>
-                <button class="bg-transparent btn btn-md border-0 "><a href="/pages/index.html">Services</a></button>
-                <button class="bg-transparent btn btn-dark border-0 btn-md dropdown-toggle" style="padding-right: 150px;" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: none; ">
-                  About Us
-                </button>
-                <ul class="dropdown-menu">
-            <li><a class="dropdown-item bg-transparent" href="/pages/contacts.html">Contact Us</a></li>
-            <li><a class="dropdown-item bg-transparent" href="/pages/locations.html">Locations</a></li>
-                </ul>
-              </div>
-              </ul>
-              <button class="bg-transparent btn btn-md border-0 "><a href="/pages/signup.html">Sign Up</a></button>
-              <button class="bg-transparent btn btn-md border-0 "><a href="/pages/login.html">Login</a></button>
-            </div>
-          </div>
-        </nav>
-</header>
-<main class="form-signin">
+  <body>
+<main class="form-signin bg-dark">
   <form>
-    <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <a class="navbar-brand" style="margin-right: 0;" href="../index.html"><img src="/images/3.png" alt="image/png"></a>
+    <h1 class="h3 mb-3 fw-normal text-white">Please Sign In</h1>
 
-    <div class="form-floating">
+    <div class=" w-100 form-floating">
       <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Email address</label>
     </div>
-    <div class="form-floating">
+    <div class= " w-25 form-floating">
       <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
       <label for="floatingPassword">Password</label>
     </div>
 
-    <div class="checkbox mb-3">
+    <div class="text-white checkbox mb-3">
       <label>
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <button class="w-10 btn btn-lg btn-primary" type="submit"><a href="index.html">Sign in</a></button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
   </form>
 </main>
