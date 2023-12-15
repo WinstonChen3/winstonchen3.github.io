@@ -9,6 +9,19 @@ header {
   background-color: #333;
   color: #fff;
 }
+.dropdown-container {
+  position: relative;
+  width: fit-content;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Bottom of button */
+  right: 0;
+  margin-left: -10px; /* More to the left */
+  width: 100px;
+}
+
 
 .container{
   max-width: 100%; /* Take up the full width of the column */
