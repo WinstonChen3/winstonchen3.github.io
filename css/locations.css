@@ -1,1 +1,125 @@
+Li{
+    float:unset;
+    font-size: 100%;
+}
+
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+
+img{float: right;
+background-color: rgb(56, 55, 55);}
+
+card-group {
+    font-size: 10;
+border-width: 20px;
+padding: 10 20;
+position: absolute;
+left: 0;
+right: 0;
+}
+drop-down{
+    color: rgb(56, 55, 55);
+
+}
+body {
+    background-color: #333;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: #333;
+}
+
+   
+
+
+
+a{
+    color: #fff;
+    text-underline-offset: none;
+}
+button {
+    display: none;
+    color: #fff;
+    border: none;
+    padding: 10 20;
+    font-size: 16;
+    text-decoration: none;
+    margin-top: 20;
+    border: #333;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+ 
+  
+  /* Header */
+  header {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  
+  .hero h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .hero p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .btn{
+    background-color:#333;
+    color: #fff;
+  }
+  button {
+    display: none;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 20px;
+    border: #333;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+
+  
+  button a {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background-color: #555;
+  }
+  
+  
+
 
