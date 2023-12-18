@@ -8,33 +8,50 @@
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <link rel="icon" href="../images/3.png" type="image/png">
   <style> 
-    @font-face {
-      font-family: 'Raleway';
-      src: url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
-      /* Add more src declarations if you have different font formats */
-      font-weight: bold;
-      font-style: italic;
+    .nav-link {
+      position: relative;
+      transition: 0.3s;
     }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
-      /* Add more src declarations if you have different font formats */
-      font-weight: bold;
-      font-style: italic;
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: #ffffff;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
     }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+    }
+    .dropdown-item.btn {
+      padding: 0;
+      background-color: transparent;
+      border: none;
+    }
+
+    .dropdown-item.btn:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
   </style>
 </head>
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-dark bg-gradient navbar-inverse" role="navigation">
       <div class="container-fluid bg-dark bg-gradient">
-        <a class="navbar-brand bg-transparent" style="margin-right: 0;" href="#"><img src="../images/3.png" alt="image/png"></a>
+        <a class="navbar-brand bg-transparent" style="left: 0;" href="/index.html"><img src="../images/3.png" alt="image/png"></a>
         <button class="navbar-toggler bg-dark bg-gradient" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       </button>
         </button>
         <nav class="navbar bg-dark bg-gradient">
           <div class="d-flex flex-wrap text-center">
-            <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/checkout.html">Home</a></button>
+            <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/membership.html">Home</a></button>
             <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/events.html">Events</a></button>
             <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/equipment.html">Equipment</a></button>
             <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/services.html">Services</a></button>
@@ -43,9 +60,9 @@
               <button class="bg-transparent btn btn-dark border-0 btn-md dropdown-toggle text-center nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: none; margin-right: 22vw;">
                 About Us
               </button>
-              <ul role="menu" class="dropdown-menu">
-                <li><a class="dropdown-item bg-transparent" style="width: 100px;" href="/pages/contacts.html">Contact Us</a></li>
-                <li><a class="dropdown-item bg-transparent" style="width: 100px;" href="/pages/locations.html">Locations</a></li>
+              <ul role="menu" class="dropdown-menu bg-dark">
+                <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="/pages/contacts.html">Contact Us</a></button>
+                <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="/pages/locations.html">Locations</a></button>
               </ul>
             </div><!--Container closed-->
           </div>
