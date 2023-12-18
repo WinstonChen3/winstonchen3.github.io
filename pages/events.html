@@ -4,24 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
-    <link rel="stylesheet" href="/css/events.css">
-    <link rel="icon" href="/images/eventfav.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</head>
-<body>
-    <header>    <nav class="navbar">
-        <ul class="navbar-nav">
-        </ul>
-
-
-       
-
-
-
+    <link rel="stylesheet" type="text/css" href="/css/events.css">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="icon" href="../images/3.png" type="image/png">
+    <style> 
+      .nav-link {
+        position: relative;
+        transition: 0.3s;
+      }
+  
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+  
+      .nav-link:hover::after {
+        transform: scaleX(1);
+      }
+      .dropdown-item.btn {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+      }
+  
+      .dropdown-item.btn:focus {
+        outline: none;
+        box-shadow: none;
+      }
+  
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark bg-gradient navbar-inverse" role="navigation">
+        <div class="container-fluid bg-dark bg-gradient">
+          <a class="navbar-brand bg-transparent" style="left: 0.1%;" href="/index.html"><img src="../images/3.png" alt="image/png"></a>
+          <button class="navbar-toggler bg-dark bg-gradient" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+          </button>
+          <nav class="navbar bg-dark bg-gradient">
+            <div class="d-flex flex-wrap text-center">
+              <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/membership.html">Home</a></button>
+              <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/events.html">Events</a></button>
+              <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/equipment.html">Equipment</a></button>
+              <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/services.html">Services</a></button>
+              
+              <div class="dropdown-container"><!--Container wrapped around-->
+                <button class="bg-transparent btn btn-dark border-0 btn-md dropdown-toggle text-center nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: none; margin-right: 22vw;">
+                  About Us
+                </button>
+                <ul role="menu" class="dropdown-menu bg-dark">
+                  <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="/pages/contacts.html">Contact Us</a></button>
+                  <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="/pages/locations.html">Locations</a></button>
+                </ul>
+              </div><!--Container closed-->
+            </div>
+            </ul>
+            <button class="bg-transparent btn btn-md border-0 nav-link" style="right: 0.1%;"><a href="../pages/signup.html">Sign Up</a></button>
+            <button class="bg-transparent btn btn-md border-0 nav-link" style="right: 0.1%;"><a href="../pages/login.html">Login</a></button>
+          </div>
+        </div>
+      </nav>
     </header>
     
 
