@@ -23,12 +23,12 @@ header {
 }
 
 
-.container{
+.container1{
   max-width: 100%; /* Take up the full width of the column */
   max-height: 40%; /* Set the height to occupy the full viewport height */
   position: relative;
 }
-.container img{
+.container1 img{
   max-width: 100%;
   height: 40%;
   object-fit: contain;
@@ -76,7 +76,7 @@ button a {
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #666;
   color: #fff;
   padding: 20px;
 }
@@ -114,43 +114,84 @@ footer {
 }
 
 .popup {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  position: relative;
-  width: 400px;
-}
-
-.popup h2 {
-  margin-bottom: 10px;
-}
-
-.popup p {
-  margin-bottom: 20px;
-}
-
-.popup label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.popup input {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
+  height: 100%;
+  background-color:#000000;
+  padding: 20px;
+  display: none;
+  z-index: 9999;
 }
 
-.popup button {
-  background-color: #333;
-  color: #fff;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #C0C0C0;
+  border-top: 2px solid #C0C0C0;
+  border-bottom: 2px solid #C0C0C0;
+  border-right: 2px solid #C0C0C0;
+  border-left: 2px solid #C0C0C0;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+  color: #C0C0C0;
+}
+
+.popup-content p {
+  color: #C0C0C0;
+}
+
+.popup-content input[type="email"],
+.popup-content button {
+  background-color: #000000;
+  color: #C0C0C0;
+  border: 2px solid #C0C0C0 ;
+  padding: 10px 20px;
+  margin-top: 10px;
   cursor: pointer;
+  border-left:2px solid #C0C0C0;
 }
 
-.popup button:hover {
-  background-color: #555;
+.popup-content input[type="email"]::placeholder {
+  color: #C0C0C0;
+}
+
+.popup-content button {
+  background-color: #000000;
+  color: #C0C0C0;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  border-left:2px solid #C0C0C0;
+}
+
+.popup-content button::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #C0C0C0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.popup-content button:hover::before {
+  transform: scaleX(1);
 }
 
 .close-signup-btn {
@@ -220,16 +261,14 @@ label {
       flex-basis: 100%;
     }
   }
-  #sideA{
+  .sideA{
       width: auto;
       float: left;
-      padding-left: 10px;
-      padding-right: 5px;
       color:#C0C0C0;
       border-right:2px solid #C0C0C0 ;
-      
+      padding-right: 100px;
   }
-  #sideC{
+  .sideC{
       width: 250px;
       float: left;
       padding-left: 10px;
@@ -238,7 +277,7 @@ label {
       top:50%;
       border-right:2px solid #C0C0C0 ;
   }
-  #sideE{
+  .sideE{
       width: 250px;
       padding-left: 10px;
       padding-right: 5px;
@@ -247,21 +286,23 @@ label {
       text-align:center;
       border-bottom:2px solid #C0C0C0 ;
   }
-  #sideD{
+  .sideD{
       width:250px;
       float:right;
       padding-left:5px;
       padding-right:10px;
       color:#C0C0C0;
+      right: 1%;
       top:50%;
       border-left:2px solid #C0C0C0 ;
   }
-  #sideB{
+  .sideB{
       width:auto;
       float:right;
       padding-left:5px;
       padding-right:10px;
       color:#C0C0C0;
+      margin-right: 1%;
       border-left:2px solid #C0C0C0 ;
   }
 /* Example styles for the navigation bar */
@@ -281,21 +322,7 @@ label {
   position: relative;
   padding: 0;
 }
-.navbar-brand{
-  width: fit-content;
-  height: fit-content;
-  margin: 0;
-  padding: 0;
-}
 
-.navbar-toggler {
-  color: #fff;
-  border-color: #fff;
-}
-
-.navbar-nav .nav-link {
-  color: #fff;
-}
 
 .mr-0{
   margin-right: 0;
@@ -355,24 +382,7 @@ button:hover {
   fill-opacity: inherit;
 }
 
-.nav-link {
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-}
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #ffffff;
-  transition: width 0.3s ease-in-out;
 
-  /* Transition effect */
-}
 .navright {
   font-size: 18px;
   color: #fff;

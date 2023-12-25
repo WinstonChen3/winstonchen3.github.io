@@ -3,101 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <title>Techlab</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/test.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-  <link rel="icon" href="../images/3.png" type="image/png">
+  <link rel="icon" href="/images/3.png" type="image/png">
   <style> 
-    .nav-link {
-      position: relative;
-      transition: 0.3s;
-    }
+.nav-link {
+  position: relative;
+  transition: 0.3s;
+}
 
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 2px;
-      background-color: #ffffff;
-      transform: scaleX(0);
-      transition: transform 0.3s ease-in-out;
-    }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
 
-    .nav-link:hover::after {
-      transform: scaleX(1);
-    }
-    .dropdown-item.btn {
-      padding: 0;
-      background-color: transparent;
-      border: none;
-    }
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+.dropdown-item.btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
 
-    .dropdown-item.btn:focus {
-      outline: none;
-      box-shadow: none;
-    }
+.dropdown-item.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
 
+.svg-large{
+  height: 50%;
+  width:50%;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgb(255, 255, 255);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }
+  .bi {
+fill: white;
+}
   </style>
 </head>
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-dark bg-gradient navbar-inverse" role="navigation">
-      <div class="container-fluid bg-dark bg-gradient">
-        <a class="navbar-brand bg-transparent" style="left: 0;" href="/index.html"><img src="../images/3.png" alt="image/png"></a>
-        <button class="navbar-toggler bg-dark bg-gradient" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      </button>
-        </button>
-        <nav class="navbar bg-dark bg-gradient">
-          <div class="d-flex flex-wrap text-center">
-            <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/membership.html">Home</a></button>
-            <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/events.html">Events</a></button>
-            <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/equipment.html">Equipment</a></button>
-            <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/services.html">Services</a></button>
-            
-            <div class="dropdown-container"><!--Container wrapped around-->
-              <button class="bg-transparent btn btn-dark border-0 btn-md dropdown-toggle text-center nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: none; margin-right: 22vw;">
-                About Us
-              </button>
-              <ul role="menu" class="dropdown-menu bg-dark">
-                <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="/pages/contacts.html">Contact Us</a></button>
-                <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="/pages/locations.html">Locations</a></button>
-              </ul>
-            </div><!--Container closed-->
+      <div class="container-fluid bg-dark bg-gradient py-2"> <!-- Added padding to vertically center -->
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <a class="navbar-brand bg-transparent text-white" href="/index.html">
+              <img src="../images/3.png" alt="image/png"> <!-- Your icon or logo -->
+            </a>
           </div>
-          </ul>
-          <button class="bg-transparent btn btn-md border-0 nav-link" style="right: 0;"><a href="../pages/signup.html">Sign Up</a></button>
-          <button class="bg-transparent btn btn-md border-0 nav-link" style="right: 0;"><a href="../pages/login.html">Login</a></button>
+          <div class="col">
+            <ul class="navbar-nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/pages/checkout.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="../pages/events.html">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="../pages/equipment.html">Equipment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="../pages/services.html">Services</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About Us
+                </a>
+                <ul class="dropdown-menu bg-dark">
+                  <li><a class="dropdown-item text-white" href="/pages/contacts.html">Contact Us</a></li>
+                  <li><a class="dropdown-item text-white" href="/pages/locations.html">Locations</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
+  
+        <!-- Right-aligned content -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../pages/signup.html">Get Started</a>
+          </li>
+        </ul>
       </div>
     </nav>
   </header>
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="images/background1.png" style="height:auto;" alt="...">
+        <img src="images/background1.png" class="d-block w-100" alt="Slide 1">
       </div>
       <div class="carousel-item">
-        <img src="images/background2.png" class="d-block w-150" style="height: fit-content;" alt="...">
+        <img src="images/background2.png" class="d-block w-100" alt="Slide 2">
       </div>
       <div class="carousel-item">
-        <img src="images/background3.png" class="d-block w-150" style="height: fit-content;" alt="...">
+        <img src="images/background3.png" class="d-block w-100" alt="Slide 3">
       </div>
+      <!-- Add more carousel items as needed -->
     </div>
-    <button class="carousel-control-prev h-100 d-inline-block" style="margin-top: 0.1px;" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next h-100 d-inline-block" style="margin-top: 0.1px;" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+  
   <div class="hero">
     <h1>Techlab</h1>
     <p>Welcome to Techlab, your community's creative hub! We provide a supportive environment for makers of all levels to explore their passions. Our makerspace is equipped with cutting-edge tools and machinery, including 3D printers, laser cutters, and more. With a vibrant community of like-minded individuals, workshops, and expert guidance, Techlab is the place to bring your ideas to life. Join us and unleash your creativity!</p</p>
-    <br><br><a class="btn" href="pages/membership.html">Get Started</a>
+    <br><br><a class="btn bg-dark text-white nav-link w-25" style="left: 37.5%;" href="pages/membership.html">Get Started</a>
   </div>
 
   <main>
@@ -135,71 +218,23 @@
 
 <div class="b-example-divider"></div>
 
+<div class="container-fluid d-flex flex-column min-vh-50 bg-dark bg-gradient " >
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+    <p class="col-md-4 col-12 mb-0 text-white">&copy; 2023 Techlab</p>
 
-<div class="container text-white bg-dark bg-gradient">
-<footer class="py-5">
-<div class="row">
-
-<footer class="py-5">
-  <div class="row align-items-center">
-    <div class="col-12 col-sm-6 text-center text-sm-start">
-      <a class="navbar-brand bg-transparent" style="margin-right: 0;" href="#"><img src="../images/3.png" alt="image/png"></a>
+    <div class="container1 col-md-4 col-12">
+      <a href="/" class="navbar-brand d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <img style="left: 16%;" src="/images/3.png" alt="">
+      </a>
     </div>
-    <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end">
-      <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="50" height="50"><use xlink:href="#twitter"/></svg></a></li>
-        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="50" height="50"><use xlink:href="#instagram"/></svg></a></li>
-        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="50" height="50"><use xlink:href="#facebook"/></svg></a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 text-center">
-      <p class="mb-0">&copy; 2023 Techlab, Inc. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-<script>
 
-
-// Function to display the pop-up
-function displayPopup() {
-  var popup = document.getElementById('popup');
-  popup.style.display = 'block';
-}
-
-// Function to close the pop-up
-function closePopup() {
-  var popup = document.getElementById('popup');
-  popup.style.display = 'none';
-
-  // Set a flag in local storage to indicate that the pop-up has been shown
-  localStorage.setItem('popupShown', 'true');
-}
-
-// Only display the pop-up if it should be shown
-if (shouldShowPopup()) {
-  displayPopup();
-}
-
-// Close the pop-up on completion
-document.getElementById('popup-close').addEventListener('click', closePopup);
-
-// Automatically close the pop-up after a certain time (e.g., 5 seconds)
-setTimeout(closePopup, 5000);
-    </script>
+    <ul class="nav col-md-4 col-12 justify-content-end">
+      <li class="ms-3"><a class="link-body-emphasis fa-3x" href="#"><svg class="bi" width="30" height="30"><use xlink:href="#twitter"/></svg></a></li>
+      <li class="ms-3"><a class="link-body-emphasis fa-3x" href="#"><svg class="bi" width="30" height="30"><use xlink:href="#instagram"/></svg></a></li>
+      <li class="ms-3"><a class="link-body-emphasis fa-3x" href="#"><svg class="bi" width="30" height="30"><use xlink:href="#facebook"/></svg></a></li>
+    </ul>
+  </footer>
+</div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <div class="col-md-5 offset-md-1 mb-3 text-white" style="display: none;">
-    <div id="popup" class="popup">
-      <div class="popup-content">
-        <h2>Welcome to our website!</h2>
-        <p>Sign up with your email to get 40% off!</p>
-        <form id="signup-form" onsubmit="submitForm(event)">
-          <input type="email" id="email-input" placeholder="Your Email" required>
-          <button type="submit">Sign up</button>
-        </form>
-        <button onclick="closePopup()">Close</button>
-      </div>
-    </div>
 </body>
 </html>
