@@ -12,8 +12,6 @@ body {
 }
 
 .form-signin {
-  width: 100%;
-  max-width: 330px;
   padding: 15px;
   margin: auto;
 }
@@ -26,17 +24,6 @@ body {
   z-index: 2;
 }
 
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
 
 body {
     font-family: Arial, sans-serif;
@@ -133,110 +120,27 @@ body {
     box-shadow: none;
     outline: none;
 }
-  .container{
-    max-width: 100%; /* Take up the full width of the column */
-    max-height: 40%; /* Set the height to occupy the full viewport height */
-    position: relative;
-  }
+.container{
+  min-width: 50vw;
+  height: auto;
+}
   .container img{
     max-width: 100%;
     height: 40%;
     object-fit: contain;
     position: relative;
+    align-items: center;
   }
   .cont {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-h2 {
-    text-align: center;
-    margin-top: 0;
-}
-
-form {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    height: 20vh; /* Adjust as needed */
+  
 }
-form input{
-  text-align: left;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="password"] {
-    width: 300px;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-input[type="submit"] {
-    width: 200px;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #555;
-}
-
-.error-message {
-    color: #ff0000;
-    margin-top: 5px;
-    font-size: 14px;
-}
-/* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-}
-
-.footer-content {
+.center-icon {
   display: flex;
-  justify-content: space-between;
-}
-
-.footer-section img{
-  width: 25%;
-  height: 80%;  
-}
-.footer-section {
-  flex: 1;
-}
-
-.footer-section h3 {
-  margin-bottom: 10px;
-}
-
-.footer-bottom {
-  text-align:center;
-}
-
-
-
-.footer-bottom {
-  background-color:#333;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 999;
-
+  align-items: center;
+  /* Additional styling for the container */
 }

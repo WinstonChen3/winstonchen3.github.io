@@ -9,6 +9,19 @@
     <title>Document</title>
 </head>
 <style>
+  .highlightable-card {
+  transition: box-shadow 0.3s; /* Adding a smooth transition effect */
+}
+
+.highlightable-card:hover,
+.highlightable-card:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Highlight effect on hover or focus */
+}
+  .card{
+    height: 90%;
+    width: 90%;
+    margin-bottom: 10px;
+  }
     .card-body.selected {
     background-color: #f0f0f0; /* Change to the desired highlight color */
   }
@@ -19,66 +32,148 @@
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Apply a subtle shadow */
     }
 
-      .nav-link {
-      position: relative;
-      transition: 0.3s;
-    }
+    .nav-link {
+  position: relative;
+  transition: 0.3s;
+}
 
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 2px;
-      background-color: #ffffff;
-      transform: scaleX(0);
-      transition: transform 0.3s ease-in-out;
-    }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
 
-    .nav-link:hover::after {
-      transform: scaleX(1);
-    }
-    .dropdown-item.btn {
-      padding: 0;
-      background-color: transparent;
-      border: none;
-    }
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+.dropdown-item.btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
 
-    .dropdown-item.btn:focus {
-      outline: none;
-      box-shadow: none;
+.dropdown-item.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.svg-large{
+  height: 50%;
+  width:50%;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
     }
+  }
+
+  .b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgb(255, 255, 255);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }
+  .bi {
+fill: white;
+}
 </style>
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-dark bg-gradient navbar-inverse" role="navigation">
-      <div class="container-fluid bg-dark bg-gradient">
-        <a class="navbar-brand bg-transparent" style="left: 0.1%;" href="/index.html"><img src="../images/3.png" alt="image/png"></a>
-        <button class="navbar-toggler bg-dark bg-gradient" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      </button>
-        </button>
-        <nav class="navbar bg-dark bg-gradient">
-          <div class="d-flex flex-wrap text-center">
-            <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/membership.html">Home</a></button>
-            <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/events.html">Events</a></button>
-            <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/equipment.html">Equipment</a></button>
-            <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="../pages/services.html">Services</a></button>
-            
-            <div class="dropdown-container"><!--Container wrapped around-->
-              <button class="bg-transparent btn btn-dark border-0 btn-md dropdown-toggle text-center nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: none; margin-right: 22vw;">
-                About Us
-              </button>
-              <ul role="menu" class="dropdown-menu bg-dark">
-                <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="/pages/contacts.html">Contact Us</a></button>
-                <button class="bg-transparent btn btn-md border-0 text-center nav-link"><a href="/pages/locations.html">Locations</a></button>
-              </ul>
-            </div><!--Container closed-->
+      <div class="container-fluid bg-dark bg-gradient py-2"> <!-- Added padding to vertically center -->
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <a class="navbar-brand bg-transparent text-white" href="/index.html">
+              <img src="../images/3.png" alt="image/png"> <!-- Your icon or logo -->
+            </a>
           </div>
-          </ul>
-          <button class="bg-transparent btn btn-md border-0 nav-link" style="right: 0.1%;"><a href="../pages/signup.html">Sign Up</a></button>
-          <button class="bg-transparent btn btn-md border-0 nav-link" style="right: 0.1%;"><a href="../pages/login.html">Login</a></button>
+          <div class="col">
+            <ul class="navbar-nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/pages/checkout.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="../pages/events.html">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="../pages/equipment.html">Equipment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="../pages/services.html">Services</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About Us
+                </a>
+                <ul class="dropdown-menu bg-dark">
+                  <li><a class="dropdown-item text-white" href="/pages/contacts.html">Contact Us</a></li>
+                  <li><a class="dropdown-item text-white" href="/pages/locations.html">Locations</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
+  
+        <!-- Right-aligned content -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../pages/signup.html">Get Started</a>
+          </li>
+        </ul>
       </div>
     </nav>
   </header>
@@ -86,21 +181,25 @@
   <h1>Welcome to Our Makerspace</h1>
   <p>At our makerspace, we provide a wide range of services and resources to help you bring your creative ideas to life. Explore the various services below that you can access to unleash your imagination and turn your dreams into reality.</p>
 </section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header">
-            <h5 class="card-title">3D Printing</h5>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card highlightable-card">
+        <div class="card-header">
+          <h5 class="card-title">3D Printing</h5>
+        </div>
+        <div class="card-body">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
+            <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
           </div>
-          <div class="card-body">
-            <img src="/images/3d.jpeg" alt="">
-            <p class="card-text">Utilize our state-of-the-art 3D printers to bring your digital designs to life with precision and accuracy.</p>
-          </div>
+          <img src="/images/3d.jpeg" alt="">
+          <p class="card-text">Utilize our state-of-the-art 3D printers to bring your digital designs to life with precision and accuracy.</p>
         </div>
       </div>
+    </div>
       <div class="col-md-4">
-        <div class="card">
+        <div class="card highlightable-card">
           <div class="card-header">
             <h5 class="card-title">Woodworking</h5>
           </div>
@@ -111,7 +210,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card">
+        <div class="card highlightable-card">
           <div class="card-header">
             <h5 class="card-title">Electronics Prototyping</h5>
           </div>
@@ -122,7 +221,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card">
+        <div class="card highlightable-card">
           <div class="card-header">
             <h5 class="card-title">Textile Design</h5>
           </div>
@@ -133,7 +232,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card">
+        <div class="card highlightable-card">
           <div class="card-header">
             <h5 class="card-title">Metalworking</h5>
           </div>
@@ -144,7 +243,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card">
+        <div class="card highlightable-card">
           <div class="card-header">
             <h5 class="card-title">Ceramics</h5>
           </div>
@@ -155,7 +254,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card">
+        <div class="card highlightable-card">
           <div class="card-header">
             <h5 class="card-title">Laser Cutting and Engraving</h5>
           </div>
@@ -166,7 +265,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card">
+        <div class="card highlightable-card">
           <div class="card-header">
             <h5 class="card-title">Virtual Reality (VR)</h5>
           </div>
@@ -176,20 +275,20 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header">
-            <h5 class="card-title">Robotics</h5>
-          </div>
-          <div class="card-body">
-            <img src="/images/robot.jpeg" alt="">
-            <p class="card-text">Learn robotics programming and build autonomous robots using our robotics kits, sensors, and programming tools.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header">
+<div class="col-md-4">
+  <div class="card highlightable-card">
+    <div class="card-header">
+      <h5 class="card-title">Robotics</h5>
+    </div>
+    <div class="card-body">
+      <img src="/images/robot.jpeg" alt="">
+      <p class="card-text">Learn robotics programming and build autonomous robots using our robotics kits, sensors, and programming tools.</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card highlightable-card">
+    <div class="card-header">
             <h5 class="card-title">Audio and Music Production</h5>
           </div>
           <div class```html
@@ -200,7 +299,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card">
+      <div class="card highlightable-card">
         <div class="card-header">
           <h5 class="card-title">Coding and Programming</h5>
         </div>
@@ -211,7 +310,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card">
+      <div class="card highlightable-card">
         <div class="card-header">
           <h5 class="card-title">Augmented Reality (AR)</h5>
         </div>
@@ -221,6 +320,7 @@
         </div>
       </div>
     </div>
+    <a class="nav-link text-white border border-white w-25 bg-dark" href="../pages/signup.html">Buy Now</a>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="bootstrap" viewBox="0 0 118 94">
         <title>Bootstrap</title>
@@ -236,25 +336,23 @@
         <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
       </symbol>
     </svg>
-    <footer class="py-5">
-      <div class="row align-items-center">
-        <div class="col-12 col-sm-6 text-center text-sm-start">
-          <a class="navbar-brand bg-transparent" style="margin-right: 0;" href="#"><img src="../images/3.png" alt="image/png"></a>
+    <div class="container-fluid d-flex flex-column min-vh-50 bg-dark bg-gradient " >
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+        <p class="col-md-4 col-12 mb-0 text-white">&copy; 2023 Techlab</p>
+    
+        <div class="container1 col-md-4 col-12">
+          <a href="/" class="navbar-brand d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img style="left: 16%;" src="/images/3.png" alt="">
+          </a>
         </div>
-        <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end">
-          <ul class="list-unstyled d-flex">
-            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="50" height="50"><use xlink:href="#twitter"/></svg></a></li>
-            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="50" height="50"><use xlink:href="#instagram"/></svg></a></li>
-            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="50" height="50"><use xlink:href="#facebook"/></svg></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 text-center">
-          <p class="mb-0">&copy; 2023 Techlab, Inc. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    
+        <ul class="nav col-md-4 col-12 justify-content-end">
+          <li class="ms-3"><a class="link-body-emphasis fa-3x" href="#"><svg class="bi" width="30" height="30"><use xlink:href="#twitter"/></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis fa-3x" href="#"><svg class="bi" width="30" height="30"><use xlink:href="#instagram"/></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis fa-3x" href="#"><svg class="bi" width="30" height="30"><use xlink:href="#facebook"/></svg></a></li>
+        </ul>
+      </footer>
+    </div>
     <script>
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(checkbox => {

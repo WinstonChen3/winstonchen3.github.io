@@ -23,7 +23,25 @@
           font-size: 3.5rem;
         }
       }
-
+      .btn-dark {
+    position: relative;
+    transition: all 0.3s; /* Transition effect for all properties */
+  }
+  
+  .btn-dark::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff; /* Underline color */
+    transition: width 0.3s; /* Transition effect for the underline width */
+  }
+  
+  .btn-dark:hover::after {
+    width: 100%; /* Change the underline width on hover */
+  }
     </style>
 
     
@@ -50,7 +68,7 @@
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
-    <button class="w-10 btn btn-lg btn-primary" type="submit"><a href="index.html">Sign in</a></button>
+    <button class="w-10 btn btn-lg btn-dark" type="submit"><a href="index.html">Sign in</a></button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
   </form>
 </main>
