@@ -10,26 +10,26 @@
 </head>
 <style>
   .highlightable-card {
-  transition: box-shadow 0.3s; /* Adding a smooth transition effect */
+  transition: box-shadow 0.3s;
 }
 
 .highlightable-card:hover,
 .highlightable-card:focus {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Highlight effect on hover or focus */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
   .card{
     height: 90%;
     width: 90%;
-    margin-bottom: 10px;
+    margin-left: 10px;
   }
     .card-body.selected {
-    background-color: #f0f0f0; /* Change to the desired highlight color */
+    background-color: #f0f0f0; 
   }
       .card-body img {
-      width: 100%; /* Make the images responsive */
-      height: auto;
-      border-radius: 8px; /* Add a border radius for a nicer look */
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Apply a subtle shadow */
+      width: 100%;  
+      height: 100%; 
+      border-radius: 8px; 
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
     }
 
     .nav-link {
@@ -177,93 +177,125 @@ fill: white;
       </div>
     </nav>
   </header>
-  <section style="text-align: center;">
-  <h1>Welcome to Our Makerspace</h1>
-  <p>At our makerspace, we provide a wide range of services and resources to help you bring your creative ideas to life. Explore the various services below that you can access to unleash your imagination and turn your dreams into reality.</p>
-</section>
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
-      <div class="card highlightable-card">
-        <div class="card-header">
-          <h5 class="card-title">3D Printing</h5>
+  <div class="col-md-4">
+  <div class="card highlightable-card" style="width: 18rem;">
+    <img src="/images/3d.jpeg" alt="">
+    <div class="card-body">
+      <h5 class="card-title">3D Printing</h5>
+      <p class="card-text">Utilize our state-of-the-art 3D printers to bring your digital designs to life with precision and accuracy.</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
+        <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card highlightable-card" style="width: 18rem;">
+      <img src="/images/wood.jpeg" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Woodworking</h5>
+        <p class="card-text">Learn woodworking techniques and access our fully equipped woodworking shop to create custom furniture, crafts, and more.</p>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
+          <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
         </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card highlightable-card" style="width: 18rem;">
+        <img src="/images/electric.jpeg" alt="">
         <div class="card-body">
+          <h5 class="card-title">Electronics Prototyping</h5>
+          <p class="card-text">Experiment with circuits, microcontrollers, and sensors to prototype your electronic projects and innovations.</p>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
             <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
           </div>
-          <img src="/images/3d.jpeg" alt="">
-          <p class="card-text">Utilize our state-of-the-art 3D printers to bring your digital designs to life with precision and accuracy.</p>
         </div>
       </div>
-    </div>
+      </div>
       <div class="col-md-4">
-        <div class="card highlightable-card">
-          <div class="card-header">
-            <h5 class="card-title">Woodworking</h5>
-          </div>
+        <div class="card highlightable-card" style="width: 18rem;">
+          <img src="/images/textile.jpeg" alt="">
           <div class="card-body">
-            <img src="/images/wood.jpeg" alt="">
-            <p class="card-text">Learn woodworking techniques and access our fully equipped woodworking shop to create custom furniture, crafts, and more.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card highlightable-card">
-          <div class="card-header">
-            <h5 class="card-title">Electronics Prototyping</h5>
-          </div>
-          <div class="card-body">
-            <img src="/images/electric.jpeg" alt="">
-            <p class="card-text">Experiment with circuits, microcontrollers, and sensors to prototype your electronic projects and innovations.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card highlightable-card">
-          <div class="card-header">
             <h5 class="card-title">Textile Design</h5>
-          </div>
-          <div class="card-body">
-            <img src="/images/textile.jpeg" alt="">
             <p class="card-text">Explore textile arts and design by using our sewing machines, embroidery tools, and fabric dyeing equipment.</p>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
+              <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card highlightable-card">
-          <div class="card-header">
-            <h5 class="card-title">Metalworking</h5>
-          </div>
-          <div class="card-body">
-            <img src="/images/Fabrication.jpeg"></img>
-            <p class="card-text">Learn metalworking techniques such as welding and blacksmithing to create metal sculptures, jewelry, and functional objects.</p>
-          </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card highlightable-card">
-          <div class="card-header">
-            <h5 class="card-title">Ceramics</h5>
+        <div class="col-md-4">
+          <div class="card highlightable-card" style="width: 18rem;">
+            <img src="/images/textile.jpeg" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Textile Design</h5>
+              <p class="card-text">Explore textile arts and design by using our sewing machines, embroidery tools, and fabric dyeing equipment.</p>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
+                <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
+              </div>
+            </div>
           </div>
-          <div class="card-body">
-            <img src="/images/ceramic.jpeg" alt="">
-            <p class="card-text">Get hands-on experience with pottery and ceramic arts, using our pottery wheels, kilns, and glazing equipment.</p>
           </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card highlightable-card">
-          <div class="card-header">
-            <h5 class="card-title">Laser Cutting and Engraving</h5>
-          </div>
-          <div class="card-body">
-            <img src="/images/laser.jpeg" alt="">
-            <p class="card-text">Create intricate designs and patterns on various materials using our laser cutting and engraving machines.</p>
-          </div>
-        </div>
-      </div>
+          <div class="col-md-4">
+            <div class="card highlightable-card" style="width: 18rem;">
+              <img src="/images/textile.jpeg" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Virtual Reality</h5>
+                <p class="card-text">Explore immersive virtual reality experiences and create your own VR content using our VR equipment and software.</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
+                  <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card highlightable-card" style="width: 18rem;">
+                <img src="/images/laser.jpeg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Laser Cutting and Engraving</h5>
+                  <p class="card-text">Create intricate designs and patterns on various materials using our laser cutting and engraving machines.</p>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
+                    <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card highlightable-card" style="width: 18rem;">
+                  <img src="/images/textile.jpeg" alt="">
+                  <div class="card-body">
+                    <h5 class="card-title">Ceramics</h5>
+                    <p class="card-text">Get hands-on experience with pottery and ceramic arts, using our pottery wheels, kilns, and glazing equipment.</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
+                      <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card highlightable-card" style="width: 18rem;">
+                    <img src="/images/Fabrication.jpeg" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Metalworking</h5>
+                      <p class="card-text">Learn metalworking techniques such as welding and blacksmithing to create metal sculptures, jewelry, and functional objects.</p>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
+                        <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
       <div class="col-md-4">
         <div class="card highlightable-card">
           <div class="card-header">
