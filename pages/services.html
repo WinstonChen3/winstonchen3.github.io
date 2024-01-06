@@ -20,7 +20,7 @@
   .card{
     height: 90%;
     width: 90%;
-    margin-left: 10px;
+    margin : 10px;
   }
     .card-body.selected {
     background-color: #f0f0f0; 
@@ -130,6 +130,9 @@
   .bi {
 fill: white;
 }
+.highlight {
+  outline: 2px solid yellow;
+}
 </style>
 <body>
   <header>
@@ -180,179 +183,105 @@ fill: white;
 <div class="container">
   <div class="row">
   <div class="col-md-4">
-  <div class="card highlightable-card" style="width: 18rem;">
+  <div class="card highlightable-card" onclick="toggleHighlight(this)">
     <img src="/images/3d.jpeg" alt="">
     <div class="card-body">
       <h5 class="card-title">3D Printing</h5>
       <p class="card-text">Utilize our state-of-the-art 3D printers to bring your digital designs to life with precision and accuracy.</p>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
-        <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
-      </div>
     </div>
   </div>
   </div>
   <div class="col-md-4">
-    <div class="card highlightable-card" style="width: 18rem;">
+    <div class="card highlightable-card" onclick="toggleHighlight(this)">
       <img src="/images/wood.jpeg" alt="">
       <div class="card-body">
         <h5 class="card-title">Woodworking</h5>
         <p class="card-text">Learn woodworking techniques and access our fully equipped woodworking shop to create custom furniture, crafts, and more.</p>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
-          <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
-        </div>
       </div>
     </div>
     </div>
     <div class="col-md-4">
-      <div class="card highlightable-card" style="width: 18rem;">
+      <div class="card highlightable-card" onclick="toggleHighlight(this)">
         <img src="/images/electric.jpeg" alt="">
         <div class="card-body">
           <h5 class="card-title">Electronics Prototyping</h5>
           <p class="card-text">Experiment with circuits, microcontrollers, and sensors to prototype your electronic projects and innovations.</p>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
-            <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
-          </div>
         </div>
       </div>
       </div>
       <div class="col-md-4">
-        <div class="card highlightable-card" style="width: 18rem;">
+        <div class="card highlightable-card" onclick="toggleHighlight(this)">
           <img src="/images/textile.jpeg" alt="">
           <div class="card-body">
             <h5 class="card-title">Textile Design</h5>
             <p class="card-text">Explore textile arts and design by using our sewing machines, embroidery tools, and fabric dyeing equipment.</p>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
-              <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
-            </div>
           </div>
         </div>
         </div>
-        <div class="col-md-4">
-          <div class="card highlightable-card" style="width: 18rem;">
-            <img src="/images/textile.jpeg" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Textile Design</h5>
-              <p class="card-text">Explore textile arts and design by using our sewing machines, embroidery tools, and fabric dyeing equipment.</p>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
-                <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
-              </div>
-            </div>
-          </div>
-          </div>
           <div class="col-md-4">
-            <div class="card highlightable-card" style="width: 18rem;">
-              <img src="/images/textile.jpeg" alt="">
+            <div class="card highlightable-card"onclick="toggleHighlight(this)" >
+              <img src="/images/vr.jpeg" alt="">
               <div class="card-body">
                 <h5 class="card-title">Virtual Reality</h5>
                 <p class="card-text">Explore immersive virtual reality experiences and create your own VR content using our VR equipment and software.</p>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
-                  <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
-                </div>
               </div>
             </div>
             </div>
             <div class="col-md-4">
-              <div class="card highlightable-card" style="width: 18rem;">
+              <div class="card highlightable-card"onclick="toggleHighlight(this)" >
                 <img src="/images/laser.jpeg" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Laser Cutting and Engraving</h5>
                   <p class="card-text">Create intricate designs and patterns on various materials using our laser cutting and engraving machines.</p>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
-                    <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
-                  </div>
                 </div>
               </div>
               </div>
               <div class="col-md-4">
-                <div class="card highlightable-card" style="width: 18rem;">
+                <div class="card highlightable-card" onclick="toggleHighlight(this)">
                   <img src="/images/textile.jpeg" alt="">
                   <div class="card-body">
                     <h5 class="card-title">Ceramics</h5>
                     <p class="card-text">Get hands-on experience with pottery and ceramic arts, using our pottery wheels, kilns, and glazing equipment.</p>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
-                      <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
-                    </div>
                   </div>
                 </div>
                 </div>
                 <div class="col-md-4">
-                  <div class="card highlightable-card" style="width: 18rem;">
+                  <div class="card highlightable-card" onclick="toggleHighlight(this)">
                     <img src="/images/Fabrication.jpeg" alt="">
                     <div class="card-body">
                       <h5 class="card-title">Metalworking</h5>
                       <p class="card-text">Learn metalworking techniques such as welding and blacksmithing to create metal sculptures, jewelry, and functional objects.</p>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="3dPrintingCheckbox">
-                        <label class="form-check-label" for="3dPrintingCheckbox">Add to Cart</label>
-                      </div>
                     </div>
                   </div>
                   </div>
-      <div class="col-md-4">
-        <div class="card highlightable-card">
-          <div class="card-header">
-            <h5 class="card-title">Virtual Reality (VR)</h5>
-          </div>
-          <div class="card-body">
-            <img src="/images/vr.jpeg" alt="">
-            <p class="card-text">Explore immersive virtual reality experiences and create your own VR content using our VR equipment and software.</p>
-          </div>
-        </div>
-      </div>
-<div class="col-md-4">
-  <div class="card highlightable-card">
-    <div class="card-header">
-      <h5 class="card-title">Robotics</h5>
-    </div>
-    <div class="card-body">
-      <img src="/images/robot.jpeg" alt="">
-      <p class="card-text">Learn robotics programming and build autonomous robots using our robotics kits, sensors, and programming tools.</p>
-    </div>
-  </div>
-</div>
-<div class="col-md-4">
-  <div class="card highlightable-card">
-    <div class="card-header">
-            <h5 class="card-title">Audio and Music Production</h5>
-          </div>
-          <div class```html
-        <div class="card-body">
-          <img src="/images/music.png" alt="">
-          <p class="card-text">Access our sound recording studio and music production equipment to create and edit your own music and audio projects.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card highlightable-card">
-        <div class="card-header">
-          <h5 class="card-title">Coding and Programming</h5>
-        </div>
-        <div class="card-body">
-          <img src="/images/coding.jpeg" alt="">
-          <p class="card-text">Learn coding languages, web development, and software programming using our computers and coding resources.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card highlightable-card">
-        <div class="card-header">
-          <h5 class="card-title">Augmented Reality (AR)</h5>
-        </div>
-        <div class="card-body">
-          <img src="/images/ar.jpeg" alt="">
-          <p class="card-text">Explore and develop augmented reality applications and experiences using our AR devices and development tools.</p>
-        </div>
-      </div>
-    </div>
-    <a class="nav-link text-white border border-white w-25 bg-dark" href="../pages/signup.html">Buy Now</a>
+                  <div class="col-md-4">
+                    <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                      <img src="/images/textile.jpeg" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title">Audio and Music Production</h5>
+                        <p class="card-text">Access our sound recording studio and music production equipment to create and edit your own music 
+                      </div>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card highlightable-card" onclick="toggleHighlight(this)" >
+                        <img src="/images/ar.jpeg" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Augmented Reality (AR)</h5>
+                          <p class="card-text">Explore and develop augmented reality applications and experiences using our AR devices and development tools.</p>
+                        </div>
+                      </div>
+                      </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                            <img src="/images/coding.jpeg" alt="">
+                            <div class="card-body">
+                              <h5 class="card-title">Coding and Programming</h5>
+                              <p class="card-text">Learn coding languages, web development, and software programming using our computers and coding resources.</p>
+                            </div>
+                          </div>
+                          </div>
+    <button>Buy Now</button>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="bootstrap" viewBox="0 0 118 94">
         <title>Bootstrap</title>
@@ -368,35 +297,30 @@ fill: white;
         <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
       </symbol>
     </svg>
-    <div class="container-fluid d-flex flex-column min-vh-50 bg-dark bg-gradient " >
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
-        <p class="col-md-4 col-12 mb-0 text-white">&copy; 2023 Techlab</p>
-    
-        <div class="container1 col-md-4 col-12">
-          <a href="/" class="navbar-brand d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <img style="left: 16%;" src="/images/3.png" alt="">
-          </a>
-        </div>
-    
-        <ul class="nav col-md-4 col-12 justify-content-end">
-          <li class="ms-3"><a class="link-body-emphasis fa-3x" href="#"><svg class="bi" width="30" height="30"><use xlink:href="#twitter"/></svg></a></li>
-          <li class="ms-3"><a class="link-body-emphasis fa-3x" href="#"><svg class="bi" width="30" height="30"><use xlink:href="#instagram"/></svg></a></li>
-          <li class="ms-3"><a class="link-body-emphasis fa-3x" href="#"><svg class="bi" width="30" height="30"><use xlink:href="#facebook"/></svg></a></li>
-        </ul>
-      </footer>
-    </div>
+  
+  <div class="b-example-divider"></div>
+  
+  <div class="container-fluid d-flex flex-column min-vh-50 bg-dark " >
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+      <p class="col-md-4 col-12 mb-0 text-white">&copy; 2023 Techlab</p>
+  
+      <div class="container1 col-md-4 col-12">
+        <a href="/" class="navbar-brand d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <img style="align-self: center;" src="/images/3.png" alt="">
+        </a>
+      </div>
+  
+      <ul class="nav col-md-4 col-12 justify-content-end">
+        <li class="ms-3"><a class="link-body-emphasis fa-3x" href="twitter.com"><svg class="bi" width="30" height="30"><use xlink:href="#twitter"/></svg></a></li>
+        <li class="ms-3"><a class="link-body-emphasis fa-3x" href="instagram.com"><svg class="bi" width="30" height="30"><use xlink:href="#instagram"/></svg></a></li>
+        <li class="ms-3"><a class="link-body-emphasis fa-3x" href="facebook.com"><svg class="bi" width="30" height="30"><use xlink:href="#facebook"/></svg></a></li>
+      </ul>
+    </footer>
+  </div>
     <script>
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', function() {
-        const cardBody = this.parentNode.parentNode;
-        if (this.checked) {
-          cardBody.classList.add('selected');
-        } else {
-          cardBody.classList.remove('selected');
-        }
-      });
-    });
+function toggleHighlight(card) {
+  card.classList.toggle('highlight');
+}
   </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

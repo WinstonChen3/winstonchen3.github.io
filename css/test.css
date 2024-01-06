@@ -83,7 +83,6 @@ footer {
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
 }
 
 .footer-section img{
@@ -98,20 +97,6 @@ footer {
   margin-bottom: 10px;
 }
 
-.footer-bottom {
-  text-align:center;
-}
-
-
-
-.footer-bottom {
-  background-color:#333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-
-}
 
 .popup {
   display: none;
@@ -248,14 +233,7 @@ label {
       color:#fff;
   }
   
-  .footer-bottom {
-    text-align: center;
-    color: #fff;
-    position:absolute;
-    margin-top:200px;
-  }
-  
-  /* Responsive Styles */
+
   @media only screen and (max-width: 768px) {
     .footer-section {
       flex-basis: 100%;
