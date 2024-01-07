@@ -7,9 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/services.css">
     <title>Document</title>
-</head>
 <style>
-  .highlightable-card {
+  .dropdown-toggle:focus {
+  box-shadow: none;
+  outline: none;
+}
+.highlightable-card {
   transition: box-shadow 0.3s;
 }
 
@@ -20,7 +23,8 @@
   .card{
     height: 90%;
     width: 90%;
-    margin : 10px;
+    margin: 10px;
+    min-height: 400px;
   }
     .card-body.selected {
     background-color: #f0f0f0; 
@@ -52,15 +56,15 @@
 .nav-link:hover::after {
   transform: scaleX(1);
 }
-.dropdown-item.btn {
-  padding: 0;
-  background-color: transparent;
-  border: none;
+.dropdown-item::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s;
 }
 
-.dropdown-item.btn:focus {
-  outline: none;
-  box-shadow: none;
+.dropdown-item:hover::after {
+  border-bottom-color: #ffffff;
 }
 
 .svg-large{
@@ -133,7 +137,10 @@ fill: white;
 .highlight {
   outline: 2px solid yellow;
 }
+
 </style>
+  </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-dark bg-gradient navbar-inverse" role="navigation">
@@ -180,109 +187,109 @@ fill: white;
       </div>
     </nav>
   </header>
-<div class="container">
-  <div class="row">
-  <div class="col-md-4">
-  <div class="card highlightable-card" onclick="toggleHighlight(this)">
-    <img src="/images/3d.jpeg" alt="">
-    <div class="card-body">
-      <h5 class="card-title">3D Printing</h5>
-      <p class="card-text">Utilize our state-of-the-art 3D printers to bring your digital designs to life with precision and accuracy.</p>
-    </div>
-  </div>
-  </div>
-  <div class="col-md-4">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-4">
     <div class="card highlightable-card" onclick="toggleHighlight(this)">
-      <img src="/images/wood.jpeg" alt="">
+      <img src="/images/3d.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
       <div class="card-body">
-        <h5 class="card-title">Woodworking</h5>
-        <p class="card-text">Learn woodworking techniques and access our fully equipped woodworking shop to create custom furniture, crafts, and more.</p>
+        <h5 class="card-title">3D Printing</h5>
+        <p class="card-text">Utilize our state-of-the-art 3D printers to bring your digital designs to life with precision and accuracy.</p>
       </div>
     </div>
     </div>
     <div class="col-md-4">
       <div class="card highlightable-card" onclick="toggleHighlight(this)">
-        <img src="/images/electric.jpeg" alt="">
+        <img src="/images/wood.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
         <div class="card-body">
-          <h5 class="card-title">Electronics Prototyping</h5>
-          <p class="card-text">Experiment with circuits, microcontrollers, and sensors to prototype your electronic projects and innovations.</p>
+          <h5 class="card-title">Woodworking</h5>
+          <p class="card-text">Learn woodworking techniques and access our fully equipped woodworking shop to create custom furniture, crafts, and more.</p>
         </div>
       </div>
       </div>
       <div class="col-md-4">
         <div class="card highlightable-card" onclick="toggleHighlight(this)">
-          <img src="/images/textile.jpeg" alt="">
+          <img src="/images/electric.jpeg"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
           <div class="card-body">
-            <h5 class="card-title">Textile Design</h5>
-            <p class="card-text">Explore textile arts and design by using our sewing machines, embroidery tools, and fabric dyeing equipment.</p>
+            <h5 class="card-title">Electronics Prototyping</h5>
+            <p class="card-text">Experiment with circuits, microcontrollers, and sensors to prototype your electronic projects and innovations.</p>
           </div>
         </div>
         </div>
-          <div class="col-md-4">
-            <div class="card highlightable-card"onclick="toggleHighlight(this)" >
-              <img src="/images/vr.jpeg" alt="">
-              <div class="card-body">
-                <h5 class="card-title">Virtual Reality</h5>
-                <p class="card-text">Explore immersive virtual reality experiences and create your own VR content using our VR equipment and software.</p>
-              </div>
+        <div class="col-md-4">
+          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+            <img src="/images/textile.jpeg"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Textile Design</h5>
+              <p class="card-text">Explore textile arts and design by using our sewing machines, embroidery tools, and fabric dyeing equipment.</p>
             </div>
-            </div>
+          </div>
+          </div>
             <div class="col-md-4">
-              <div class="card highlightable-card"onclick="toggleHighlight(this)" >
-                <img src="/images/laser.jpeg" alt="">
+              <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                <img src="/images/vr.jpeg"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
                 <div class="card-body">
-                  <h5 class="card-title">Laser Cutting and Engraving</h5>
-                  <p class="card-text">Create intricate designs and patterns on various materials using our laser cutting and engraving machines.</p>
+                  <h5 class="card-title">Virtual Reality</h5>
+                  <p class="card-text">Explore immersive virtual reality experiences and create your own VR content using our VR equipment and software.</p>
                 </div>
               </div>
               </div>
               <div class="col-md-4">
                 <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                  <img src="/images/textile.jpeg" alt="">
+                  <img src="/images/laser.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
                   <div class="card-body">
-                    <h5 class="card-title">Ceramics</h5>
-                    <p class="card-text">Get hands-on experience with pottery and ceramic arts, using our pottery wheels, kilns, and glazing equipment.</p>
+                    <h5 class="card-title">Laser Cutting and Engraving</h5>
+                    <p class="card-text">Create intricate designs and patterns on various materials using our laser cutting and engraving machines.</p>
                   </div>
                 </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                    <img src="/images/Fabrication.jpeg" alt="">
+                    <img src="/images/textile.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
                     <div class="card-body">
-                      <h5 class="card-title">Metalworking</h5>
-                      <p class="card-text">Learn metalworking techniques such as welding and blacksmithing to create metal sculptures, jewelry, and functional objects.</p>
+                      <h5 class="card-title">Ceramics</h5>
+                      <p class="card-text">Get hands-on experience with pottery and ceramic arts, using our pottery wheels, kilns, and glazing equipment.</p>
                     </div>
                   </div>
                   </div>
                   <div class="col-md-4">
                     <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                      <img src="/images/textile.jpeg" alt="">
+                      <img src="/images/Fabrication.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
                       <div class="card-body">
-                        <h5 class="card-title">Audio and Music Production</h5>
-                        <p class="card-text">Access our sound recording studio and music production equipment to create and edit your own music 
+                        <h5 class="card-title">Metalworking</h5>
+                        <p class="card-text">Learn metalworking techniques such as welding and blacksmithing to create metal sculptures, jewelry, and functional objects.</p>
                       </div>
                     </div>
                     </div>
                     <div class="col-md-4">
-                      <div class="card highlightable-card" onclick="toggleHighlight(this)" >
-                        <img src="/images/ar.jpeg" alt="">
+                      <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                        <img src="/images/textile.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
                         <div class="card-body">
-                          <h5 class="card-title">Augmented Reality (AR)</h5>
-                          <p class="card-text">Explore and develop augmented reality applications and experiences using our AR devices and development tools.</p>
+                          <h5 class="card-title">Audio and Music Production</h5>
+                          <p class="card-text">Access our sound recording studio and music production equipment to create and edit your own music 
                         </div>
                       </div>
                       </div>
+                      <div class="col-md-4">
+                        <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                          <img src="/images/ar.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                          <div class="card-body">
+                            <h5 class="card-title">Augmented Reality (AR)</h5>
+                            <p class="card-text">Explore and develop augmented reality applications and experiences using our AR devices and development tools.</p>
+                          </div>
+                        </div>
+                        </div>
                         <div class="col-md-4">
                           <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                            <img src="/images/coding.jpeg" alt="">
+                              <img src="/images/coding.jpg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
                             <div class="card-body">
                               <h5 class="card-title">Coding and Programming</h5>
                               <p class="card-text">Learn coding languages, web development, and software programming using our computers and coding resources.</p>
                             </div>
                           </div>
-                          </div>
+                        </div>
+    </div>
   </div>
-</div>
     <button>Buy Now</button>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="bootstrap" viewBox="0 0 118 94">

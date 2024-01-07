@@ -62,10 +62,6 @@ header {
 .mr-0 {
   margin-right: 0;
 }
-.dropdown-toggle:focus {
-  box-shadow: none;
-  outline: none;
-}
 .hero {
   background-color: #f2f2f2;
   padding: 50px;
