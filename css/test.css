@@ -1,5 +1,5 @@
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -22,24 +22,14 @@ header {
   width: 100px;
 }
 
-
-.container1{
-  max-width: 100%; /* Take up the full width of the column */
-  max-height: 40%; /* Set the height to occupy the full viewport height */
-  position: relative;
-}
-.container1 img{
-  max-width: 100%;
-  height: 40%;
-  object-fit: contain;
-  position: relative;
+.container1 img {
+  max-width: 40%;
+  max-height: 40%;
 }
 /* Add your existing CSS styles here */
 
-
-
-.btn{
-  background-color:#333;
+.btn {
+  background-color: #333;
   color: #fff;
 }
 button {
@@ -51,7 +41,6 @@ button {
   margin-top: 20px;
   border: #333;
 }
-
 
 button a {
   color: #fff;
@@ -74,120 +63,6 @@ button a {
   align-items: right;
 }
 
-/* Footer */
-footer {
-  background-color: #666;
-  color: #fff;
-  padding: 20px;
-}
-
-.footer-content {
-  display: flex;
-}
-
-.footer-section img{
-  width: 25%;
-  height: 80%;  
-}
-.footer-section {
-  flex: 1;
-}
-
-.footer-section h3 {
-  margin-bottom: 10px;
-}
-
-
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color:#000000;
-  padding: 20px;
-  display: none;
-  z-index: 9999;
-}
-
-.popup-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #000000;
-  padding: 20px;
-  text-align: center;
-  border: 2px solid #C0C0C0;
-  border-top: 2px solid #C0C0C0;
-  border-bottom: 2px solid #C0C0C0;
-  border-right: 2px solid #C0C0C0;
-  border-left: 2px solid #C0C0C0;
-}
-
-.popup-content h2 {
-  margin-top: 0;
-  color: #C0C0C0;
-}
-
-.popup-content p {
-  color: #C0C0C0;
-}
-
-.popup-content input[type="email"],
-.popup-content button {
-  background-color: #000000;
-  color: #C0C0C0;
-  border: 2px solid #C0C0C0 ;
-  padding: 10px 20px;
-  margin-top: 10px;
-  cursor: pointer;
-  border-left:2px solid #C0C0C0;
-}
-
-.popup-content input[type="email"]::placeholder {
-  color: #C0C0C0;
-}
-
-.popup-content button {
-  background-color: #000000;
-  color: #C0C0C0;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s ease;
-  border-left:2px solid #C0C0C0;
-}
-
-.popup-content button::before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #C0C0C0;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.popup-content button:hover::before {
-  transform: scaleX(1);
-}
-
-.close-signup-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-}
 .cont {
   max-width: 400px;
   margin: 0 auto;
@@ -207,102 +82,75 @@ form {
   text-align: left;
 }
 
+.container {
+  max-width: 100%; /* Take up the full width of the column */
+  max-height: 40%; /* Set the height to occupy the full viewport height */
+}
+.container img {
+  max-width: 100%;
+  height: 40%;
+  object-fit: contain;
+}
+
 label {
   display: block;
   margin-bottom: 5px;
 }
-
-  
-  .footer-content {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .footer-section {
-    flex-basis: 30%;
-    margin-bottom: 20px;
-  }
-  
-  .footer-section h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .footer p{
-      color:#fff;
-  }
-  
-
-  @media only screen and (max-width: 768px) {
-    .footer-section {
-      flex-basis: 100%;
-    }
-  }
-  .sideA{
-      width: auto;
-      float: left;
-      color:#C0C0C0;
-      border-right:2px solid #C0C0C0 ;
-      padding-right: 100px;
-  }
-  .sideC{
-      width: 250px;
-      float: left;
-      padding-left: 10px;
-      padding-right: 5px;
-      color:#C0C0C0;
-      top:50%;
-      border-right:2px solid #C0C0C0 ;
-  }
-  .sideE{
-      width: 250px;
-      padding-left: 10px;
-      padding-right: 5px;
-      color:#C0C0C0;
-      top:50%;
-      text-align:center;
-      border-bottom:2px solid #C0C0C0 ;
-  }
-  .sideD{
-      width:250px;
-      float:right;
-      padding-left:5px;
-      padding-right:10px;
-      color:#C0C0C0;
-      right: 1%;
-      top:50%;
-      border-left:2px solid #C0C0C0 ;
-  }
-  .sideB{
-      width:auto;
-      float:right;
-      padding-left:5px;
-      padding-right:10px;
-      color:#C0C0C0;
-      margin-right: 1%;
-      border-left:2px solid #C0C0C0 ;
-  }
+.sideA {
+  width: auto;
+  float: left;
+  color: #c0c0c0;
+  border-right: 2px solid #c0c0c0;
+  padding-right: 100px;
+}
+.sideC {
+  width: 250px;
+  float: left;
+  padding-left: 10px;
+  padding-right: 5px;
+  color: #c0c0c0;
+  top: 50%;
+  border-right: 2px solid #c0c0c0;
+}
+.sideE {
+  width: 250px;
+  padding-left: 10px;
+  padding-right: 5px;
+  color: #c0c0c0;
+  top: 50%;
+  text-align: center;
+  border-bottom: 2px solid #c0c0c0;
+}
+.sideD {
+  width: 250px;
+  float: right;
+  padding-left: 5px;
+  padding-right: 10px;
+  color: #c0c0c0;
+  right: 1%;
+  top: 50%;
+  border-left: 2px solid #c0c0c0;
+}
+.sideB {
+  width: auto;
+  float: right;
+  padding-left: 5px;
+  padding-right: 10px;
+  color: #c0c0c0;
+  margin-right: 1%;
+  border-left: 2px solid #c0c0c0;
+}
 /* Example styles for the navigation bar */
 .navbar {
   background-color: #333;
-  height: 100px; 
-  
+  height: 100px;
 }
 
-.btn{
+.btn {
   border-color: #222;
 }
-.navbar-brand img {
-  max-width: 25%;
-  height: auto;
-  object-fit: contain;
-  position: relative;
-  padding: 0;
-}
 
-
-.mr-0{
+.mr-0 {
   margin-right: 0;
 }
 .dropdown-toggle:focus {
@@ -316,20 +164,20 @@ label {
 }
 
 .hero h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 36px;
   font-weight: bold;
   color: #333;
 }
 
 .hero p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   color: #666;
 }
 
-.btn{
-  background-color:#333;
+.btn {
+  background-color: #333;
   color: #fff;
 }
 button {
@@ -360,12 +208,29 @@ button:hover {
   fill-opacity: inherit;
 }
 
-
 .navright {
   font-size: 18px;
   color: #fff;
   text-decoration: none;
   text-align: right;
+}
+
+.navbar-brand img {
+  max-width: 25%;
+  height: auto;
+  object-fit: contain;
+  padding: 0;
+}
+.navbar-brand {
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-toggler {
+  color: #fff;
+  border-color: #fff;
 }
 
 .hero {
@@ -472,39 +337,14 @@ button a {
 footer {
   background-color: #333;
   color: #fff;
-  padding: 20px;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-section img{
+.footer-section img {
   width: 25%;
-  height: 80%;  
+  height: 80%;
 }
 .footer-section {
   flex: 1;
-}
-
-.footer-section h3 {
-  margin-bottom: 10px;
-}
-
-.footer-bottom {
-  text-align:center;
-}
-
-
-
-.footer-bottom {
-  background-color:#333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-
 }
 
 .popup {

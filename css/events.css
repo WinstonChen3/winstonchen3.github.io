@@ -1,21 +1,35 @@
-@font-face {
-  font-family: 'Raleway';
-  src: url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
-  /* Add more src declarations if you have different font formats */
-  font-weight: bold;
-  font-style: italic;
-} 
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
-  /* Add more src declarations if you have different font formats */
-  font-weight: bold;
-  font-style: italic;
-} 
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+}
+.dropdown-container {
+  position: relative;
+  width: fit-content;
+}
 
-.btn{
-  background-color:#333;
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Bottom of button */
+  right: 0;
+  margin-left: -10px; /* More to the left */
+  width: 100px;
+}
+
+.container1 img {
+  max-width: 40%;
+  max-height: 40%;
+}
+/* Add your existing CSS styles here */
+
+.btn {
+  background-color: #333;
   color: #fff;
 }
 button {
@@ -27,7 +41,6 @@ button {
   margin-top: 20px;
   border: #333;
 }
-
 
 button a {
   color: #fff;
@@ -50,43 +63,288 @@ button a {
   align-items: right;
 }
 
+.cont {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+form {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.container {
+  max-width: 100%; /* Take up the full width of the column */
+  max-height: 40%; /* Set the height to occupy the full viewport height */
+}
+.container img {
+  max-width: 100%;
+  height: 40%;
+  object-fit: contain;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+.sideA {
+  width: auto;
+  float: left;
+  color: #c0c0c0;
+  border-right: 2px solid #c0c0c0;
+  padding-right: 100px;
+}
+.sideC {
+  width: 250px;
+  float: left;
+  padding-left: 10px;
+  padding-right: 5px;
+  color: #c0c0c0;
+  top: 50%;
+  border-right: 2px solid #c0c0c0;
+}
+.sideE {
+  width: 250px;
+  padding-left: 10px;
+  padding-right: 5px;
+  color: #c0c0c0;
+  top: 50%;
+  text-align: center;
+  border-bottom: 2px solid #c0c0c0;
+}
+.sideD {
+  width: 250px;
+  float: right;
+  padding-left: 5px;
+  padding-right: 10px;
+  color: #c0c0c0;
+  right: 1%;
+  top: 50%;
+  border-left: 2px solid #c0c0c0;
+}
+.sideB {
+  width: auto;
+  float: right;
+  padding-left: 5px;
+  padding-right: 10px;
+  color: #c0c0c0;
+  margin-right: 1%;
+  border-left: 2px solid #c0c0c0;
+}
+/* Example styles for the navigation bar */
+.navbar {
+  background-color: #333;
+  height: 100px;
+}
+
+.btn {
+  border-color: #222;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+.dropdown-toggle:focus {
+  box-shadow: none;
+  outline: none;
+}
+.hero {
+  background-color: #f2f2f2;
+  padding: 50px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.hero p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #666;
+}
+
+.btn {
+  background-color: #333;
+  color: #fff;
+}
+button {
+  display: none;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 20px;
+  border: #333;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Add more CSS styles for the rest of your website */
+
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  text-align: center;
+  fill-opacity: inherit;
+}
+
+.navright {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  text-align: right;
+}
+
+.navbar-brand img {
+  max-width: 25%;
+  height: auto;
+  object-fit: contain;
+  padding: 0;
+}
+.navbar-brand {
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-toggler {
+  color: #fff;
+  border-color: #fff;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+button a {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  align-items: right;
+}
+/* Main */
+.features {
+  margin: 50px 0;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.feature {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.feature img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+}
+
+.testimonials {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonial {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial blockquote {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.testimonial cite {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 /* Footer */
 footer {
   background-color: #333;
   color: #fff;
-  padding: 20px;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-section img{
+.footer-section img {
   width: 25%;
-  height: 80%;  
+  height: 80%;
 }
 .footer-section {
   flex: 1;
-}
-
-.footer-section h3 {
-  margin-bottom: 10px;
-}
-
-.footer-bottom {
-  text-align:center;
-}
-
-
-
-.footer-bottom {
-  background-color:#333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-
 }
 
 .popup {
@@ -162,630 +420,24 @@ label {
   margin-bottom: 5px;
 }
 
-  
-  .footer-content {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .footer-section {
-    flex-basis: 30%;
-    margin-bottom: 20px;
-  }
-  
-  .footer-section h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .footer p{
-      color:#fff;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    color: #fff;
-    position:absolute;
-    margin-top:200px;
-  }
-  
-  /* Responsive Styles */
-  @media only screen and (max-width: 768px) {
-    .footer-section {
-      flex-basis: 100%;
-    }
-  }
-  #sideA{
-      width: auto;
-      float: left;
-      padding-left: 10px;
-      padding-right: 5px;
-      color:#C0C0C0;
-      border-right:2px solid #C0C0C0 ;
-      
-  }
-  #sideC{
-      width: 250px;
-      float: left;
-      padding-left: 10px;
-      padding-right: 5px;
-      color:#C0C0C0;
-      top:50%;
-      border-right:2px solid #C0C0C0 ;
-  }
-  #sideE{
-      width: 250px;
-      padding-left: 10px;
-      padding-right: 5px;
-      color:#C0C0C0;
-      top:50%;
-      text-align:center;
-      border-bottom:2px solid #C0C0C0 ;
-  }
-  #sideD{
-      width:250px;
-      float:right;
-      padding-left:5px;
-      padding-right:10px;
-      color:#C0C0C0;
-      top:50%;
-      border-left:2px solid #C0C0C0 ;
-  }
-  #sideB{
-      width:auto;
-      float:right;
-      padding-left:5px;
-      padding-right:10px;
-      color:#C0C0C0;
-      border-left:2px solid #C0C0C0 ;
-  }
-  footer {
-    padding: 20px;
-    text-align: center;
-    height:225px;
-  }
-  
-  footer img{
-      width:40%;
-      height:90%;
-  }
-  main {
-    padding: 20px;
-  }
-  
-  footer{
-      background-color:#888;
-  }
-  section{
-    border-bottom:2px solid #000;
-  }
-  section {
-    margin-bottom: 40px;
-  }
-  
-  h2 {
-    font-size: 20px;
-    margin: 0;
-  }
-  
-  p {
-    font-size: 16px;
-    line-height: 1.5;
-    font-family:'Raleway';
-  }
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  
-  h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  .slideshow-container {
-    max-width: 100%; /* Take up the full width of the column */
-    max-height: 40%; /* Set the height to occupy the full viewport height */
-    position: relative;
-  }
-  /* Adjust the max-height value if needed */
-  .slideshow-container .mySlides img {
-    max-width: 100%;
-    height: 40%;
-    object-fit: contain;
-    position: relative;
-    text-align:left;
-  }
-  
-  
-  /* Set a default font */
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  
-  /* Hero section styles */
-  .hero {
-    text-align: center;
-  }
-  
-  .hero h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
-  
-  .hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  /* Button styles */
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  
-  /* Footer styles */
-  footer {
-    background-color: #333;
-    padding: 20px;
-    color: #fff;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .footer-content p {
-    font-size: 16px;
-    margin-right: 10px;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 24px;
-    color: #333;
-    transition: color 0.3s ease;
-  }
-  
-  .social-icons a:hover {
-    color: #007bff;
-  }
-  /* Copyright styles */
-  .copyright {
-    text-align: center;
-    font-size: 14px;
-    color:#fff;
-  }
-  
-  .slide-img {
-    position: relative;
-  }
-  .navbar {
-    padding: 10px;
-    font-family:'Raleway','Montserrat';
-    text-align: center;
-    color:#333;
-  }
-  
-  .navbar-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .nav-item {
-    margin: 0 10px;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    color: #333;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  .nav-link:hover {
-    background-color: #000;
-    color: #fff;
-  }
-  body {
-    font-family: 'Raleway', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .dropdown-container {
-    position: relative;
-    width: fit-content;
-  }
-  
-  .dropdown-menu {
-    position: absolute;
-    top: 100%; /* Bottom of button */
-    right: 0;
-    margin-left: -10px; /* More to the left */
-    width: 100px;
-  }
-  
-  
-  .container{
-    max-width: 100%; /* Take up the full width of the column */
-    max-height: 40%; /* Set the height to occupy the full viewport height */
-    position: relative;
-  }
-  .container img{
-    max-width: 100%;
-    height: 40%;
-    object-fit: contain;
-    position: relative;
-  }
-  /* Add your existing CSS styles here */
-  
-  /* Example styles for the navigation bar */
-  .navbar {
-    background-color: #333;
-    height: 100px; 
-    
-  }
-  
-  .btn{
-    border-color: #222;
-  }
-  .navbar-brand img {
-    max-width: 25%;
-    height: auto;
-    object-fit: contain;
-    position: relative;
-    padding: 0;
-  }
-  .navbar-brand{
-    width: fit-content;
-    height: fit-content;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-toggler {
-    color: #fff;
-    border-color: #fff;
-  }
-  
-  .navbar-nav .nav-link {
-    color: #fff;
-  }
-  
-  .mr-0{
-    margin-right: 0;
-  }
-  .dropdown-toggle:focus {
-    box-shadow: none;
-    outline: none;
-  }
-  .hero {
-    background-color: #f2f2f2;
-    padding: 50px;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .hero p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    color: #666;
-  }
-  
-  .btn{
-    background-color:#333;
-    color: #fff;
-  }
-  button {
-    display: none;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    margin-top: 20px;
-    border: #333;
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
-  
-  /* Add more CSS styles for the rest of your website */
-  
-  .navbar-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-item {
-    text-align: center;
-    fill-opacity: inherit;
-  }
-  
-  .nav-link {
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-  }
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #ffffff;
-    transition: width 0.3s ease-in-out;
-  
-    /* Transition effect */
-  }
-  .navright {
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    text-align: right;
-  }
-  
-  .hero {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  .hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  button a {
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  .btn:hover {
-    background-color: #555;
-  }
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-menu {
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    align-items: right;
-  }
-  /* Main */
-  .features {
-    margin: 50px 0;
-  }
-  
-  .features h2 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .feature {
-    text-align: left;
-    margin-bottom: 30px;
-  }
-  
-  .feature img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  
-  .feature h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .feature p {
-    font-size: 16px;
-  }
-  
-  .testimonials {
-    background-color: #f9f9f9;
-    padding: 50px 0;
-  }
-  
-  .testimonials h2 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .testimonial {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .testimonial img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  
-  .testimonial blockquote {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .testimonial cite {
-    font-size: 14px;
-    font-weight: bold;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .footer-section img{
-    width: 25%;
-    height: 80%;  
-  }
-  .footer-section {
-    flex: 1;
-  }
-  
-  .footer-section h3 {
-    margin-bottom: 10px;
-  }
-  
-  .footer-bottom {
-    text-align:center;
-  }
-  
-  
-  
-  .footer-bottom {
-    background-color:#333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-  
-  }
-  
-  .popup {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    position: relative;
-    width: 400px;
-  }
-  
-  .popup h2 {
-    margin-bottom: 10px;
-  }
-  
-  .popup p {
-    margin-bottom: 20px;
-  }
-  
-  .popup label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .popup input {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .popup button {
-    background-color: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .popup button:hover {
-    background-color: #555;
-  }
-  
-  .close-signup-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-  }
-  .cont {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  h2 {
-    margin-top: 0;
-  }
-  
-  form {
-    margin-top: 20px;
-    text-align: left;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  
-  input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

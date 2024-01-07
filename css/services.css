@@ -1,5 +1,4 @@
 body {
-  font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -13,7 +12,10 @@ header {
   position: relative;
   width: fit-content;
 }
-
+.container1 img {
+  max-width: 40%;
+  max-height: 40%;
+}
 .dropdown-menu {
   position: absolute;
   top: 100%; /* Bottom of button */
@@ -22,42 +24,34 @@ header {
   width: 100px;
 }
 
-
-.container{
+.container {
   max-width: 100%; /* Take up the full width of the column */
   max-height: 40%; /* Set the height to occupy the full viewport height */
-  position: relative;
 }
-.container img{
+.container img {
   max-width: 100%;
   height: 40%;
   object-fit: contain;
-  position: relative;
 }
 /* Add your existing CSS styles here */
 
 /* Example styles for the navigation bar */
 .navbar {
   background-color: #333;
-  height: 100px; 
-  
+  height: 100px;
 }
 
-.btn{
+.btn {
   border-color: #222;
 }
 .navbar-brand img {
   max-width: 25%;
   height: auto;
   object-fit: contain;
-  position: relative;
-  padding: 0;
 }
-.navbar-brand{
+.navbar-brand {
   width: fit-content;
   height: fit-content;
-  margin: 0;
-  padding: 0;
 }
 
 .navbar-toggler {
@@ -65,7 +59,7 @@ header {
   border-color: #fff;
 }
 
-.mr-0{
+.mr-0 {
   margin-right: 0;
 }
 .dropdown-toggle:focus {
@@ -79,20 +73,20 @@ header {
 }
 
 .hero h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 36px;
   font-weight: bold;
   color: #333;
 }
 
 .hero p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   color: #666;
 }
 
-.btn{
-  background-color:#333;
+.btn {
+  background-color: #333;
   color: #fff;
 }
 button {
@@ -129,7 +123,7 @@ button:hover {
   padding: 10px;
 }
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -254,14 +248,9 @@ footer {
   padding: 20px;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-section img{
+.footer-section img {
   width: 25%;
-  height: 80%;  
+  height: 80%;
 }
 .footer-section {
   flex: 1;
@@ -271,20 +260,7 @@ footer {
   margin-bottom: 10px;
 }
 
-.footer-bottom {
-  text-align:center;
-}
 
-
-
-.footer-bottom {
-  background-color:#333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-
-}
 
 .popup {
   background-color: #fff;
