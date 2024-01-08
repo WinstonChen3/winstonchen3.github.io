@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Techlab</title>
-  <link rel="stylesheet" type="text/css" href="css/test.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/test.css">
   <link rel="icon" href="/images/3.png" type="image/png">
   <style> 
 .nav-link {
@@ -56,10 +57,17 @@
       font-size: 3.5rem;
     }
   }
-
-  .b-example-divider {
+  .divider {
     width: 100%;
     height: 2rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgb(255, 255, 255);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  .divider2 {
+    width: 100%;
+    height: auto;
     background-color: rgba(0, 0, 0, .1);
     border: solid rgb(255, 255, 255);
     border-width: 1px 0;
@@ -71,44 +79,6 @@
     width: 1.5rem;
     height: 100vh;
   }
-
-  .bi {
-    vertical-align: -.125em;
-    fill: currentColor;
-  }
-
-  .nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-  }
-
-  .nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-
-
-  .bd-mode-toggle {
-    z-index: 1500;
-  }
-
-  .bd-mode-toggle .dropdown-menu .active .bi {
-    display: block !important;
-  }
-  .white {
-fill: white;
-}
-.centered{
-  align-self: center !important;
-}
   </style>
 </head>
 <body>
@@ -185,7 +155,11 @@ fill: white;
     <p class="text-dark">Welcome to Techlab, your community's creative hub! We provide a supportive environment for makers of all levels to explore their passions. Our makerspace is equipped with cutting-edge tools and machinery, including 3D printers, laser cutters, and more. With a vibrant community of like-minded individuals, workshops, and expert guidance, Techlab is the place to bring your ideas to life. Join us and unleash your creativity!</p</p>
     <br><br><a class="btn bg-dark text-white nav-link w-25" style="left: 37.5%;" href="pages/signup.html">Get Started</a>
   </div>
-
+  <div class="divider2">    
+    <div class="container">
+      <h1>Event Calendar</h1>
+      <div id="calendar"></div>
+    </div>  
   <main>
         <!-- Features Section -->
         <section class="features">
@@ -202,6 +176,7 @@ fill: white;
         </section>
     
   </main>
+  <div class="divider"></div>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="bootstrap" viewBox="0 0 118 94">
       <title>Bootstrap</title>
@@ -218,8 +193,6 @@ fill: white;
     </symbol>
   </svg>
 
-<div class="b-example-divider"></div>
-
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
     <div class="container-fluid d-flex flex-column min-vh-60 " ></div>
     <p class="col-md-2 col-6 mb-0 text-white">&copy; 2023 Techlab</p>
@@ -231,12 +204,16 @@ fill: white;
     </div>
 
     <ul class="nav col-md-2 col-6 justify-content-end">
-      <li class="ms-3"><a class="link-body-emphasis fa-3x" href="twitter.com"><svg class="white" width="30" height="30"><use xlink:href="#twitter"/></svg></a></li>
-      <li class="ms-3"><a class="link-body-emphasis fa-3x" href="instagram.com"><svg class="white" width="30" height="30"><use xlink:href="#instagram"/></svg></a></li>
-      <li class="ms-3"><a class="link-body-emphasis fa-3x" href="facebook.com"><svg class="white" width="30" height="30"><use xlink:href="#facebook"/></svg></a></li>
+      <li class="ms-3"><a class="link-body-emphasis fa-3x" href="twitter.com"><svg style="fill: white;"  width="30" height="30"><use xlink:href="#twitter"/></svg></a></li>
+      <li class="ms-3"><a class="link-body-emphasis fa-3x" href="instagram.com"><svg style="fill: white;"  width="30" height="30"><use xlink:href="#instagram"/></svg></a></li>
+      <li class="ms-3"><a class="link-body-emphasis fa-3x" href="facebook.com"><svg style="fill: white;" width="30" height="30"><use xlink:href="#facebook"/></svg></a></li>
     </ul>
   </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+  <script src="java/script.js"></script>
 </body>
 </html>
