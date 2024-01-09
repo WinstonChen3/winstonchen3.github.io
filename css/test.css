@@ -66,15 +66,12 @@ button {
   display: none;
   color: #fff;
   border: none;
-  padding: 10px 20px;
   text-decoration: none;
-  margin-top: 20px;
   border: #333;
 }
 
 button a {
   color: #fff;
-  padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
 }

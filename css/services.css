@@ -40,7 +40,14 @@ header {
   background-color: #333;
   height: 100px;
 }
-
+.middle_text {
+  padding:8px 16px;
+  border-radius:30px;
+  font-weight:bold;
+  color:#000000;
+  text-align: center;
+  background-color: #999;
+  }
 .btn {
   border-color: #222;
 }
