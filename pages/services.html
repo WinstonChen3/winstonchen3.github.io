@@ -21,10 +21,10 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
   .card{
-    height: 90%;
-    width: 90%;
+    height: fit-content;
+    width: fit-content;
     margin: 10px;
-    min-height: 400px;
+    min-height: 450px;
   }
     .card-body.selected {
     background-color: #f0f0f0; 
@@ -137,7 +137,6 @@ fill: white;
 .highlight {
   outline: 2px solid yellow;
 }
-
 </style>
   </head>
 
@@ -212,7 +211,7 @@ fill: white;
           <img src="/images/electric.jpeg"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
           <div class="card-body">
             <h5 class="card-title">Electronics Prototyping</h5>
-            <p class="card-text">Experiment with circuits, microcontrollers, and sensors to prototype your electronic projects and innovations.</p>
+            <p class="card-text">Experiment with circuits, microcontrollers, and sensors to test your projects and innovations.</p>
           </div>
         </div>
         </div>
@@ -227,7 +226,7 @@ fill: white;
           </div>
             <div class="col-md-4">
               <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                <img src="/images/vr.jpeg"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+                <img src="/images/vr.jpeg"class="card-img-top" alt="" style="height: 300px; width: 400px; object-fit: cover;" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Virtual Reality</h5>
                   <p class="card-text">Explore immersive virtual reality experiences and create your own VR content using our VR equipment and software.</p>
@@ -263,7 +262,7 @@ fill: white;
                     </div>
                     <div class="col-md-4">
                       <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                        <img src="/images/music.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+                        <img src="/images/music.png" class="card-img-top" alt="" style="height: 300px; width: 400px; object-fit: cover;" alt="">
                         <div class="card-body">
                           <h5 class="card-title">Audio and Music Production</h5>
                           <p class="card-text">Access our sound recording studio and music production equipment to create and edit your own music 
@@ -281,7 +280,7 @@ fill: white;
                         </div>
                         <div class="col-md-4">
                           <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                            <img src="/images/food.jpg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+                            <img src="/images/food.jpeg" class="card-img-top" alt="" style="height: 250px; width: 450px; object-fit: cover;" alt="">
                             <div class="card-body">
                               <h5 class="card-title">Food Hacking</h5>
                               <p class="card-text">Explore the intersection of food and technology, experiment with molecular gastronomy, and create innovative culinary experiences.</p>
@@ -299,7 +298,7 @@ fill: white;
                         </div>
     </div>
   </div>
-    <button>Buy Now</button>
+  <a class="nav-link text-white col-md-2 col-6 mx-auto border border-dark rounded bg-dark" style="text-align: center; width: fit-content;  " href="/pages/signup.html">Continue To Checkout</a>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="bootstrap" viewBox="0 0 118 94">
         <title>Bootstrap</title>
