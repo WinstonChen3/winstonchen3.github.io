@@ -42,6 +42,10 @@ $(document).ready(function() {
         title: 'AR and VR, Whats the difference?',
         start: '2024-01-13',
       },
+      {
+        title: 'RC Racing',
+        start: '2024-2-10'
+      }
       // Add more events as needed
     ]
   });
