@@ -45,6 +45,10 @@ $(document).ready(function() {
       {
         title: 'RC Racing',
         start: '2024-2-10'
+      },
+      {
+        title: 'Code And Crafts',
+        start: '2024-1-10'
       }
       // Add more events as needed
     ]
