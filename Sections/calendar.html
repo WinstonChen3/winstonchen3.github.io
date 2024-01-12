@@ -1,64 +1,181 @@
 <!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-    
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Techlab</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/test.css">
+  <link rel="icon" href="/images/3.png" type="image/png">
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+  <script>
 
-    <title>
-  
-    Demos
-  
-  | FullCalendar 
-</title>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth'
+      });
+      calendar.render();
+    });
 
-    
+  </script>
+  <style> 
+.nav-link {
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+.dropdown-item.btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.dropdown-item.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.svg-large{
+  height: 50%;
+  width:50%;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  .divider {
+    width: 100%;
+    height: 2rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgb(255, 255, 255);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  .divider2 {
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgb(255, 255, 255);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
 
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LM1SN3K0E"></script>
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
 
-    
-<link rel="icon" href="/favicon-32x32.png?v=63734d4d33b09dc30c8e6c8f0ff38e19" type="image/png"/>
-<link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/>
-
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Muli:300,400,600,800,900' />
-
-<link href='/css/calendar.css' rel='stylesheet' />
-
-
-
-
-  
-    <link rel='stylesheet' href='/docs/dist/demos.css?1701224432' />
-  
-
-  
-
-
-    
-
-
-
-
-
-  
-
-  
-    <script type='text/javascript' src='/java/script.js'></script>
-  
-
-
-  </head>
-  <body >
-
-
-        <div class='accordion' id='demo-accordion'></div>
-      </div>
-      <div class='demos__main'>
-        <div class='demos__main-container' id='demo-content'>
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }
+  .white {
+fill: white;
+}
+.centered{
+  align-self: center !important;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark bg-gradient navbar-inverse" role="navigation">
+      <div class="container-fluid bg-dark bg-gradient py-2"> <!-- Added padding to vertically center -->
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <a class="navbar-brand bg-transparent text-white" href="/index.html">
+              <img src="../images/3.png" alt="image/png"> <!-- Your icon or logo -->
+            </a>
+          </div>
+          <div class="col">
+            <ul class="navbar-nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/pages/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="../pages/events.html">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="../pages/equipment.html">Equipment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/clone/servicesclone.html">Services</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About Us
+                </a>
+                <ul class="dropdown-menu bg-dark">
+                  <li><a class="dropdown-item text-white" href="/pages/contacts.html">Contact Us</a></li>
+                  <li><a class="dropdown-item text-white" href="/pages/locations.html">Locations</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
+  
+        <!-- Right-aligned content -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../pages/signup.html">Get Started</a>
+          </li>
+        </ul>
       </div>
-    </div>
-  </div>
-</div>
-  <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dc4641f860664c6e824b093274f50291"}'></script><!-- Cloudflare Pages Analytics --></body>
+    </nav>
+  </header>
+<body>
+<div id="calendar"></div>
+</body>
 </html>
