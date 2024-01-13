@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.port": 5510
+    "liveServer.settings.port": 5511,
+    "livePreview.defaultPreviewPath": "/pages/services.html"
 }
