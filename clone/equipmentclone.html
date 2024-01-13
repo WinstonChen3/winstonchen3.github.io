@@ -8,29 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <link rel="icon" href="/images/3.png" type="image/png">
-  <style> 
-
-  
-
-
-.white {
-fill: white;
-}
-.highlightable-card {
-  transition: box-shadow 0.3s;
-}
-
-.highlightable-card:hover,
-.highlightable-card:focus {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-.highlight {
-  outline: 2px solid yellow;
-}
-
-
-
-
+<style> 
 .nav-link {
   position: relative;
   transition: 0.3s;
@@ -79,10 +57,17 @@ fill: white;
       font-size: 3.5rem;
     }
   }
-
-  .b-example-divider {
+  .divider {
     width: 100%;
-    height: 3rem;
+    height: 2rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgb(255, 255, 255);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  .divider2 {
+    width: 100%;
+    height: auto;
     background-color: rgba(0, 0, 0, .1);
     border: solid rgb(255, 255, 255);
     border-width: 1px 0;
@@ -94,7 +79,6 @@ fill: white;
     width: 1.5rem;
     height: 100vh;
   }
-
   .bi {
     vertical-align: -.125em;
     fill: currentColor;
@@ -126,8 +110,11 @@ fill: white;
   .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
   }
-  .bi {
+  .white {
 fill: white;
+}
+.centered{
+  align-self: center !important;
 }
   </style>
 </head>
@@ -144,16 +131,16 @@ fill: white;
           <div class="col">
             <ul class="navbar-nav justify-content-center">
               <li class="nav-item">
-                <a class="nav-link text-white" href="/pages/checkout.html">Home</a>
+                <a class="nav-link text-white" href="/pages/index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="../pages/events.html">Events</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="../pages/equipment.html">Equipment</a>
+                <a class="nav-link text-white" href="/clone/equipmentclone.html">Equipment</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="../pages/services.html">Services</a>
+                <a class="nav-link text-white" href="/clone/servicesclone.html">Services</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

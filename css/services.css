@@ -12,6 +12,7 @@ header {
   position: relative;
   width: fit-content;
 }
+.small-price { font-size:12px; }
 .container1 img {
   max-width: 40%;
   max-height: 40%;
