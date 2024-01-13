@@ -123,7 +123,15 @@
       background-color: #343a40; /* Dark background color */
       color: #fff !important; /* White text color */
       transition: none; /* Disable color change on click */
+      color: inherit;
+  background-color: transparent;
+  border: none;
     }
+
+.accordion-button.active, 
+.accordion-button:active {
+  border-bottom: 1px solid #fff;
+}
     </style>
   </head>
   <body>
