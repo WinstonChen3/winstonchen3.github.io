@@ -3,13 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Techlab</title>
-  <link rel="stylesheet" type="text/css" href="/css/teeeeeest.css">
-  <link rel="stylesheet" href="/css/equipment.css">
+  <link rel="stylesheet" type="text/css" href="/css/services.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <link rel="icon" href="/images/3.png" type="image/png">
 <style> 
-.nav-link {
+      .card p{
+        text-align: center;
+      }
+      b{
+        text-align: center;
+      }
+  .dropdown-toggle:focus {
+  box-shadow: none;
+  outline: none;
+}
+.highlightable-card {
+  transition: box-shadow 0.3s;
+}
+
+.highlightable-card:hover,
+.highlightable-card:focus {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+  .card{
+    height: fit-content;
+    width: fit-content;
+    margin: 10px;
+    min-height: 450px;
+  }
+    .card-body.selected {
+    background-color: #f0f0f0; 
+  }
+      .card-body img {
+      width: 100%;  
+      height: 100%; 
+      border-radius: 8px; 
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+
+    .nav-link {
   position: relative;
   transition: 0.3s;
 }
@@ -29,15 +61,15 @@
 .nav-link:hover::after {
   transform: scaleX(1);
 }
-.dropdown-item.btn {
-  padding: 0;
-  background-color: transparent;
-  border: none;
+.dropdown-item::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s;
 }
 
-.dropdown-item.btn:focus {
-  outline: none;
-  box-shadow: none;
+.dropdown-item:hover::after {
+  border-bottom-color: #ffffff;
 }
 
 .svg-large{
@@ -57,17 +89,10 @@
       font-size: 3.5rem;
     }
   }
-  .divider {
+
+  .b-example-divider {
     width: 100%;
-    height: 2rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgb(255, 255, 255);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-  }
-  .divider2 {
-    width: 100%;
-    height: auto;
+    height: 3rem;
     background-color: rgba(0, 0, 0, .1);
     border: solid rgb(255, 255, 255);
     border-width: 1px 0;
@@ -79,7 +104,8 @@
     width: 1.5rem;
     height: 100vh;
   }
-  .bi {
+
+  .white {
     vertical-align: -.125em;
     fill: currentColor;
   }
@@ -113,9 +139,14 @@
   .white {
 fill: white;
 }
-.centered{
-  align-self: center !important;
+.highlight {
+  outline: 2px solid yellow;
 }
+      .accordion-button {
+          background-color: #343a40; /* Dark background color */
+          color: #fff !important; /* White text color */
+          transition: none; /* Disable color change on click */
+        }
   </style>
 </head>
 <body>
@@ -131,7 +162,7 @@ fill: white;
           <div class="col">
             <ul class="navbar-nav justify-content-center">
               <li class="nav-item">
-                <a class="nav-link text-white" href="/pages/index.html">Home</a>
+                <a class="nav-link text-white" href="/index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="../pages/events.html">Events</a>
@@ -142,14 +173,8 @@ fill: white;
               <li class="nav-item">
                 <a class="nav-link text-white" href="/clone/servicesclone.html">Services</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  About Us
-                </a>
-                <ul class="dropdown-menu bg-dark">
-                  <li><a class="dropdown-item text-white" href="/pages/contacts.html">Contact Us</a></li>
-                  <li><a class="dropdown-item text-white" href="/pages/locations.html">Locations</a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/pages/locations.html">Locations</a>
               </li>
             </ul>
           </div>
@@ -164,2068 +189,473 @@ fill: white;
       </div>
     </nav>
   </header>
-    
-    
-    
-      <header>
-
-<h1 style="color: black;" style="text-align: center;">Equipment</h1>
-        </header>
-        
-            
-            
-            <header>
-            <h2  style="color: black;" ><b>3D Printer
-            </b>
-            </h2>
-           </header>
-
-        <main id="sideA">
-
-          
-        <div class="card highlightable-card"  style="width: 21.9rem;" onclick="toggleHighlight(this)">
-              <div class="card-body">
-                <br>
-                <img src="/images/cheap printer.png" width="100%">
-                <br>
-                <div class="middle_cta" style="background:rgb(173, 173, 173);">
-                  <div class="middle_img">
-                      </div>
-                      
-                      <div class="middle_text">
-                    Creality Ender 3 3D Printer
-                  </div>
-                  </div>
-            </div>
-            
-            <div style="text-align: center;" class="price__inner_list">
-              <ul>
-                  <li>
-                    
-                      <p style="font-size: 150%;">
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-                      </p>
-                    
-                      
-                      <h3>
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $9<span class="small-price">.99</span>
-                      </h3>
-                  </li>
-                  </ul>
-              </div>
-
-
-              
-            </main>
- 
-
-
-<main id="sideA">
- <div class="card" style="width: 21.9rem;">
-  <div class="card-body">
-    <br>
-    <img src="/images/median 3d printer.png" width="100%">
-    <br>
-    <div class="middle_cta" style="background:rgb(173, 173, 173);">
-      <div class="middle_img">
+  <h1 style="color: black;" style="text-align: center;">Equipment</h1>
+  <div class="container">
+    <div class="row">
+      <h2  style="text-align: center; color: black;" ><b>3D Printers
+      </b>
+      </h2>
+    <div class="col-md-4">
+    <div class="card highlightable-card" onclick="toggleHighlight(this)">
+      <img src="/images/median 3d printer.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+      <div class="card-body">
+        <h5 class="middle_text">Anycubic Photon Mono M5</h5>
+        <p class="card-text">Rental</p>
+        <p class="card-text centered">9.99$ Per Month</p>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card highlightable-card" onclick="toggleHighlight(this)">
+        <img src="/images/cheap printer.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+        <div class="card-body">
+          <h5 class="middle_text">Creality Ender 3 3D Printer</h5>
+          <p>Rental</p>
+          <p class="card-text centered">9.99$ Per Month</p>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card highlightable-card" onclick="toggleHighlight(this)">
+          <img src="/images/expensive printer.png"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+          <div class="card-body">
+            <h5 class="middle_text">Snapmaker J1/J1S High Speed Idex</h5>
+            <p class="card-text">Rental</p>
+            <p class="card-text centered">44.99$ Per Month</p>
           </div>
-          
-          <div class="middle_text">
-            Anycubic Photon Mono M5
-      </div>
-      </div>
-</div>
-
-<div style="text-align: center;" class="price__inner_list">
-  <ul>
-      <li>
-        
-          <p style="font-size: 150%;">
-            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-          </p>
-        
-          
-          <h3>
-            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $19<span class="small-price">.99</span>
-          </h3>
-      </li>
-      </ul>
-  </div>
-  
-
- 
-</main>
-
-
-<main id="sideA">
-  <div class="card" style="width: 21.9rem;">
-   <div class="card-body">
-     <br><br><br>
-     <img style="align-content: center;" src="/images/expensive printer.png" width="102%">
-<br><br><br>
-     <div class="middle_cta" style="background:rgb(173, 173, 173);">
-       <div class="middle_img">
-           </div>
-          
-           <div class="middle_text">
-            Snapmaker J1/J1S High Speed Idex
-       </div>
-       </div>
- </div>
- 
- 
- <div style="text-align: center;" class="price__inner_list">
-   <ul>
-       <li>
-         
-           <p style="font-size: 150%;">
-             &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-           </p>
-         
-           
-           <h3>
-             &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $44<span class="small-price">.99</span>
-           </h3>
-       </li>
-       </ul>
-   </div>
- 
-  
- </main>
-
-
- <main id="sideA">
-  <div class="card" style="width: 21.9rem;">
-   <div class="card-body">
-     <br>
-     <img style="align-content: center;" src="/images/medianprinter1.png" width="100%">
-<br>
-     <div class="middle_cta" style="background:rgb(173, 173, 173);">
-       <div class="middle_img">
-           </div>
-          
-           <div class="middle_text">
-           Flashforge Adventurer 5M Printer
-       </div>
-       </div>
- </div>
- 
- 
- <div style="text-align: center;" class="price__inner_list">
-   <ul>
-       <li>
-         
-           <p style="font-size: 150%;">
-             &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-           </p>
-         
-           
-           <h3>
-             &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $29<span class="small-price">.99</span>
-           </h3>
-       </li>
-       </ul>
-   </div>
- 
-  
- </main>
-          
-
-
-
- <main id="sideA">
-  <div class="card" style="width: 21.9rem;">
-   <div class="card-body">
-     <br><br><br>
-     <img  src="/images/mimaki.png" width="106%">
-<br><br>
-     <div class="middle_cta" style="background:rgb(173, 173, 173);">
-       <div class="middle_img">
-           </div>
-          
-           <div class="middle_text">
-           Mimaki 3DUJ-533 Printer
-       </div>
-       </div>
- </div>
- 
- 
- <div style="text-align: center;" class="price__inner_list">
-   <ul>
-       <li>
-         
-           <p style="font-size: 150%;">
-             &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
-           </p>
-         
-           
-           <h3>
-             &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$509<span class="small-price">.99</span>
-           </h3>
-       </li>
-       </ul>
-   </div>
- 
-   
- 
-</main>
-
-
-
-
-
-
-
-
-
-<header>
-  <br>
-  
-  
-  <h1>....</h1>
- </header>
-
-<main id="sideA">
-
-
-<div class="card" style="width: 21.9rem;">
-    <div class="card-body">
-      <br>
-      <img src="/images/printer 1.png" width="100%">
-      <br>
-      <div class="middle_cta" style="background:rgb(173, 173, 173);">
-        <div class="middle_img">
-            </div>
-            
-            <div class="middle_text">
-              K1 Speedy 3D Printer
         </div>
         </div>
-  </div>
-  
-  <div style="text-align: center;" class="price__inner_list">
-    <ul>
-        <li>
-          
-            <p style="font-size: 150%;">
-              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-            </p>
-          
-            
-            <h3>
-              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $32<span class="small-price">.50</span>
-            </h3>
-        </li>
-        </ul>
-    </div>
-
-    
-  </main>
-
-
-
-<main id="sideA">
-<div class="card" style="width: 21.9rem;">
-<div class="card-body">
-<br><br><br>
-<img src="/images/printer 2.png" width="104%">
-<br><br><br>
-<div class="middle_cta" style="background:rgb(173, 173, 173);">
-<div class="middle_img">
-</div>
-
-<div class="middle_text">
-  EVO R 3D Printers
-</div>
-</div>
-</div>
-
-<div style="text-align: center;" class="price__inner_list">
-<ul>
-<li>
-
-<p style="font-size: 150%;">
-  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-</p>
-
-
-<h3>
-  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $520<span class="small-price">.99</span>
-</h3>
-</li>
-</ul>
-</div>
-
-
-
-</main>
-
-
-<main id="sideA">
-<div class="card" style="width: 21.9rem;">
-<div class="card-body">
-<br><br><br>
-<img   src="/images/printer 3.png" width="70.3%">
-<br><br><br>
-<div class="middle_cta" style="background:rgb(173, 173, 173);">
-<div class="middle_img">
- </div>
-
- <div class="middle_text">
-  Print Maker 3D Printer
-</div>
-</div>
-</div>
-
-
-<div style="text-align: center;" class="price__inner_list">
-<ul>
-<li>
-
- <p style="font-size: 150%;">
-   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
- </p>
-
- 
- <h3>
-   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $8<span class="small-price">.50</span>
- </h3>
-</li>
-</ul>
-</div>
-
-
-</main>
-
-
-<main id="sideA">
-<div class="card" style="width: 21.9rem;">
-<div class="card-body">
-<br>
-<img  src="/images/anker.png" width="100%">
-<br>
-<div class="middle_cta" style="background:rgb(173, 173, 173);">
-<div class="middle_img">
- </div>
-
- <div class="middle_text">
-  AnkerMake M5 3D Printer
-</div>
-</div>
-</div>
-
-
-<div style="text-align: center;" class="price__inner_list">
-<ul>
-<li>
-
- <p style="font-size: 150%;">
-   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
- </p>
-
- 
- <h3>
-   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $55<span class="small-price">.99</span>
- </h3>
-</li>
-</ul>
-</div>
-
-
-</main>
-
-
-
-
-<main id="sideA">
-<div class="card" style="width: 21.9rem;">
-<div class="card-body">
-<br><br><br>
-<img src="/images/flash.png" width="77.5%">
-<br><br>
-<div class="middle_cta" style="background:rgb(173, 173, 173);">
-<div class="middle_img">
- </div>
-
- <div class="middle_text">
-  Flsun V400 Large Delta 3D Printer
-</div>
-</div>
-</div>
-
-
-<div style="text-align: center;" class="price__inner_list">
-<ul>
-<li>
-
- <p style="font-size: 150%;">
-   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
- </p>
-
- 
- <h3>
-   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$46<span class="small-price">.99</span>
- </h3>
-</li>
-</ul>
-</div>
-
-
-</main>
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<header>
-  <h2>....</h2>
-  <h2  style="color: black;" ><b>Laser Cutter</b>  </h2>
-  
- </header>
-
-
-
-
-<main id="sideA">
-  <div class="card" style="width: 21.9rem;">
-  <div class="card-body">
-  <br><br><br>
-  <img src="/images/cheap laser.png" width="83%">
-  <br><br><br>
-  <div class="middle_cta" style="background:rgb(173, 173, 173);">
-  <div class="middle_img">
-  </div>
-  
-  <div class="middle_text">
-    TTS-55 PRO 5.5W Laser Engraver
-  </div>
-  </div>
-  </div>
-  
-  <div style="text-align: center;" class="price__inner_list">
-  <ul>
-  <li>
-  
-  <p style="font-size: 150%;">
-    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-  </p>
-  
-  
-  <h3>
-    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $13<span class="small-price">.50</span>
-  </h3>
-  </li>
-  </ul>
-  </div>
-  
-  
- 
-  </main>
-  
-  
-  <main id="sideA">
-  <div class="card" style="width: 21.9rem;">
-  <div class="card-body">
-  <br><br><br>
-  <img   src="/images/laser cutter blue.png" width="78%">
-  <br><br><br>
-  <div class="middle_cta" style="background:rgb(173, 173, 173);">
-  <div class="middle_img">
-   </div>
-  
-   <div class="middle_text">
-    US Stock SFX Co2 Laser Cutter
-  </div>
-  </div>
-  </div>
-  
-  
-  <div style="text-align: center;" class="price__inner_list">
-  <ul>
-  <li>
-  
-   <p style="font-size: 150%;">
-     &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-   </p>
-  
-   
-   <h3>
-     &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $714<span class="small-price">.30</span>
-   </h3>
-  </li>
-  </ul>
-  </div>
-  
-  
-  </main>
-  
-  
-  <main id="sideA">
-  <div class="card" style="width: 21.9rem;">
-  <div class="card-body">
-  <br><br><br><br>
-  <img  src="/images/expensive laser cutter.png" width="82%">
-  <br><br><br>
-  <div class="middle_cta" style="background:rgb(173, 173, 173);">
-  <div class="middle_img">
-   </div>
-  
-   <div class="middle_text">
-    HP-3655 CO2 Laser Cutter
-  </div>
-  </div>
-  </div>
-  
-  
-  <div style="text-align: center;" class="price__inner_list">
-  <ul>
-  <li>
-  
-   <p style="font-size: 150%;">
-     &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;  Rental
-   </p>
-  
-   
-   <h3>
-     &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;  $1214<span class="small-price">.99</span>
-   </h3>
-  </li>
-  </ul>
-  </div>
-  
- 
-  </main>
-  
-  
-  
-  
-  <main id="sideA">
-  <div class="card" style="width: 21.9rem;">
-  <div class="card-body">
-  <br><br><br>
-  <img src="/images/genesis.png" width="77.5%">
-  <br><br><br>
-  <div class="middle_cta" style="background:rgb(173, 173, 173);">
-  <div class="middle_img">
-   </div>
-  
-   <div class="middle_text">
-    G139L – GENESIS Laser Cutter
-  </div>
-  </div>
-  </div>
-  
-  
-  <div style="text-align: center;" class="price__inner_list">
-  <ul>
-  <li>
-  
-   <p style="font-size: 150%;">
-     &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
-   </p>
-  
-   
-   <h3>
-     &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$1141<span class="small-price">.99</span>
-   </h3>
-  </li>
-  </ul>
-  </div>
-  
-  
-  </main>
-
-  <main id="sideA">
-    <div class="card" style="width: 21.9rem;">
-    <div class="card-body">
-    <br><br><br>
-    <img src="/images/mini laser.png" width="77.5%">
-    <br><br>
-    <div class="middle_cta" style="background:rgb(173, 173, 173);">
-    <div class="middle_img">
-     </div>
-    
-     <div class="middle_text">
-      Mini Laser Engraving Machines
-    </div>
-    </div>
-    </div>
-    
-    
-    <div style="text-align: center;" class="price__inner_list">
-    <ul>
-    <li>
-    
-     <p style="font-size: 150%;">
-       &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
-     </p>
-    
-     
-     <h3>
-       &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$11<span class="small-price">.40</span>
-     </h3>
-    </li>
-    </ul>
-    </div>
-    
-    
-    </main>
-
-
-
-    <header>
-      <br>
-      <h1>....</h1>
-     </header>
-    
-    <main id="sideA">
-    
-    
-    <div class="card" style="width: 21.9rem;">
-        <div class="card-body">
-          <br>
-          <img src="/images/3020.png" width="100%">
-          <br>
-          <div class="middle_cta" style="background:rgb(173, 173, 173);">
-            <div class="middle_img">
-                </div>
-                
-                <div class="middle_text">
-                  3020 40w 50w CO2 Laser Cutter
-            </div>
-            </div>
-      </div>
-      
-      <div style="text-align: center;" class="price__inner_list">
-        <ul>
-            <li>
-              
-                <p style="font-size: 150%;">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-                </p>
-              
-                
-                <h3>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $17<span class="small-price">.60</span>
-                </h3>
-            </li>
-            </ul>
-        </div>
-    
-      </main>
-    
-    
-    
-    <main id="sideA">
-    <div class="card" style="width: 21.9rem;">
-    <div class="card-body">
-    <br><br>
-    <img src="/images/daja.png" width="92.7%">
-    <br>
-    <div class="middle_cta" style="background:rgb(173, 173, 173);">
-    <div class="middle_img">
-    </div>
-    
-    <div class="middle_text">
-      DAJA DJ7 Laser Engraving Machine
-    </div>
-    </div>
-    </div>
-    
-    <div style="text-align: center;" class="price__inner_list">
-    <ul>
-    <li>
-    
-    <p style="font-size: 150%;">
-      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-    </p>
-    
-    
-    <h3>
-      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $14<span class="small-price">.20</span>
-    </h3>
-    </li>
-    </ul>
-    </div>
-    
-    
-    
-    </main>
-    
-    
-    <main id="sideA">
-    <div class="card" style="width: 21.9rem;">
-    <div class="card-body">
-    <br><br><br>
-    <img   src="/images/laser pecker.png" width="77%">
-    <br><br>
-    <div class="middle_cta" style="background:rgb(173, 173, 173);">
-    <div class="middle_img">
-     </div>
-    
-     <div class="middle_text">
-      LaserPecker Laser Engraver
-    </div>
-    </div>
-    </div>
-    
-    
-    <div style="text-align: center;" class="price__inner_list">
-    <ul>
-    <li>
-    
-     <p style="font-size: 150%;">
-       &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-     </p>
-    
-     
-     <h3>
-       &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $21<span class="small-price">.40</span>
-     </h3>
-    </li>
-    </ul>
-    </div>
-    
-    
-    </main>
-    
-    
-    <main id="sideA">
-    <div class="card" style="width: 21.9rem;">
-    <div class="card-body">
-    <br>
-    <img  src="/images/red light cutter.png" width="100%">
-    <br>
-    <div class="middle_cta" style="background:rgb(173, 173, 173);">
-    <div class="middle_img">
-     </div>
-    
-     <div class="middle_text">
-      1064NM Red Light Laser Cutter
-    </div>
-    </div>
-    </div>
-    
-    
-    <div style="text-align: center;" class="price__inner_list">
-    <ul>
-    <li>
-    
-     <p style="font-size: 150%;">
-       &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-     </p>
-    
-     
-     <h3>
-       &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $104<span class="small-price">.50</span>
-     </h3>
-    </li>
-    </ul>
-    </div>
-    
-    
-    </main>
-    
-    
-    
-    
-    <main id="sideA">
-    <div class="card" style="width: 21.9rem;">
-    <div class="card-body">
-    <br><br><br>
-    <img src="/images/utech.png" width="77.5%">
-    <br><br>
-    <div class="middle_cta" style="background:rgb(173, 173, 173);">
-    <div class="middle_img">
-     </div>
-    
-     <div class="middle_text">
-      IIIUTECH Laser Cutter 
-    </div>
-    </div>
-    </div>
-    
-    
-    <div style="text-align: center;" class="price__inner_list">
-    <ul>
-    <li>
-    
-     <p style="font-size: 150%;">
-       &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
-     </p>
-    
-     
-     <h3>
-       &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$71<span class="small-price">.99</span>
-     </h3>
-    </li>
-    </ul>
-    </div>
-    
-    
-    </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <header>
-      <h2>....</h2>
-      <h2  style="color: black;" ><b>CNC Machine</b>  </h2>
-      
-     </header>
-    
-    
-    
-    
-    <main id="sideA">
-      <div class="card" style="width: 21.9rem;">
-      <div class="card-body">
-      <br><br><br>
-      <img src="/images/cheap cnc.png" width="73%">
-      <br><br><br>
-      <div class="middle_cta" style="background:rgb(173, 173, 173);">
-      <div class="middle_img">
-      </div>
-      
-      <div class="middle_text">
-        1610 CNC Machine Blue
-      </div>
-      </div>
-      </div>
-      
-      <div style="text-align: center;" class="price__inner_list">
-      <ul>
-      <li>
-      
-      <p style="font-size: 150%;">
-        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-      </p>
-      
-      
-      <h3>
-        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $9<span class="small-price">.50</span>
-      </h3>
-      </li>
-      </ul>
-      </div>
-      
-      
-      
-      </main>
-      
-      
-      <main id="sideA">
-      <div class="card" style="width: 21.9rem;">
-      <div class="card-body">
-      <br><br><br>
-      <img   src="/images/median cnc.png" width="80.5%">
-      <br><br><br>
-      <div class="middle_cta" style="background:rgb(173, 173, 173);">
-      <div class="middle_img">
-       </div>
-      
-       <div class="middle_text">
-        AnoleX 3030-Evo Pro CNC Router
-      </div>
-      </div>
-      </div>
-      
-      
-      <div style="text-align: center;" class="price__inner_list">
-      <ul>
-      <li>
-      
-       <p style="font-size: 150%;">
-         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-       </p>
-      
-       
-       <h3>
-         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $19<span class="small-price">.99</span>
-       </h3>
-      </li>
-      </ul>
-      </div>
-      
-      
-      </main>
-      
-      
-      <main id="sideA">
-      <div class="card" style="width: 21.9rem;">
-      <div class="card-body">
-      <br><br><br><br>
-      <img  src="/images/expensive CNC.png" width="64%">
-      <br><br><br>
-      <div class="middle_cta" style="background:rgb(173, 173, 173);">
-      <div class="middle_img">
-       </div>
-      
-       <div class="middle_text">
-        Genmitsu CNC Router Machine
-      </div>
-      </div>
-      </div>
-      
-      
-      <div style="text-align: center;" class="price__inner_list">
-      <ul>
-      <li>
-      
-       <p style="font-size: 150%;">
-         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;  Rental
-       </p>
-      
-       
-       <h3>
-         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;  $57<span class="small-price">.10</span>
-       </h3>
-      </li>
-      </ul>
-      </div>
-      
-      
-      </main>
-      
-      
-      
-      
-      <main id="sideA">
-      <div class="card" style="width: 21.9rem;">
-      <div class="card-body">
-      <br><br><br>
-      <img src="/images/cnc1.png" width="58.5%">
-      <br><br><br>
-      <div class="middle_cta" style="background:rgb(173, 173, 173);">
-      <div class="middle_img">
-       </div>
-      
-       <div class="middle_text">
-        EPS 5 Axis CNC Cutting Machine
-      </div>
-      </div>
-      </div>
-      
-      
-      <div style="text-align: center;" class="price__inner_list">
-      <ul>
-      <li>
-      
-       <p style="font-size: 150%;">
-         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
-       </p>
-      
-       
-       <h3>
-         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$449<span class="small-price">.99</span>
-       </h3>
-      </li>
-      </ul>
-      </div>
-      
-      
-      </main>
-    
-      <main id="sideA">
-        <div class="card" style="width: 21.9rem;">
-        <div class="card-body">
-        <br><br><br>
-        <img src="/images/cnc3018.png" width="85.7%">
-        <br><br>
-        <div class="middle_cta" style="background:rgb(173, 173, 173);">
-        <div class="middle_img">
-         </div>
-        
-         <div class="middle_text">
-          CNCTOPBAOS CNC 3018 Pro Max
-        </div>
-        </div>
-        </div>
-        
-        
-        <div style="text-align: center;" class="price__inner_list">
-        <ul>
-        <li>
-        
-         <p style="font-size: 150%;">
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
-         </p>
-        
-         
-         <h3>
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$11<span class="small-price">.40</span>
-         </h3>
-        </li>
-        </ul>
-        </div>
-        
-        
-        </main>
-    
-    
-    
-    
-    
-    
-        <header>
-          <br>
-          <h1>....</h1>
-         </header>
-        
-        <main id="sideA">
-        
-        
-        <div class="card" style="width: 21.9rem;">
+        <div class="col-md-4">
+          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+            <img src="/images/medianprinter1.png"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
             <div class="card-body">
-              <br>
-              <img src="/images/20wcnc.png" width="99.5%">
-              <br>
-              <div class="middle_cta" style="background:rgb(173, 173, 173);">
-                <div class="middle_img">
-                    </div>
-                    
-                    <div class="middle_text">
-                      20W Output CNC Laser Cutter
-                </div>
-                </div>
-          </div>
-          
-          <div style="text-align: center;" class="price__inner_list">
-            <ul>
-                <li>
-                  
-                    <p style="font-size: 150%;">
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-                    </p>
-                  
-                    
-                    <h3>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $42<span class="small-price">.80</span>
-                    </h3>
-                </li>
-                </ul>
+              <h5 class="middle_text">Flashforge Adventurer 5M Printer</h5>
+              <p class="card-text">Rental</p>
+              <p class="card-text centered">29.99$ Per Month</p>
             </div>
-        
-            
-          </main>
-        
-        
-        
-        <main id="sideA">
-        <div class="card" style="width: 21.9rem;">
-        <div class="card-body">
-        <br><br>
-        <img src="/images/cnc2.png" width="92%">
-        <br>
-        <div class="middle_cta" style="background:rgb(173, 173, 173);">
-        <div class="middle_img">
-        </div>
-        
-        <div class="middle_text">
-          Anet 4540 Desktop CNC Machine
-        </div>
-        </div>
-        </div>
-        
-        <div style="text-align: center;" class="price__inner_list">
-        <ul>
-        <li>
-        
-        <p style="font-size: 150%;">
-          &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-        </p>
-        
-        
-        <h3>
-          &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $64<span class="small-price">.30</span>
-        </h3>
-        </li>
-        </ul>
-        </div>
-        
-        
-        
-        </main>
-        
-        
-        <main id="sideA">
-        <div class="card" style="width: 21.9rem;">
-        <div class="card-body">
-        <br><br><br>
-        <img   src="/images/cnc3.png" width="45.5%">
-        <br><br>
-        <div class="middle_cta" style="background:rgb(173, 173, 173);">
-        <div class="middle_img">
-         </div>
-        
-         <div class="middle_text">
-          OpenBuilds MiniMill CNC Machine
-        </div>
-        </div>
-        </div>
-        
-        
-        <div style="text-align: center;" class="price__inner_list">
-        <ul>
-        <li>
-        
-         <p style="font-size: 150%;">
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-         </p>
-        
-         
-         <h3>
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $67<span class="small-price">.40</span>
-         </h3>
-        </li>
-        </ul>
-        </div>
-        
-        
-        </main>
-        
-        
-        <main id="sideA">
-        <div class="card" style="width: 21.9rem;">
-        <div class="card-body">
-        <br>
-        <img  src="/images/bantam.png" width="100%">
-        <br>
-        <div class="middle_cta" style="background:rgb(173, 173, 173);">
-        <div class="middle_img">
-         </div>
-        
-         <div class="middle_text">
-          Bantam Tools CNC Machine
-        </div>
-        </div>
-        </div>
-        
-        
-        <div style="text-align: center;" class="price__inner_list">
-        <ul>
-        <li>
-        
-         <p style="font-size: 150%;">
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-         </p>
-        
-         
-         <h3>
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $464<span class="small-price">.30</span>
-         </h3>
-        </li>
-        </ul>
-        </div>
-        
-        
-        </main>
-        
-        
-        
-        
-        <main id="sideA">
-        <div class="card" style="width: 21.9rem;">
-        <div class="card-body">
-        <br><br><br>
-        <img src="/images/cnc5.png" width="90.8%">
-        <br><br>
-        <div class="middle_cta" style="background:rgb(173, 173, 173);">
-        <div class="middle_img">
-         </div>
-        
-         <div class="middle_text">
-          X-CARVE Pro 4x2 CNC System 
-        </div>
-        </div>
-        </div>
-        
-        
-        <div style="text-align: center;" class="price__inner_list">
-        <ul>
-        <li>
-        
-         <p style="font-size: 150%;">
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
-         </p>
-        
-         
-         <h3>
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$392<span class="small-price">.50</span>
-         </h3>
-        </li>
-        </ul>
-        </div>
-        
-        
-        </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <header>
-  <h2>....</h2>
-      <h2  style="color: black;" ><b>Soldering Irons </b>  </h2>
-      
-     </header>
-    
-    
-    
-    
-     <main id="sideA">
-      <div class="card" style="width: 21.9rem;">
-      <div class="card-body">
-      <br><br><br>
-      <img src="/images/cheap solder irons.png" width="65%">
-      <br><br><br>
-      <div class="middle_cta" style="background:rgb(173, 173, 173);">
-      <div class="middle_img">
-      </div>
-      
-      <div class="middle_text">
-        80W Soldering Iron Kit
-      </div>
-      </div>
-      </div>
-      
-      <div style="text-align: center;" class="price__inner_list">
-      <ul>
-      <li>
-      
-      <p style="font-size: 150%;">
-        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-      </p>
-      
-      
-      <h3>
-        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $5<span class="small-price">.99</span>
-      </h3>
-      </li>
-      </ul>
-      </div>
-      
-      
-      
-      </main>
-      
-      
-      <main id="sideA">
-      <div class="card" style="width: 21.9rem;">
-      <div class="card-body">
-      <br><br><br>
-      <img   src="/images/median soldering.png" width="69.5%">
-      <br><br><br>
-      <div class="middle_cta" style="background:rgb(173, 173, 173);">
-      <div class="middle_img">
-       </div>
-      
-       <div class="middle_text">
-        Soldering Station Digital Display
-      </div>
-      </div>
-      </div>
-      
-      
-      <div style="text-align: center;" class="price__inner_list">
-      <ul>
-      <li>
-      
-       <p style="font-size: 150%;">
-         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-       </p>
-      
-       
-       <h3>
-         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $7<span class="small-price">.60</span>
-       </h3>
-      </li>
-      </ul>
-      </div>
-      
-      
-      </main>
-      
-      
-      <main id="sideA">
-      <div class="card" style="width: 21.9rem;">
-      <div class="card-body">
-      <br><br><br><br>
-      <img  src="/images/expensive soldering.png" width="72%">
-      <br><br><br>
-      <div class="middle_cta" style="background:rgb(173, 173, 173);">
-      <div class="middle_img">
-       </div>
-      
-       <div class="middle_text">
-        Weller Soldering Station
-      </div>
-      </div>
-      </div>
-      
-      
-      <div style="text-align: center;" class="price__inner_list">
-      <ul>
-      <li>
-      
-       <p style="font-size: 150%;">
-         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;  Rental
-       </p>
-      
-       
-       <h3>
-         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;  $32<span class="small-price">.80</span>
-       </h3>
-      </li>
-      </ul>
-      </div>
-      
-      
-      </main>
-      
-      
-      
-      
-      <main id="sideA">
-      <div class="card" style="width: 21.9rem;">
-      <div class="card-body">
-      <br><br><br>
-      <img src="/images/solder1.png" width="104.5%">
-      <br><br><br>
-      <div class="middle_cta" style="background:rgb(173, 173, 173);">
-      <div class="middle_img">
-       </div>
-      
-       <div class="middle_text">
-        FX888D-23BY Soldering Station
-      </div>
-      </div>
-      </div>
-      
-      
-      <div style="text-align: center;" class="price__inner_list">
-      <ul>
-      <li>
-      
-       <p style="font-size: 150%;">
-         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
-       </p>
-      
-       
-       <h3>
-         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$8<span class="small-price">.20</span>
-       </h3>
-      </li>
-      </ul>
-      </div>
-      
-      
-      </main>
-    
-      <main id="sideA">
-        <div class="card" style="width: 21.9rem;">
-        <div class="card-body">
-        <br><br><br>
-        <img src="/images/JBC.png" width="77.5%">
-        <br><br>
-        <div class="middle_cta" style="background:rgb(173, 173, 173);">
-        <div class="middle_img">
-         </div>
-        
-         <div class="middle_text">
-          CD-1BQF Soldering Station
-        </div>
-        </div>
-        </div>
-        
-        
-        <div style="text-align: center;" class="price__inner_list">
-        <ul>
-        <li>
-        
-         <p style="font-size: 150%;">
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
-         </p>
-        
-         
-         <h3>
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$42<span class="small-price">.50</span>
-         </h3>
-        </li>
-        </ul>
-        </div>
-        
-       
-        </main>
-
-
-
-
-
-
-
-        <header>
-          <br>
-          <h1>....</h1>
-         </header>
-        
-        <main id="sideA">
-        
-        
-        <div class="card" style="width: 21.9rem;">
-            <div class="card-body">
-              <br>
-              <img src="/images/cordless.png" width="93%">
-              <br>
-              <div class="middle_cta" style="background:rgb(173, 173, 173);">
-                <div class="middle_img">
-                    </div>
-                    
-                    <div class="middle_text">
-                      Cordless Soldering Iron Kit
-                </div>
-                </div>
           </div>
-          
-          <div style="text-align: center;" class="price__inner_list">
-            <ul>
-                <li>
-                  
-                    <p style="font-size: 150%;">
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-                    </p>
-                  
-                    
-                    <h3>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $3<span class="small-price">.80</span>
-                    </h3>
-                </li>
-                </ul>
-            </div>
-        
-            
-          </main>
-        
-        
-        
-        <main id="sideA">
-        <div class="card" style="width: 21.9rem;">
-        <div class="card-body">
-        <br><br>
-        <img src="/images/safe soldering.png" width="91.7%">
-        <br>
-        <div class="middle_cta" style="background:rgb(173, 173, 173);">
-        <div class="middle_img">
-        </div>
-        
-        <div class="middle_text">
-          ESD-Safe Mini Soldering System 
-        </div>
-        </div>
-        </div>
-        
-        <div style="text-align: center;" class="price__inner_list">
-        <ul>
-        <li>
-        
-        <p style="font-size: 150%;">
-          &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-        </p>
-        
-        
-        <h3>
-          &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $430<span class="small-price">.70</span>
-        </h3>
-        </li>
-        </ul>
-        </div>
-        
-        
-        
-        </main>
-        
-        
-        <main id="sideA">
-        <div class="card" style="width: 21.9rem;">
-        <div class="card-body">
-        <br><br><br>
-        <img   src="/images/desoldering.png" width="73.8%">
-        <br><br>
-        <div class="middle_cta" style="background:rgb(173, 173, 173);">
-        <div class="middle_img">
-         </div>
-        
-         <div class="middle_text">
-          FR301-03/P Desoldering Tool
-        </div>
-        </div>
-        </div>
-        
-        
-        <div style="text-align: center;" class="price__inner_list">
-        <ul>
-        <li>
-        
-         <p style="font-size: 150%;">
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-         </p>
-        
-         
-         <h3>
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $22<span class="small-price">.60</span>
-         </h3>
-        </li>
-        </ul>
-        </div>
-        
-        
-        </main>
-        
-        
-        <main id="sideA">
-        <div class="card" style="width: 21.9rem;">
-        <div class="card-body">
-        <br>
-        <img  src="/images/soldering2.png" width="98.6%">
-        <br>
-        <div class="middle_cta" style="background:rgb(173, 173, 173);">
-        <div class="middle_img">
-         </div>
-        
-         <div class="middle_text">
-          WHA3000PS Desoldering Station
-        </div>
-        </div>
-        </div>
-        
-        
-        <div style="text-align: center;" class="price__inner_list">
-        <ul>
-        <li>
-        
-         <p style="font-size: 150%;">
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-         </p>
-        
-         
-         <h3>
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $522<span class="small-price">.10</span>
-         </h3>
-        </li>
-        </ul>
-        </div>
-        
-        
-        </main>
-        
-        
-        
-        
-        <main id="sideA">
-        <div class="card" style="width: 21.9rem;">
-        <div class="card-body">
-        <br><br><br>
-        <img src="/images/de and soldering.png" width="76%">
-        <br><br>
-        <div class="middle_cta" style="background:rgb(173, 173, 173);">
-        <div class="middle_img">
-         </div>
-        
-         <div class="middle_text">
-          Weller Solderingv & Desoldering Set 
-        </div>
-        </div>
-        </div>
-        
-        
-        <div style="text-align: center;" class="price__inner_list">
-        <ul>
-        <li>
-        
-         <p style="font-size: 150%;">
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
-         </p>
-        
-         
-         <h3>
-           &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$28<span class="small-price">.60</span>
-         </h3>
-        </li>
-        </ul>
-        </div>
-        
-        
-        </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <header>
-          <h2>....</h2>
-              <h2  style="color: black;" ><b>Sewing Machines </b>  </h2>
-              
-             </header>
-            
-            
-            
-            
-             <main id="sideA">
-              <div class="card" style="width: 21.9rem;">
-              <div class="card-body">
-              <br><br><br>
-              <img src="/images/cheap sewing.png" width="91.8%">
-              <br><br><br>
-              <div class="middle_cta" style="background:rgb(173, 173, 173);">
-              <div class="middle_img">
-              </div>
-              
-              <div class="middle_text">
-                MX60 Sewing Machine
-              </div>
-              </div>
-              </div>
-              
-              <div style="text-align: center;" class="price__inner_list">
-              <ul>
-              <li>
-              
-              <p style="font-size: 150%;">
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-              </p>
-              
-              
-              <h3>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $6<span class="small-price">.99</span>
-              </h3>
-              </li>
-              </ul>
-              </div>
-              
-              
-              
-              </main>
-              
-              
-              <main id="sideA">
-              <div class="card" style="width: 21.9rem;">
-              <div class="card-body">
-              <br><br><br>
-              <img   src="/images/median sewing.png" width="86.5%">
-              <br><br><br>
-              <div class="middle_cta" style="background:rgb(173, 173, 173);">
-              <div class="middle_img">
-               </div>
-              
-               <div class="middle_text">
-                4423 Heavy Duty Sewing Machine
-              </div>
-              </div>
-              </div>
-              
-              
-              <div style="text-align: center;" class="price__inner_list">
-              <ul>
-              <li>
-              
-               <p style="font-size: 150%;">
-                 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-               </p>
-              
-               
-               <h3>
-                 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $7<span class="small-price">.50</span>
-               </h3>
-              </li>
-              </ul>
-              </div>
-              
-              
-              </main>
-              
-              
-              <main id="sideA">
-              <div class="card" style="width: 21.9rem;">
-              <div class="card-body">
-              <br><br><br><br>
-              <img  src="/images/expensive sewing.png" width="98%">
-              <br><br><br>
-              <div class="middle_cta" style="background:rgb(173, 173, 173);">
-              <div class="middle_img">
-               </div>
-              
-               <div class="middle_text">
-                Brother Sewing Station
-              </div>
-              </div>
-              </div>
-              
-              
-              <div style="text-align: center;" class="price__inner_list">
-              <ul>
-              <li>
-              
-               <p style="font-size: 150%;">
-                 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;  Rental
-               </p>
-              
-               
-               <h3>
-                 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;  $60<span class="small-price">.70</span>
-               </h3>
-              </li>
-              </ul>
-              </div>
-              
-              
-              </main>
-              
-              
-              
-              
-              <main id="sideA">
-              <div class="card" style="width: 21.9rem;">
-              <div class="card-body">
-              <br><br><br>
-              <img src="/images/janome.png" width="96.5%">
-              <br><br><br>
-              <div class="middle_cta" style="background:rgb(173, 173, 173);">
-              <div class="middle_img">
-               </div>
-              
-               <div class="middle_text">
-                2030DC-T Sewing Machine
-              </div>
-              </div>
-              </div>
-              
-              
-              <div style="text-align: center;" class="price__inner_list">
-              <ul>
-              <li>
-              
-               <p style="font-size: 150%;">
-                 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
-               </p>
-              
-               
-               <h3>
-                 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$49<span class="small-price">.99</span>
-               </h3>
-              </li>
-              </ul>
-              </div>
-              
-              
-              </main>
-            
-              <main id="sideA">
-                <div class="card" style="width: 21.9rem;">
+          </div>
+            <div class="col-md-4">
+              <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                <img src="/images/mimaki.png"class="card-img-top" alt="" style="height: 15rem; width: 100%; object-fit: cover;" alt="">
                 <div class="card-body">
-                <br><br><br>
-                <img src="/images/Soldering3.jpg" width="77.5%">
-                <br><br>
-                <div class="middle_cta" style="background:rgb(173, 173, 173);">
-                <div class="middle_img">
-                 </div>
-                
-                 <div class="middle_text">
-                  Mini Sewing Machine Kit
+                  <h5 class="middle_text">Mimaki 3DUJ-533 Printer</h5>
+                  <p class="card-text">Rental</p>
+                  <p class="card-text centered">509.99$ Per Month</p>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                  <img src="/images/printer 1.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+                  <div class="card-body">
+                    <h5 class="middle_text">K1 Speedy 3D Printer</h5>
+                    <p class="card-text">Rental</p>
+                    <p class="card-text centered">32.99$ Per Month</p>
+                  </div>
                 </div>
                 </div>
-                </div>
-                
-                
-                <div style="text-align: center;" class="price__inner_list">
-                <ul>
-                <li>
-                
-                 <p style="font-size: 150%;">
-                   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
-                 </p>
-                
-                 
-                 <h3>
-                   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$2<span class="small-price">.99</span>
-                 </h3>
-                </li>
-                </ul>
-                </div>
-                
-                
-                </main>
-
-
-
-                <header>
-                  <br>
-                  <h1>....</h1>
-                 </header>
-                
-                <main id="sideA">
-                
-                
-                <div class="card" style="width: 21.9rem;">
+                <div class="col-md-4">
+                  <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                    <img src="/images/printer 2.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
                     <div class="card-body">
-                      <br><br>
-                      <img src="/images/old sewing.png" width="104.5%">
-                      <br><br>
-                      <div class="middle_cta" style="background:rgb(173, 173, 173);">
-                        <div class="middle_img">
-                            </div>
-                            
-                            <div class="middle_text">
-                              Industrial Leather Sewing Machine
-                        </div>
-                        </div>
-                  </div>
-                  
-                  <div style="text-align: center;" class="price__inner_list">
-                    <ul>
-                        <li>
-                          
-                            <p style="font-size: 150%;">
-                              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-                            </p>
-                          
-                            
-                            <h3>
-                              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $21<span class="small-price">.60</span>
-                            </h3>
-                        </li>
-                        </ul>
+                      <h5 class="middle_text">EVO R 3D Printers</h5>
+                      <p class="card-text"></p>
+                      <p class="card-text centered">519.99$ Per Month</p>
                     </div>
-                
-                    
-                  </main>
-                
-                
-                
-                <main id="sideA">
-                <div class="card" style="width: 21.9rem;">
-                <div class="card-body">
-                <br><br>
-                <img src="/images/brother.png" width="91.7%">
-                <br>
-                <div class="middle_cta" style="background:rgb(173, 173, 173);">
-                <div class="middle_img">
-                </div>
-                
-                <div class="middle_text">
-                  Brother SE400 Sewing Machine
-                </div>
-                </div>
-                </div>
-                
-                <div style="text-align: center;" class="price__inner_list">
-                <ul>
-                <li>
-                
-                <p style="font-size: 150%;">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-                </p>
-                
-                
-                <h3>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $28<span class="small-price">.60</span>
-                </h3>
-                </li>
-                </ul>
-                </div>
-                
-                
-                
-                </main>
-                
-                
-                <main id="sideA">
-                <div class="card" style="width: 21.9rem;">
-                <div class="card-body">
-                <br><br><br>
-                <img   src="/images/mini sewing.png" width="82%">
-                <br><br>
-                <div class="middle_cta" style="background:rgb(173, 173, 173);">
-                <div class="middle_img">
-                 </div>
-                
-                 <div class="middle_text">
-                  Mini Handheld Sewing Machine
-                </div>
-                </div>
-                </div>
-                
-                
-                <div style="text-align: center;" class="price__inner_list">
-                <ul>
-                <li>
-                
-                 <p style="font-size: 150%;">
-                   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-                 </p>
-                
-                 
-                 <h3>
-                   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $0<span class="small-price">.60</span>
-                 </h3>
-                </li>
-                </ul>
-                </div>
-                
-                
-                </main>
-                
-                
-                <main id="sideA">
-                <div class="card" style="width: 21.9rem;">
-                <div class="card-body">
-                <br><br>
-                <img  src="/images/green sewing.jpg" width="104.3%">
-                <br>
-                <div class="middle_cta" style="background:rgb(173, 173, 173);">
-                <div class="middle_img">
-                 </div>
-                
-                 <div class="middle_text">
-                  Handheld Green Sewing Machine
-                </div>
-                </div>
-                </div>
-                
-                
-                <div style="text-align: center;" class="price__inner_list">
-                <ul>
-                <li>
-                
-                 <p style="font-size: 150%;">
-                   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; Rental
-                 </p>
-                
-                 
-                 <h3>
-                   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; $1<span class="small-price">.40</span>
-                 </h3>
-                </li>
-                </ul>
-                </div>
-                
-                
-                </main>
-                
-                
-                
-                
-                <main id="sideA">
-                <div class="card" style="width: 21.9rem;">
-                <div class="card-body">
-                <br><br><br><br>
-                <img src="/images/white sewing.png" width="97%">
-                <br><br><br><br>
-                <div class="middle_cta" style="background:rgb(173, 173, 173);">
-                <div class="middle_img">
-                 </div>
-                
-                 <div class="middle_text">
-                  Michley SewSimple Sewing Machine 
-                </div>
-                </div>
-                </div>
-                
-                
-                <div style="text-align: center;" class="price__inner_list">
-                <ul>
-                <li>
-                
-                 <p style="font-size: 150%;">
-                   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rental
-                 </p>
-                
-                 
-                 <h3>
-                   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$1<span class="small-price">.90</span>
-                 </h3>
-                </li>
-                </ul>
-                </div>
-                
-                
-                </main>
+                  </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                      <img src="/images/printer 3.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+                      <div class="card-body">
+                        <h5 class="middle_text">Print Maker 3D Printer</h5>
+                        <p class="card-text">Rental</p>
+                        <p class="card-text centered">9.99$ Per Month</p>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                        <img src="/images/anker.png" class="card-img-top" alt="" style="height: 15rem; width: 90%; object-fit: cover;" alt="">
+                        <div class="card-body">
+                          <h5 class="middle_text">AnkerMake M5 3D Printer</h5>
+                          <p class="card-text">Rental</p> 
+                          <p class="card-text centered">59.99$ Per Month</p>
+                          </div>
+                      </div>
+                      </div>
+                        <h2  style="color: black; text-align: center;" ><b>Laser Cutters</b></h2>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                            <img src="/images/cheap laser.png" class="card-img-top" alt="" style="height: 16.5rem; width: 100%; object-fit: cover;" alt="">
+                            <div class="card-body">
+                              <h5 class="middle_text">TTS-55 PRO 5.5W Laser Engraver</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">19.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/laser cutter blue.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">US Stock SFX Co2 Laser Cutter</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">709.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/expensive laser cutter.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">HP-3655 CO2 Laser Cutter</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">1219.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/genesis.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">G139L – GENESIS Laser Cutter</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">1139.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/mini laser.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">Mini Laser Engraving Machines</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">19.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/3020.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">3020 40w 50w CO2 Laser Cutter</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">19.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/daja.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">DAJA DJ7 Laser Engraving Machine</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">19.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/laser pecker.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">LaserPecker Laser Engraver</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">29.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/utech.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">IIIUTECH Laser Cutter</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">79.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <h2  style="color: black; text-align: center;" ><b>CNC Machine</b></h2> 
+                       <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/cheap cnc.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">1610 CNC Machine Blue</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">9.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/median cnc.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">AnoleX 3030-Evo Pro CNC Router</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">19.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/expensive CNC.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">Genmitsu CNC Router Machine</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">59.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/cnc1.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">EPS 5 Axis CNC Cutting Machine</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">499.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/cnc3018.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">CNCTOPBAOS CNC 3018 Pro Max</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">19.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/20wcnc.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">20W Output CNC Laser Cutter</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">49.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/cnc2.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">Anet 4540 Desktop CNC Machine</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">69.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/cnc3.png" class="card-img-top" alt="" style="align-items: center; height: 22rem; width: 90%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">OpenBuilds MiniMill CNC Machine</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">69.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/bantam.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">Bantam Tools CNC Machine</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">499.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <h2  style="color: black; text-align: center;" ><b>Soldering Irons</b></h2> 
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/cheap solder irons.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">80W Soldering Iron Kit</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">19.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/median soldering.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">Soldering Station Digital Display</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">9.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/expensive soldering.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">Weller Soldering Station</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">39.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/solder1.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">FX888D-23BY Soldering Station</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">9.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/JBC.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">CD-1BQF Soldering Station</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">49.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/cordless.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">Cordless Soldering Iron Kit</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">9.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/safe soldering.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">ESD-Safe Mini Soldering System</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">429.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/desoldering.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">FR301-03/P Desoldering Tool</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">29.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/soldering2.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">WHA3000PS Desoldering Station</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">499.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <h2  style="color: black; text-align: center;" ><b>Sewing Machines </b>  </h2>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/cheap sewing.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">MX60 Sewing Machine</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">9.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/median sewing.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">4423 Heavy Duty Sewing Machine</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">9.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/expensive sewing.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">Brother Sewing Station</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">59.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/janome.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">2030DC-T Sewing Machine</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">49.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/Soldering3.jpg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">Mini Sewing Machine Kit</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">9.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/old sewing.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">Industrial Leather Sewing Machine</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">29.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/brother.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">Brother SE400 Sewing Machine</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">29.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/mini sewing.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">Mini Handheld Sewing Machine</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">4.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
+                              <img src="/images/green sewing.jpg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                            <div class="card-body">
+                              <h5 class="middle_text">Handheld Green Sewing Machine</h5>
+                              <p class="card-text">Rental</p>
+                              <p class="card-text centered">9.99$ Per Month</p>
+                            </div>
+                          </div>
+                        </div>
+    </div>
+  </div>
 
 
-                <br><br>
-
-<a class="nav-link text-white col-md-2 col-6 mx-auto border border-dark rounded bg-dark" style="text-align: center; width: fit-content;  " href="/pages/signup.html">Buy Now</a>
-
+<a class="nav-link text-white col-md-2 col-6 mx-auto border border-dark rounded bg-dark w-25" style="text-align: center; width: fit-content;  " href="/pages/signup.html">Buy Now</a>
+<br><br>
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
                   <symbol id="bootstrap" viewBox="0 0 118 94">
@@ -2267,7 +697,7 @@ fill: white;
                 function toggleHighlight(card) {
                   card.classList.toggle('highlight');}
                   </script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 
 </body>

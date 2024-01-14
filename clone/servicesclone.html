@@ -8,113 +8,138 @@
     <link rel="stylesheet" href="/css/services.css">
     <title>Services</title>
     <style>
-      .nav-link {
-        position: relative;
-        transition: 0.3s;
+      .card p{
+        text-align: center;
       }
-      
-      .nav-link::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -2px;
-        width: 100%;
-        height: 4px;
-        background-color: #ffffff;
-        transform: scaleX(0);
-        transition: transform 0.3s ease-in-out;
-      }
-      
-      .nav-link:hover::after {
-        transform: scaleX(1);
-      }
-      .dropdown-item.btn {
-        padding: 0;
-        background-color: transparent;
-        border: none;
-      }
-      
-      .dropdown-item.btn:focus {
-        outline: none;
-        box-shadow: none;
-      }
-      
-      .svg-large{
-        height: 50%;
-        width:50%;
-      }
-      .bd-placeholder-img {
-          font-size: 1.125rem;
-          text-anchor: middle;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          user-select: none;
-        }
-      
-        @media (min-width: 768px) {
-          .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-          }
-        }
-        .divider {
-          width: 100%;
-          height: 2rem;
-          background-color: rgba(0, 0, 0, .1);
-          border: solid rgb(255, 255, 255);
-          border-width: 1px 0;
-          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-        .divider2 {
-          width: 100%;
-          height: auto;
-          background-color: rgba(0, 0, 0, .1);
-          border: solid rgb(255, 255, 255);
-          border-width: 1px 0;
-          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-      
-        .b-example-vr {
-          flex-shrink: 0;
-          width: 1.5rem;
-          height: 100vh;
-        }
-        .bi {
-          vertical-align: -.125em;
-          fill: currentColor;
-        }
-      
-        .nav-scroller {
-          position: relative;
-          z-index: 2;
-          height: 2.75rem;
-          overflow-y: hidden;
-        }
-      
-        .nav-scroller .nav {
-          display: flex;
-          flex-wrap: nowrap;
-          padding-bottom: 1rem;
-          margin-top: -1px;
-          overflow-x: auto;
-          text-align: center;
-          white-space: nowrap;
-          -webkit-overflow-scrolling: touch;
-        }
-      
-      
-        .bd-mode-toggle {
-          z-index: 1500;
-        }
-      
-        .bd-mode-toggle .dropdown-menu .active .bi {
-          display: block !important;
-        }
-        .white {
-      fill: white;
-      }
-      .centered{
-        align-self: center !important;
-      }
+  .dropdown-toggle:focus {
+  box-shadow: none;
+  outline: none;
+}
+.highlightable-card {
+  transition: box-shadow 0.3s;
+}
+
+.highlightable-card:hover,
+.highlightable-card:focus {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+  .card{
+    height: fit-content;
+    width: fit-content;
+    margin: 10px;
+    min-height: 450px;
+  }
+    .card-body.selected {
+    background-color: #f0f0f0; 
+  }
+      .card-body img {
+      width: 100%;  
+      height: 100%; 
+      border-radius: 8px; 
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+
+    .nav-link {
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+.dropdown-item::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s;
+}
+
+.dropdown-item:hover::after {
+  border-bottom-color: #ffffff;
+}
+
+.svg-large{
+  height: 50%;
+  width:50%;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgb(255, 255, 255);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .white {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }
+  .white {
+fill: white;
+}
+.highlight {
+  outline: 2px solid yellow;
+}
       .accordion-button {
           background-color: #343a40; /* Dark background color */
           color: #fff !important; /* White text color */
@@ -146,14 +171,8 @@
                     <li class="nav-item">
                       <a class="nav-link text-white" href="/clone/servicesclone.html">Services</a>
                     </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        About Us
-                      </a>
-                      <ul class="dropdown-menu bg-dark">
-                        <li><a class="dropdown-item text-white" href="/pages/contacts.html">Contact Us</a></li>
-                        <li><a class="dropdown-item text-white" href="/pages/locations.html">Locations</a></li>
-                      </ul>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="/pages/locations.html">Locations</a>
                     </li>
                   </ul>
                 </div>
@@ -212,7 +231,7 @@
           </div>
             <div class="col-md-4">
               <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                <img src="/images/vr.jpeg"class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
+                <img src="/images/vr.jpeg"class="card-img-top" alt="" style="height: 15rem; width: 100%; object-fit: cover;" alt="">
                 <div class="card-body">
                   <h5 class="middle_text">Virtual Reality</h5>
                   <p class="card-text">Explore immersive virtual reality experiences and create your own VR content using our VR equipment and software.</p>
@@ -252,7 +271,7 @@
                     </div>
                     <div class="col-md-4">
                       <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                        <img src="/images/music.png" class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
+                        <img src="/images/music.png" class="card-img-top" alt="" style="height: 15rem; width: 90%; object-fit: cover;" alt="">
                         <div class="card-body">
                           <h5 class="middle_text">Audio and Music Production</h5>
                           <p class="card-text">Access our sound recording studio and music production equipment to create and edit your own music 
@@ -272,7 +291,7 @@
                         </div>
                         <div class="col-md-4">
                           <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                            <img src="/images/food.jpeg" class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
+                            <img src="/images/food.jpeg" class="card-img-top" alt="" style="height: 16.5rem; width: 100%; object-fit: cover;" alt="">
                             <div class="card-body">
                               <h5 class="middle_text">Food Hacking</h5>
                               <p class="card-text">Explore the intersection of food and technology, experiment with molecular gastronomy, and create innovative culinary experiences.</p>
@@ -285,7 +304,7 @@
                               <img src="/images/coding.jpg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
                             <div class="card-body">
                               <h5 class="middle_text">Coding and Programming</h5>
-                              <p class="card-text">Learn coding languages, web development, and software programming using our computers and coding resources.</p><br>
+                              <p class="card-text">Learn coding languages, web development, and software programming using our computers and coding resources.</p>
                               <p class="card-text centered">14.99$ Per Month</p>
                             </div>
                           </div>
