@@ -123,7 +123,10 @@ border-top: 1px solid #000000;
 
 
 }
-
+div{
+  margin-left: 0;
+  margin-right: 0;
+}
 main u{
 font-size: 300%;
 color: black;
@@ -238,22 +241,4 @@ font-weight:600;
 
                           
 
-                         
-
-                          
-
-
-
-
-                          
-
-
-
-
-                       
-                         
-                        
-                       
-                         
-                         
                          
