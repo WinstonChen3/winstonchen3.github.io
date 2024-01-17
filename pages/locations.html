@@ -3,184 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/images/3.png" type="image/png">
+    <title>Locations</title>
+    <link rel="icon" href="../images/3.png" type="image/png">
+    <style> 
+      
+    </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/services.css">
-    <title>Services</title>
-<style>
-  .dropdown-toggle:focus {
-  box-shadow: none;
-  outline: none;
-}
-.highlightable-card {
-  transition: box-shadow 0.3s;
-}
-
-.highlightable-card:hover,
-.highlightable-card:focus {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-  .card{
-    height: fit-content;
-    width: fit-content;
-    margin: 10px;
-    min-height: 450px;
-  }
-    .card-body.selected {
-    background-color: #f0f0f0; 
-  }
-      .card-body img {
-      width: 100%;  
-      height: 100%; 
-      border-radius: 8px; 
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-    }
-
-    .nav-link {
-  position: relative;
-  transition: 0.3s;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 4px;
-  background-color: #ffffff;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-.nav-link:hover::after {
-  transform: scaleX(1);
-}
-.dropdown-item::after {
-  content: '';
-  display: block;
-  border-bottom: 2px solid transparent;
-  transition: border-bottom-color 0.3s;
-}
-
-.dropdown-item:hover::after {
-  border-bottom-color: #ffffff;
-}
-
-.svg-large{
-  height: 50%;
-  width:50%;
-}
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-
-  .b-example-divider {
-    width: 100%;
-    height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgb(255, 255, 255);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-  }
-
-  .b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-  }
-
-  .white {
-    vertical-align: -.125em;
-    fill: currentColor;
-  }
-
-  .nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-  }
-
-  .nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-
-
-  .bd-mode-toggle {
-    z-index: 1500;
-  }
-
-  .bd-mode-toggle .dropdown-menu .active .bi {
-    display: block !important;
-  }
-  .white {
-fill: white;
-}
-.highlight {
-  outline: 2px solid yellow;
-}
-</style>
-  </head>
-
+    <link rel="stylesheet" href="/css/locations.css">
+</head>
+    <button class=".bg-dark btn btn-sm "><a href="/index.html">Home</a></button>
+    <button class=".bg-dark btn btn-sm "><a href="/pages/events.html">Events</a></button>
+    <button class=".bg-dark btn btn-sm "><a href="/pages/equipment.html">Equipment</a></button>
+    <button class=".bg-dark btn btn-sm "><a href="/pages/membership.html">Sign Up</a></button>
+    <button class=".bg-dark btn btn-sm "><a href="/pages/login.html">Login</a></button>
+  </form>
+</nav>
+  </ul>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-dark bg-gradient navbar-inverse" role="navigation">
-      <div class="container-fluid bg-dark bg-gradient py-2"> <!-- Added padding to vertically center -->
-        <div class="row align-items-center">
-          <div class="col-auto">
-            <a class="navbar-brand bg-transparent text-white" href="/index.html">
-              <img src="../images/3.png" alt="image/png"> <!-- Your icon or logo -->
-            </a>
-          </div>
-          <div class="col">
-            <ul class="navbar-nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="../pages/events.html">Events</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/clone/equipmentclone.html">Equipment</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/clone/servicesclone.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/pages/locations.html">Locations</a>
-              </li>
+
+  <div class="container">
+    <div class="row">
+    <div class="col-md-4">
+    <div class="card highlightable-card" onclick="toggleHighlight(this)">
+      <img src="/images/BM1.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+      <div class="card-body">
+        <h5 class="card-title">2356 Armadillo street, Houston TX, US</h5>
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Contact Information
+        </button>
+      
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item">Phone number: 8885141177</a></li>
+        <li><a class="dropdown-item">Email: MakerspaceTech@gmail.com</a></li>
+        <li><a class="dropdown-item">Fax: 8624528765 </a></li>
+      </ul>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card highlightable-card" onclick="toggleHighlight(this)">
+        <img src="/images/BM2.png" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+        <div class="card-body">
+          <h5 class="card-title">5555 ted jet street, Las Vegas NV, US</h5>
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Contact Information
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item">Phone number: 5227293022</a></li>
+              <li><a class="dropdown-item">Email: MakerspaceTech@gmailcom</a></li>
+              <li><a class="dropdown-item">Fax:298590824</a></li>
+            </ul>
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Hours
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item">Monday 7:00am-5:00pm</a></li>
+              <li><a class="dropdown-item">Tuesday 7:00am-4:00pm</a></li>
+              <li><a class="dropdown-item">Wensday 7:00am-5:00pm</a></li>
+              <li><a class="dropdown-item">Thursday 11:00am-9:00pm</a></li>
+              <li><a class="dropdown-item">Friday 11:00am-10:00pm</a></li>
+              <li><a class="dropdown-item">Saturday 2:00pm-5:00pm</a></li>
+              <li><a class="dropdown-item">Sunday 12:00am-11:30pm</a></li>
+            </ul>
+            
+        </div>
+      </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card highlightable-card" onclick="toggleHighlight(this)">
+          <img src="/images/BM3.png"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+          <div class="card-body">
+            <h5 class="card-title">4546 Hotdog palace av, Little rock AR, US</h5>
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Contact Information
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item">Phone number: 5056823295</a></li>
+              <li><a class="dropdown-item">Email: MakerspaceTech@gmail.com</a></li>
+              <li><a class="dropdown-item">Fax: 97265284567</a></li>
+            </ul>
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Hours
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item">Monday Closed</a></li>
+              <li><a class="dropdown-item">Tuesday 12:30pm-7:00pm</a></li>
+              <li><a class="dropdown-item">Wensday 7:45am-8:55pm</a></li>
+              <li><a class="dropdown-item">Thursday 11:00am-7:00pm</a></li>
+              <li><a class="dropdown-item">Friday 9:00am-5:00pm</a></li>
+              <li><a class="dropdown-item">Saturday 11:00pm-12:00pm</a></li>
+              <li><a class="dropdown-item">Sunday Closed</a></li>
             </ul>
           </div>
         </div>
-  
-        <!-- Right-aligned content -->
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="../pages/signup.html">Get Started</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-         <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
           <div class="card highlightable-card" onclick="toggleHighlight(this)">
             <img src="/images/BM4.png"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
             <div class="card-body">
@@ -321,7 +238,7 @@ fill: white;
                     </div>
                     <div class="col-md-4">
                       <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                        <img src="/images/music.png" class="card-img-top" alt="" style="height: 30rem; width: 100%; object-fit: cover;" alt="">
+                        <img src="/images/BM9.png" class="card-img-top" alt="" style="height: 30rem; width: 100%; object-fit: cover;" alt="">
                         <div class="card-body">
                           <h5 class="card-title"> 848 Innovation Street, Irving, US</h5>
                           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
