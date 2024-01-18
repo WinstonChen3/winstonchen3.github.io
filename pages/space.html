@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    <title>Workspace Reservation</title>
+    <style>
+        body {
+            color: rgb(255, 255, 255);
+            align-items: center;
+            margin: 50px;
+        }
+        .centered{
+            align-self: center;
+        }
+    </style>
+</head>
+<body class="text-center bg-dark">
+
+<div class="container bg-dark">
+    <h1 class="mb-4">Workspace Reservation</h1>
+
+    <!-- Workspace Reservation Form -->
+    <form class="text-start">
+        <div class="mb-3">
+            <label for="reservationDate" class="form-label">Reservation Date</label>
+            <input type="date" class="form-control form-control-lg" id="reservationDate" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="reservationTime" class="form-label">Reservation Time</label>
+            <input type="time" class="form-control form-control-lg" id="reservationTime" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="additionalNotes" class="form-label">Additional Notes</label>
+            <textarea class="form-control form-control-lg" id="additionalNotes" rows="3"></textarea>
+        </div>
+
+        <div class="row justify-content-center">
+            <button type="submit" class="btn btn-dark w-25"><a href="/pages/checkout.html">Proceed</a></button>
+        </div>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-xU3g8AFgA5Q5qCpiWJH2Vn7T6E8FxsUKTKh5PFFOOYibCH0RHdLfg2bJAC7vFhXp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
