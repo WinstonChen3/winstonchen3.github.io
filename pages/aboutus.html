@@ -1,28 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/test.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Techlab - Empowering Creativity</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #fff; /* White background */
+            color: #000; /* Black text */
+        }
+
+        .navbar {
+            background-color: #fff; /* White navbar background */
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #000; /* Black color for the toggler icon */
+        }
+
+        .navbar-brand img {
+            width: 40px; /* Adjust the width of the image */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Add margin to separate image from text */
+        }
+
+        .navbar-nav .nav-link {
+            color: #000 !important; /* Black color for navbar links */
+            transition: color 0.3s ease; /* Smooth transition effect */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #333 !important; /* Darker shade on hover */
+        }
+
+        .navbar-nav .btn-dark {
+            color: #fff; /* White text color */
+            background-color: #000; /* Black background color */
+            border-color: #000; /* Black border color */
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
+        }
+
+        .navbar-nav .btn-dark:hover {
+            background-color: #333; /* Darker background on hover */
+            border-color: #333; /* Darker border color on hover */
+        }
+
+        .jumbotron {
+            background-color: #000; /* Black jumbotron background */
+            color: #fff; /* White text for jumbotron */
+        }
+    </style>
 </head>
-<body> 
-    <nav class="navbar">
-  <ul class="navbar-nav">
-    <li class="nav-item" style="font-family:'Raleway';"><a href="#" class="nav-link">Home</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="#" class="nav-link">About Us</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="#" class="nav-link">Equipment</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="#" class="nav-link">Membership</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="#" class="nav-link">Events</a></li>
-    <li class="nav-item" style="font-family:'Raleway';"><a href="#" class="nav-link">Contact</a></li>
-  </ul>
-</nav>
+
+<body>
+
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="your-logo-image.jpg" alt="Techlab Logo">
+              </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/equipment.html">Equipment</a>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/events.html">Calendar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/pages/locations.html">Locations</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-dark" href="#">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Jumbotron/Introduction Section -->
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Unleash Your Creativity with Techlab</h1>
+            <p class="lead">Empowering individuals to bring their ideas to life through cutting-edge makerspace
+                services.</p>
+        </div>
+    </header>
 
 
-<footer>
-    <p>&copy; 2023 Your Company. All rights reserved.</p>
-  </footer>
+    <!-- Main Content Section -->
+    <div class="container">
+        <section>
+            <h2>Our Mission</h2>
+            <p>At the core of Techlab's mission is the belief that everyone deserves access to the tools and resources
+                they need to turn their imagination into reality. We strive to foster a creative community where
+                innovation knows no bounds.</p>
+        </section>
 
+        <section>
+            <h2>What Sets Us Apart</h2>
+            <ul>
+                <li><strong>Global Network:</strong> With locations scattered across the globe, Techlab provides a
+                    seamless experience for makers worldwide.</li>
+                <li><strong>Cutting-edge Equipment:</strong> We curate a comprehensive array of state-of-the-art
+                    equipment, ranging from 3D printers and CNC machines to woodworking tools and electronics kits.</li>
+                <li><strong>Expert Support:</strong> Our team of experienced professionals is dedicated to assisting you
+                    at every step of your creative journey.</li>
+                <li><strong>Community Collaboration:</strong> Techlab isn't just a service; it's a community.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why Choose Techlab</h2>
+            <ul>
+                <li><strong>Accessibility:</strong> Techlab is committed to making makerspaces accessible to all.</li>
+                <li><strong>Innovation Hub:</strong> Join a community that thrives on innovation.</li>
+                <li><strong>Quality Assurance:</strong> Trust in the quality of our equipment and services.</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>
