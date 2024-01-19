@@ -54,10 +54,10 @@ body {
     border-color: #333;
   }
   .navbar-brand img {
-    max-width: 25%;
+    max-width: 13%;
     height: auto;
     object-fit: contain;
-    position: relative;
+    padding: 0;
   }
   .navbar-brand{
     width: fit-content;
