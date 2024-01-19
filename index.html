@@ -5,7 +5,7 @@
   <title>Techlab</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/services.css">
+  <link rel="stylesheet" type="text/css" href="css/test.css">
   <link rel="icon" href="/images/3.png" type="image/png">
   <style> 
 .nav-link {
@@ -115,12 +115,52 @@ fill: white;
 .centered{
   align-self: center !important;
 }
+.jumbotron {
+            background: linear-gradient(to bottom, #000, #333); /* Gradient background */
+            color: #fff; /* White text for jumbotron */
+            padding: 100px 0; /* Increase padding for a larger visual impact */
+            text-align: center;
+        }
+        .contacts {
+            background-color: #f8f9fa; /* Background color for the contacts section */
+            padding: 50px 0; /* Adjust padding as needed */
+            text-align: center;
+        }
+
+        .contacts h2 {
+            font-size: 2.5rem; /* Adjust font size as needed */
+            margin-bottom: 20px; /* Add margin between title and contact details */
+            color: #343a40; /* Text color for the title */
+        }
+
+        .contacts p {
+            font-size: 1.25rem; /* Adjust font size as needed */
+            margin-bottom: 15px; /* Add margin between contact details */
+            color: #6c757d; /* Text color for contact details */
+        }
+
+        .contacts .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contacts .contact-info a {
+            text-decoration: none;
+            color: #007bff; /* Link color for contact information */
+            transition: color 0.3s ease;
+        }
+
+        .contacts .contact-info a:hover {
+            color: #0056b3; /* Hover color for links */
+        }
+
   </style>
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg bg-dark bg-gradient navbar-inverse" role="navigation">
-      <div class="container-fluid bg-dark bg-gradient py-2">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-inverse" role="navigation">
+      <div class="container-fluid bg-dark py-2">
         <div class="row align-items-center">
           <div class="col-auto">
             <a class="navbar-brand bg-transparent text-white" href="/index.html">
@@ -156,34 +196,12 @@ fill: white;
         </ul>
       </div>
     </nav>
+    <div class="jumbotron">
+      <h1 class="display-4">Unleash Your Creativity with Techlab</h1>
+      <p class="lead">Empowering individuals to bring their ideas to life through cutting-edge makerspace
+          services.</p>
+  </div>
   </header>
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="images/background1.png" class="d-block w-100 h-100" alt="Slide 1">
-      </div>
-      <div class="carousel-item">
-        <img src="images/background2.png" class="d-block w-100" alt="Slide 2">
-      </div>
-      <div class="carousel-item">
-        <img src="images/background3.png" class="d-block w-100" alt="Slide 3">
-      </div>
-    </div>
-    <button class="carousel-control-prev h-100" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" style="padding-bottom: 200px;" aria-hidden="true"></span>
-      <span class="visually-hidden" >Previous</span>
-    </button>
-    <button class="carousel-control-next h-100" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  
-  <div class="hero">
-    <h1>Techlab</h1>
-    <p class="text-dark">Welcome to Techlab, your community's creative hub! We provide a supportive environment for makers of all levels to explore their passions. Our makerspace is equipped with cutting-edge tools and machinery, including 3D printers, laser cutters, and more. With a vibrant community of like-minded individuals, workshops, and expert guidance, Techlab is the place to bring your ideas to life. Join us and unleash your creativity!</p</p>
-    <br><br><a class="btn bg-dark text-white nav-link w-25" style="left: 37.5%;" href="pages/signup.html">Get Started</a>
-  </div>
   <main>
         <!-- Features Section -->
         <section class="features">
@@ -222,8 +240,15 @@ fill: white;
             <br>
             <a class="nav-link text-white col-md-2 col-6 mx-auto border border-dark rounded bg-dark" style="text-align: center; width: 19rem;  " href="/pages/signup.html">See More</a>
         </section>
-    
-  </main>
+        <section class="contacts">
+          <div class="container">
+              <h2>Contact Us</h2>
+              <div class="contact-info">
+                  <p>Email: <a href="mailto:info@techlab.com">info@techlab.com</a></p>
+                  <p>Phone: <a href="tel:+11234567890">+1 (123) 456-7890</a></p>
+              </div>
+          </div>
+      </section>
   <div class="divider"></div>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="bootstrap" viewBox="0 0 118 94">
