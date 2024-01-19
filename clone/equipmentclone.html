@@ -146,7 +146,12 @@ fill: white;
           background-color: #343a40; /* Dark background color */
           color: #fff !important; /* White text color */
           transition: none; /* Disable color change on click */
-        }
+        }.navbar-brand img {
+  max-width: 13%;
+  height: auto;
+  object-fit: contain;
+  padding: 0;
+}
   </style>
 </head>
 <body>
@@ -154,7 +159,7 @@ fill: white;
     <nav class="navbar navbar-expand-lg bg-dark navbar-inverse" role="navigation">
       <div class="container-fluid bg-dark py-2">
         <div class="row align-items-center">
-          <div class="col-auto">
+          <div class="w-25">
             <a class="navbar-brand bg-transparent text-white" href="/index.html">
               <img src="../images/3.png" alt="image/png"> 
             </a>
