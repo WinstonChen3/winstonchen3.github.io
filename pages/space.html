@@ -13,12 +13,15 @@
         .centered{
             align-self: center;
         }
+        .a{
+            text-decoration: none;
+        }
     </style>
 </head>
-<body class="text-center bg-dark">
+<body class="text-center bg-dark bg-gradient">
 
-<div class="container bg-dark">
-    <a class="navbar-brand" style="margin-right: 0;" href="../index.html"><img src="/images/3.png" alt="image/png"></a>
+<div class="container w-100 h-100">
+    <a class="navbar-brand" href="../index.html"><img src="/images/3.png" alt="image/png" style="width: 10%; height: 10%;"></a>
     <h1 class="mb-4">Workspace Reservation</h1>
 
     <!-- Workspace Reservation Form -->
@@ -30,16 +33,16 @@
 
         <div class="mb-3">
             <label for="reservationTime" class="form-label">Reservation Time</label>
-            <input type="time" class="form-control form-control-lg w-50" id="reservationTime" required>
+            <input type="time" class="form-control form-control-lg" id="reservationTime" required>
         </div>
 
         <div class="mb-3">
             <label for="additionalNotes" class="form-label">Additional Notes</label>
-            <textarea class="form-control form-control-lg w-50" id="additionalNotes" rows="3"></textarea>
+            <textarea class="form-control form-control-lg" id="additionalNotes" rows="3"></textarea>
         </div>
 
         <div class="row justify-content-center">
-            <button type="submit" class="btn btn-dark w-25" style="text-decoration: none;"><a href="/pages/checkout.html">Proceed</a></button>
+            <button type="submit" class="btn w-25"><a class="a text-white" href="/pages/checkout.html">Proceed</a></button>
         </div>
     </form>
 </div>
