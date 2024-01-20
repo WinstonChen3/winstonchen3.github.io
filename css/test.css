@@ -242,7 +242,7 @@ button:hover {
 }
 
 .navbar-brand img {
-  max-width: 13%;
+  max-width: 120%;
   height: auto;
   object-fit: contain;
   padding: 0;
@@ -295,6 +295,7 @@ button a {
   align-items: right;
 }
 /* Main */
+
 .features {
   margin: 50px 0;
 }

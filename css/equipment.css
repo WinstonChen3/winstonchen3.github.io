@@ -20,7 +20,12 @@ align-content: left;
   border-bottom:2px solid #C0C0C0 ;
 }
 
-
+.navbar-brand img {
+  max-width: 120%;
+  height: auto;
+  object-fit: contain;
+  padding: 0;
+}
 
 main {
 padding: 20px;

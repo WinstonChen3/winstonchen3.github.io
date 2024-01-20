@@ -53,7 +53,7 @@ header {
   border-color: #222;
 }
 .navbar-brand img {
-  max-width: 13%;
+  max-width: 120%;
   height: auto;
   object-fit: contain;
   padding: 0;

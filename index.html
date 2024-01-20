@@ -118,52 +118,62 @@ fill: white;
 .jumbotron {
             background: linear-gradient(to bottom, #000, #333); /* Gradient background */
             color: #fff; /* White text for jumbotron */
-            padding: 100px 0; /* Increase padding for a larger visual impact */
+            padding: 350px 0; /* Increase padding for a larger visual impact */
             text-align: center;
             height: 500px;
+            vertical-align: center;
         }
 
+    /* Custom CSS for centering the logo */
+    .navbar-brand-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand img {
+      max-height: 75px; /* Adjust the max-height as needed */
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-inverse" role="navigation">
-      <div class="container-fluid bg-dark py-2">
-        <div class="row align-items-center">
-          <div class="col-auto container">
-            <a class="navbar-brand bg-transparent text-white" href="/index.html">
-              <img src="../images/3.png" alt="image/png"> 
-            </a>
-          </div>
-          <div class="col">
-            <ul class="navbar-nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="../pages/events.html">Events</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/clone/equipmentclone.html">Equipment</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/clone/servicesclone.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/pages/locations.html">Locations</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-  
-        <!-- Right-aligned content -->
-        <ul class="navbar-nav ml-auto">
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-inverse" role="navigation">
+  <div class="container-fluid bg-dark py-2">
+    <div class="row align-items-center">
+      <div class="col-auto mx-auto navbar-brand-container">
+        <a class="navbar-brand bg-transparent text-white" href="/index.html">
+          <img src="../images/3.png" alt="image/png">
+        </a>
+      </div>
+      <div class="col">
+        <ul class="navbar-nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link text-white" href="../pages/signup.html">Get Started</a>
+            <a class="nav-link text-white" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../pages/events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/clone/equipmentclone.html">Equipment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/clone/servicesclone.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/pages/locations.html">Locations</a>
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
+
+    <!-- Right-aligned content -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="../pages/signup.html">Get Started</a>
+      </li>
+    </ul>
+  </div>
+</nav>
     <div class="jumbotron">
       <h1 class="display-2" style="vertical-align: middle;">Unleash Your Creativity with Techlab</h1>
       <p class="lead" style="vertical-align: middle;">Empowering individuals to bring their ideas to life through cutting-edge makerspace
@@ -177,7 +187,7 @@ fill: white;
             <div class="container">
               <div class="row">
               <div class="col-md-4">
-              <div class="card highlightable-card">
+              <div class="card highlightable-card"  style="height: 30rem;">
                 <img src="/images/3d.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
                 <div class="card-body">
                   <h5 class="card-title">3D Printing</h5>
@@ -186,7 +196,7 @@ fill: white;
               </div>
               </div>
               <div class="col-md-4">
-                <div class="card highlightable-card">
+                <div class="card highlightable-card"  style="height: 30rem;">
                   <img src="/images/wood.jpeg" class="card-img-top" alt="" style="height: 70%; width: 100%; object-fit: cover;" alt="">
                   <div class="card-body">
                     <h5 class="card-title">Woodworking</h5>
@@ -195,7 +205,7 @@ fill: white;
                 </div>
                 </div>
                 <div class="col-md-4">
-                  <div class="card highlightable-card">
+                  <div class="card highlightable-card"  style="height: 30rem;">
                     <img src="/images/electric.jpeg"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
                     <div class="card-body">
                       <h5 class="card-title">Electronics Prototyping</h5>
@@ -206,8 +216,10 @@ fill: white;
               </div>
             </div>
             <br>
-            <a class="nav-link text-white col-md-2 col-6 mx-auto border border-dark rounded bg-dark" style="text-align: center; width: 19rem;  " href="/pages/signup.html">See More</a>
-        </section>
+            <div class="row justify-content-center">
+              <a href="/clone/servicesclone.html" class="btn btn-dark w-25 text-white" role="button">See More</a>
+            </div>
+                </section>
   <div class="divider"></div>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="bootstrap" viewBox="0 0 118 94">
@@ -226,8 +238,8 @@ fill: white;
   </svg>
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
-    <div class="container-fluid d-flex flex-column min-vh-60 " ></div>
-    <p class="col-md-2 col-6 mb-0 text-white">Email: info@techlab.com <br>
+    <div class="container-fluid d-flex flex-column min-vh-60 "></div>
+    <p class="col-md-2 col-6 mb-0 text-white" >Email: info@techlab.com <br>
     Phone: +1 (123) 456-7890</p>
 
     <p class="col-md-2 col-6 mb-0 text-white" style="text-align: center;">&copy; 2023 Techlab</p>

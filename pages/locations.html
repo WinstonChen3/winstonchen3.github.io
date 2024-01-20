@@ -120,52 +120,60 @@ fill: white;
   align-self: center !important;
 }
 .navbar-brand img {
-  max-width: 13%;
   height: auto;
   object-fit: contain;
   padding: 0;
 }
+    /* Custom CSS for centering the logo */
+    .navbar-brand-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand img {
+      max-height: 75px; /* Adjust the max-height as needed */
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-inverse" role="navigation">
-      <div class="container-fluid bg-dark py-2">
-        <div class="row align-items-center">
-          <div class="col-auto container">
-            <a class="navbar-brand bg-transparent text-white" href="/index.html">
-              <img src="../images/3.png" alt="image/png"> 
-            </a>
-          </div>
-          <div class="col">
-            <ul class="navbar-nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="../pages/events.html">Events</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/clone/equipmentclone.html">Equipment</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/clone/servicesclone.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/pages/locations.html">Locations</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-  
-        <!-- Right-aligned content -->
-        <ul class="navbar-nav ml-auto">
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-inverse" role="navigation">
+  <div class="container-fluid bg-dark py-2">
+    <div class="row align-items-center">
+      <div class="col-auto mx-auto navbar-brand-container">
+        <a class="navbar-brand bg-transparent text-white" href="/index.html">
+          <img src="../images/3.png" alt="image/png">
+        </a>
+      </div>
+      <div class="col">
+        <ul class="navbar-nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link text-white" href="../pages/signup.html">Get Started</a>
+            <a class="nav-link text-white" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../pages/events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/clone/equipmentclone.html">Equipment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/clone/servicesclone.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/pages/locations.html">Locations</a>
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
+
+    <!-- Right-aligned content -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="../pages/signup.html">Get Started</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 </header>
   <div class="container mt-5">
     <h1 class="text-center mb-4">Locations and FAQ</h1>

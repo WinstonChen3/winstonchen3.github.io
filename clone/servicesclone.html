@@ -131,7 +131,6 @@
     z-index: 1500;
   }
   .navbar-brand img {
-  max-width: 13%;
   height: auto;
   object-fit: contain;
   padding: 0;
@@ -150,172 +149,188 @@ fill: white;
           color: #fff !important; /* White text color */
           transition: none; /* Disable color change on click */
         }
-        </style>
-      </head>
-      <body>
-        <header>
-          <nav class="navbar navbar-expand-lg bg-dark navbar-inverse" role="navigation">
-            <div class="container-fluid bg-dark py-2">
-              <div class="row align-items-center">
-                <div class="col-auto container">
-                  <a class="navbar-brand bg-transparent text-white" href="/index.html">
-                    <img src="../images/3.png" alt="image/png"> 
-                  </a>
-                </div>
-                <div class="col">
-                  <ul class="navbar-nav justify-content-center">
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="/index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="../pages/events.html">Events</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="/clone/equipmentclone.html">Equipment</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="/clone/servicesclone.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="/pages/locations.html">Locations</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-        
-              <!-- Right-aligned content -->
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="../pages/signup.html">Get Started</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+    /* Custom CSS for centering the logo */
+    .navbar-brand-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand img {
+      max-height: 75px; /* Adjust the max-height as needed */
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-inverse" role="navigation">
+  <div class="container-fluid bg-dark py-2">
+    <div class="row align-items-center">
+      <div class="col-auto mx-auto navbar-brand-container">
+        <a class="navbar-brand bg-transparent text-white" href="/index.html">
+          <img src="../images/3.png" alt="image/png">
+        </a>
+      </div>
+      <div class="col">
+        <ul class="navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../pages/events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/clone/equipmentclone.html">Equipment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/clone/servicesclone.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/pages/locations.html">Locations</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right-aligned content -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="../pages/signup.html">Get Started</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
       </header>
-  <div class="container">
-    <div class="row">
-    <div class="col-md-4">
-    <div class="card highlightable-card" onclick="toggleHighlight(this)">
-      <img src="/images/3d.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
-      <div class="card-body">
-        <h5 class="middle_text">3D Printing</h5>
-        <p class="card-text">Utilize our state-of-the-art 3D printers to bring your digital designs to life with precision and accuracy.</p>
-        <p class="card-text centered">29.99$ Per Month</p>
-      </div>
-    </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card highlightable-card" onclick="toggleHighlight(this)">
-        <img src="/images/wood.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
-        <div class="card-body">
-          <h5 class="middle_text">Woodworking</h5>
-          <p class="card-text">Learn woodworking techniques and access our fully equipped woodworking shop to create custom furniture, crafts, and more.</p>
-          <p class="card-text centered">14.99$ Per Month</p>
-        </div>
-      </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card highlightable-card" onclick="toggleHighlight(this)">
-          <img src="/images/electric.jpeg"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+      <div class="container">
+        <div class="row">
+        <div class="col-md-4">
+        <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
+          <img src="/images/3d.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
           <div class="card-body">
-            <h5 class="middle_text">Electronics Prototyping</h5>
-            <p class="card-text">Experiment with circuits, microcontrollers, and sensors to test your projects and innovations.</p>
-            <p class="card-text centered">19.99$ Per Month</p>
+            <h5 class="middle_text">3D Printing</h5>
+            <p class="card-text">Utilize our state-of-the-art 3D printers to bring your digital designs to life with precision and accuracy.</p>
+            <p class="card-text centered">29.99$ Per Month</p>
           </div>
         </div>
         </div>
         <div class="col-md-4">
-          <div class="card highlightable-card" onclick="toggleHighlight(this)">
-            <img src="/images/textile.jpeg"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+          <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
+            <img src="/images/wood.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
             <div class="card-body">
-              <h5 class="middle_text">Textile Design</h5>
-              <p class="card-text">Explore textile arts and design by using our sewing machines, embroidery tools, and fabric dyeing equipment.</p>
+              <h5 class="middle_text">Woodworking</h5>
+              <p class="card-text">Learn woodworking techniques and access our fully equipped woodworking shop to create custom furniture, crafts, and more.</p>
               <p class="card-text centered">14.99$ Per Month</p>
             </div>
           </div>
           </div>
+          <div class="col-md-4">
+            <div class="card highlightable-card"  style="height: 30rem;"onclick="toggleHighlight(this)">
+              <img src="/images/electric.jpeg"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+              <div class="card-body">
+                <h5 class="middle_text">Electronics Prototyping</h5>
+                <p class="card-text">Experiment with circuits, microcontrollers, and sensors to test your projects and innovations.</p>
+                <p class="card-text centered">19.99$ Per Month</p>
+              </div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-4">
-              <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                <img src="/images/vr.jpeg"class="card-img-top" alt="" style="height: 15rem; width: 100%; object-fit: cover;" alt="">
+              <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
+                <img src="/images/textile.jpeg"class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
                 <div class="card-body">
-                  <h5 class="middle_text">Virtual Reality</h5>
-                  <p class="card-text">Explore immersive virtual reality experiences and create your own VR content using our VR equipment and software.</p>
-                  <p class="card-text centered">29.99$ Per Month</p>
+                  <h5 class="middle_text">Textile Design</h5>
+                  <p class="card-text">Explore textile arts and design by using our sewing machines, embroidery tools, and fabric dyeing equipment.</p>
+                  <p class="card-text centered">14.99$ Per Month</p>
                 </div>
               </div>
               </div>
-              <div class="col-md-4">
-                <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                  <img src="/images/laser.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
-                  <div class="card-body">
-                    <h5 class="middle_text">Laser Cutting and Engraving</h5>
-                    <p class="card-text">Create intricate designs and patterns on various materials using our laser cutting and engraving machines.</p>
-                    <p class="card-text centered">14.99$ Per Month</p>
-                  </div>
-                </div>
-                </div>
                 <div class="col-md-4">
-                  <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                    <img src="/images/ceramic.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+                  <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
+                    <img src="/images/vr.jpeg"class="card-img-top" alt="" style="height: 15rem; width: 100%; object-fit: cover;" alt="">
                     <div class="card-body">
-                      <h5 class="middle_text">Ceramics</h5>
-                      <p class="card-text">Get hands-on experience with pottery and ceramic arts, using our pottery wheels, kilns, and glazing equipment.</p>
-                      <p class="card-text centered">14.99$ Per Month</p>
+                      <h5 class="middle_text">Virtual Reality</h5>
+                      <p class="card-text">Explore immersive virtual reality experiences and create your own VR content using our VR equipment and software.</p>
+                      <p class="card-text centered">29.99$ Per Month</p>
                     </div>
                   </div>
                   </div>
                   <div class="col-md-4">
-                    <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                      <img src="/images/Fabrication.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
+                    <div class="card highlightable-card"  style="height: 30rem;" onclick="toggleHighlight(this)">
+                      <img src="/images/laser.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
                       <div class="card-body">
-                        <h5 class="middle_text">Metalworking</h5>
-                        <p class="card-text">Learn metalworking techniques such as welding and blacksmithing to create metal sculptures, jewelry, and functional objects.</p>
-                        <p class="card-text centered">24.99$ Per Month</p>
+                        <h5 class="middle_text">Laser Cutting and Engraving</h5>
+                        <p class="card-text">Create intricate designs and patterns on various materials using our laser cutting and engraving machines.</p>
+                        <p class="card-text centered">14.99$ Per Month</p>
                       </div>
                     </div>
                     </div>
+                  </div>
+                  <div class="row">
                     <div class="col-md-4">
-                      <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                        <img src="/images/music.png" class="card-img-top" alt="" style="height: 15rem; width: 90%; object-fit: cover;" alt="">
+                      <div class="card highlightable-card"  style="height: 30rem;" onclick="toggleHighlight(this)">
+                        <img src="/images/ceramic.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
                         <div class="card-body">
-                          <h5 class="middle_text">Audio and Music Production</h5>
-                          <p class="card-text">Access our sound recording studio and music production equipment to create and edit your own music 
+                          <h5 class="middle_text">Ceramics</h5>
+                          <p class="card-text">Get hands-on experience with pottery and ceramic arts, using our pottery wheels, kilns, and glazing equipment.</p>
                           <p class="card-text centered">14.99$ Per Month</p>
-                          </div>
+                        </div>
                       </div>
                       </div>
                       <div class="col-md-4">
-                        <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                          <img src="/images/ar.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                        <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
+                          <img src="/images/Fabrication.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;" alt="">
                           <div class="card-body">
-                            <h5 class="middle_text">Augmented Reality (AR)</h5>
-                            <p class="card-text">Explore and develop augmented reality applications and experiences using our AR devices and development tools.</p>
-                            <p class="card-text centered">19.99$ Per Month</p>
+                            <h5 class="middle_text">Metalworking</h5>
+                            <p class="card-text">Learn metalworking techniques such as welding and blacksmithing to create metal sculptures, jewelry, and functional objects.</p>
+                            <p class="card-text centered">24.99$ Per Month</p>
                           </div>
                         </div>
                         </div>
                         <div class="col-md-4">
-                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                            <img src="/images/food.jpeg" class="card-img-top" alt="" style="height: 16.5rem; width: 100%; object-fit: cover;" alt="">
+                          <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
+                            <img src="/images/music.png" class="card-img-top" alt="" style="height: 15rem; width: 90%; object-fit: cover;" alt="">
                             <div class="card-body">
-                              <h5 class="middle_text">Food Hacking</h5>
-                              <p class="card-text">Explore the intersection of food and technology, experiment with molecular gastronomy, and create innovative culinary experiences.</p>
-                              <p class="card-text centered">9.99$ Per Month</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="card highlightable-card" onclick="toggleHighlight(this)">
-                              <img src="/images/coding.jpg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
-                            <div class="card-body">
-                              <h5 class="middle_text">Coding and Programming</h5>
-                              <p class="card-text">Learn coding languages, web development, and software programming using our computers and coding resources.</p>
+                              <h5 class="middle_text">Audio and Music Production</h5>
+                              <p class="card-text">Access our sound recording studio and music production equipment to create and edit your own music 
                               <p class="card-text centered">14.99$ Per Month</p>
-                            </div>
+                              </div>
+                          </div>
                           </div>
                         </div>
-    </div>
-  </div>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
+                              <img src="/images/ar.jpeg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                              <div class="card-body">
+                                <h5 class="middle_text">Augmented Reality (AR)</h5>
+                                <p class="card-text">Explore and develop augmented reality applications and experiences using our AR devices and development tools.</p>
+                                <p class="card-text centered">19.99$ Per Month</p>
+                              </div>
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
+                                <img src="/images/food.jpeg" class="card-img-top" alt="" style="height: 16.5rem; width: 100%; object-fit: cover;" alt="">
+                                <div class="card-body">
+                                  <h5 class="middle_text">Food Hacking</h5>
+                                  <p class="card-text">Explore the intersection of food and technology, experiment with molecular gastronomy, and create innovative culinary experiences.</p>
+                                  <p class="card-text centered">9.99$ Per Month</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="card highlightable-card" style="height: 30rem;" onclick="toggleHighlight(this)">
+                                  <img src="/images/coding.jpg" class="card-img-top" alt="" style="height: 100%; width: 100%; object-fit: cover;">
+                                <div class="card-body">
+                                  <h5 class="middle_text">Coding and Programming</h5>
+                                  <p class="card-text">Learn coding languages, web development, and software programming using our computers and coding resources.</p>
+                                  <p class="card-text centered">14.99$ Per Month</p>
+                                </div>
+                              </div>
+                            </div>
+        </div>
+      </div>
   <div class="row justify-content-center">
     <button type="submit" class="btn btn-dark w-25"><a href="/pages/signup.html">Proceed</a></button>
 </div>
