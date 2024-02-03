@@ -9,26 +9,6 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
   <style> 
 
-    .btn-dark {
-      position: relative;
-      transition: all 0.3s; /* Transition effect for all properties */
-    }
-    
-    .btn-dark::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: #fff; /* Underline color */
-      transition: width 0.3s; /* Transition effect for the underline width */
-    }
-    
-    .btn-dark:hover::after {
-      width: 100%; /* Change the underline width on hover */
-    }
-
     .left-align {
       text-align: left;
     }
@@ -55,7 +35,7 @@
         <img src="/images/3.png" alt="image/png"  >
       </a>
     </div>
-    <h3 class="text-white mb-0" style="text-align: center; margin-bottom: 0%;">Sign Up</h3>
+    <h3 class="text-white mb-0" style="text-align: center; margin-bottom: 0%;">Checkout</h3>
     <div class="container">
       <form class="form-container mt-1">
         <div class="row mb-3">
@@ -71,6 +51,8 @@
               <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
             </div>
           </div>
+        </div>
+        <div class="row mb-3">
           <div class="col">
             <div class="form-group">
               <label for="cvv" class="text-white">CVV</label>
