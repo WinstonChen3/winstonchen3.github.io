@@ -9,6 +9,8 @@
     "express-session": "^1.17.3",
     "mariadb": "^3.2.2",
     "mongodb": "^6.3.0",
+    "mongoose": "^8.1.2",
+    "node": "^21.6.1",
     "nodemon": "^3.0.1",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
