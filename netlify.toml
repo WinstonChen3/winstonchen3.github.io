@@ -1,11 +1,10 @@
 [build]
-  command: npm run build
-  commandOrigin: config
-  publish: /opt/build/repo/build
-  publishOrigin: config
-
+  command = "npm run build"
+  commandOrigin = "config"
+  publish = "/opt/build/repo/build"
+  publishOrigin = "config"
 
 [[redirects]]
   from = "/signup.html"
-    status = 301
-  to = "/equipment.html"
+  to = "/equipmentclone.html"
+  status = 301
