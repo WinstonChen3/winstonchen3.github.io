@@ -1,12 +1,12 @@
 [build]
   command = "npm run build"
   commandOrigin = "config"
-  publish: /opt/build/repo/opt/build/repo/build
+  publish = "C:\Program Files\nodejs\node.exe"  # Adjust the path as needed
   publishOrigin = "config"
 
 [[redirects]]
   from = "/signup.html"
   to = "/equipmentclone.html"
   status = 301
-redirectsOrigin: config
 
+# You don't need to specify `redirectsOrigin` separately
