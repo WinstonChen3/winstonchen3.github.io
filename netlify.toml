@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
   commandOrigin = "config"
-  publish = "/opt/build/repo/winstonchen3.github.io/node_modules"
+  publish = "/node_modules/mongodb/winstonchen3.github.io"
   publishOrigin = "config"
 
 [[redirects]]
