@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "devStart": "nodemon main.js",
-    "build": "echo \"No build step required for server-side code\""
+    "devStart": "nodemon main.js"
+    "build" : "webpack --mode=production" 
  },
   "keywords": [],
   "author": "Your Name",

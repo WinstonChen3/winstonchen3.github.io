@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
   commandOrigin = "config"
-  publish = "C:\Program Files\nodejs\node.exe"  # Adjust the path as needed
+  publish = "node_modules"  # Adjust the path as needed
   publishOrigin = "config"
 
 [[redirects]]
