@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
   commandOrigin = "config"
-  publish = "https://winstonchen3.netlify.app/node_modules/"  # Adjust the path as needed
+  publish = "winstonchen3.github.io/node_modules"  # Adjust the path as needed
   publishOrigin = "config"
 
 [[redirects]]
