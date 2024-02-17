@@ -3,6 +3,6 @@
   publish = "build/"
 
 [[redirects]]
-  from = "/old-url"
-  to = "/new-url"
+  from = "/signup.html"
+  to = "/equipment.html"
   status = 301
