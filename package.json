@@ -1,4 +1,15 @@
 {
+  "name": "winstonchen3.github.io",
+  "version": "1.0.0",
+  "description": "A web application built using Node.js, Express, and MongoDB for user authentication and authorization.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon main.js"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
@@ -17,16 +28,5 @@
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "sequelize": "^6.35.1"
-  },
-  "name": "winstonchen3.github.io",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "devStart": "nodemon main.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
