@@ -6,5 +6,6 @@
 
 [[redirects]]
   from = "/signup.html"
-  to = "/equipmentclone.html"
+  to = "equipmentclone.html"
   status = 301
+  force = true
