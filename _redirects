@@ -1,2 +1,2 @@
 # _redirects file
-/thank-you /equipment.html
+/signup.html /equipmentclone.html 301
