@@ -1,12 +1,10 @@
 [build]
   command = "npm run build"
   commandOrigin = "config"
-  publish = "/node_modules/mongodb/winstonchen3.github.io"
+  publish = "/"
   publishOrigin = "config"
 
 [[redirects]]
   from = "/signup.html"
   to = "/equipmentclone.html"
   status = 301
-
-# You don't need to specify `redirectsOrigin` separately
