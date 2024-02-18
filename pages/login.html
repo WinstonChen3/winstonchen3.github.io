@@ -80,8 +80,32 @@
           </form>
       </div>
   </main>
-  
-  
+  <script src="https://unpkg.com/gotrue-js"></script>
+  <script>
+            const auth = new GoTrue({
+            APIUrl: 'https://your-site-name.netlify.app/.netlify/identity',
+            audience: '',
+            setCookie: false,
+        });
+
+        const loginForm = document.getElementById('loginForm');
+
+        loginForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const user = await auth.login(email, password, true);
+                console.log('User:', user);
+                // You can redirect or perform other actions upon successful login
+            } catch (error) {
+                console.error('Login failed:', error);
+                // Handle login failure, show error message, etc.
+            }
+        });
+  </script>
   
     
 
