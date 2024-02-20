@@ -73,7 +73,74 @@
         </form>
     </div>
 </main>
+<script>
+    document.querySelector(".form-container").addEventListener("submit", function(event) {
+  event.preventDefault(); 
 
+  const nameValue = document.querySelector('#floatingName').value;
+  const emailValue = document.querySelector('#floatingEmail').value;
+  const passwordValue = document.querySelector('#password').value;
+  const confirmPasswordValue = document.querySelector('#confirm_password').value;
+
+  console.log("Name: " + nameValue);
+  console.log("Email: " + emailValue);
+  console.log("Password: " + passwordValue);
+  console.log("Confirm Password: " + confirmPasswordValue);
+
+  // You can add your logic or redirection here
+  window.location.href = 'equipment.html';
+});
+
+// Additional event listener for Enter key press
+document.querySelector(".form-container").addEventListener("keydown", function(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    // Manually trigger the submit event
+    document.querySelector(".form-container").submit();
+  }
+});
+document.querySelector(".form-container").addEventListener("submit", function(event) {
+  if (!validatePasswordMatch()) {
+    event.preventDefault();
+  }
+});
+
+document.querySelectorAll(".form-container input[required]").forEach(function(input) {
+  input.addEventListener("input", function() {
+    validateField(this);
+    // Check if the password and confirm password fields match
+    if (this.id === 'password' || this.id === 'confirm_password') {
+      validatePasswordMatch();
+    }
+  });
+});
+
+function validateField(input) {
+  const isValid = input.checkValidity();
+
+  if (isValid) {
+    input.classList.remove("is-invalid");
+  } else {
+    input.classList.add("is-invalid");
+  }
+}
+
+function validatePasswordMatch() {
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirm_password').value;
+  const matchError = document.getElementById('matchError');
+  const submitButton = document.querySelector(".form-container button[type='submit']");
+
+  if (password === confirmPassword) {
+    matchError.textContent = '';
+    submitButton.disabled = false;
+  } else {
+    matchError.textContent = 'Passwords do not match';
+    submitButton.disabled = true;
+  }
+}
+
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
