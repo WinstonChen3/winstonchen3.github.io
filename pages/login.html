@@ -8,6 +8,7 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>Login</title>
     <link rel="icon" href="../images/3.png" type="image/png">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
     <style>
@@ -80,67 +81,30 @@
           </form>
       </div>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Add event listener to the login form
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
 
-  <script type="module">
-    import GoTrue from './gotrue-js';
+            // Get user input values
+            const email = document.getElementById('floatingEmail').value;
+            const password = document.getElementById('password').value;
 
-    // Initialize GoTrue client
-    const auth = new GoTrue({
-        APIUrl: 'https://winstonchen3.netlify.app/', // Replace with your GoTrue server URL
-        setCookie: true,
+            // Log in user using Netlify Identity
+            netlifyIdentity
+                .login(email, password)
+                .then((user) => {
+                    console.log('Logged in as:', user);
+                    // Redirect to a success page or perform other actions upon successful login
+                    window.location.href = '/success'; // Redirect to success page
+                })
+                .catch((error) => {
+                    console.error('Error logging in:', error);
+                    // Handle login error (e.g., display error message to user)
+                });
+        });
     });
-
-    // Example usage: Signup a new user
-    const signupUser = async () => {
-        const email = 'example@example.com'; // Replace with user's email
-        const password = 'password123'; // Replace with user's password
-
-        try {
-            const { user } = await auth.signup(email, password);
-            console.log('User signed up:', user);
-        } catch (error) {
-            console.error('Error signing up:', error.message);
-        }
-    };
-
-    // Example usage: Login an existing user
-    const loginUser = async () => {
-        const email = 'example@example.com'; // Replace with user's email
-        const password = 'password123'; // Replace with user's password
-
-        try {
-            const { user } = await auth.login(email, password);
-            console.log('User logged in:', user);
-        } catch (error) {
-            console.error('Error logging in:', error.message);
-        }
-    };
-
-    // Example usage: Logout the current user
-    const logoutUser = async () => {
-        try {
-            await auth.currentUser().logout();
-            console.log('User logged out');
-        } catch (error) {
-            console.error('Error logging out:', error.message);
-        }
-    };
-
-    // Example usage: Get the current user
-    const getCurrentUser = async () => {
-        try {
-            const user = await auth.currentUser();
-            console.log('Current user:', user);
-        } catch (error) {
-            console.error('Error getting current user:', error.message);
-        }
-    };
-
-    // You can call these functions as needed in your application
-    // signupUser();
-    // loginUser();
-    // logoutUser();
-    // getCurrentUser();
 </script>
     
 

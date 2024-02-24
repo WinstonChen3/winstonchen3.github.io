@@ -76,78 +76,80 @@
         </div>
     </main>
 
-    <!-- Include GoTrue JavaScript client library -->
-    <script src="node_modules/gotrue-js/dist/index.umd.js"></script>
     <script>
-        const auth = new GoTrue({
-            APIUrl: 'https://winstonchen3.netlify.app/', // Replace with your GoTrue server URL
-            setCookie: true,
-        });
-
-        const signupForm = document.getElementById('signup-form');
-
-        signupForm.addEventListener('submit', async (event) => {
-            event.preventDefault();
-
-            const formData = new FormData(signupForm);
-            const email = formData.get('email');
-            const password = formData.get('password');
-            const name = formData.get('name');
-
-            try {
-                const { user } = await auth.signup(email, password, { fullName: name });
-                console.log('User signed up:', user);
-
-                // After successful signup, validate fields
-                if (validatePasswordMatch()) {
-                    // You can redirect the user to a new page upon successful signup and validation.
-                    // window.location.href = 'success.html';
-                } else {
-                    // Handle validation errors
-                }
-            } catch (error) {
-                console.error('Error signing up:', error.message);
-                // Handle signup errors here, like displaying error messages to the user.
-            }
-        });
-
-        document.querySelectorAll(".form-container input[required]").forEach(function(input) {
-            input.addEventListener("input", function() {
-                validateField(this);
-                // Check if the password and confirm password fields match
-                if (this.id === 'password' || this.id === 'confirm_password') {
-                    validatePasswordMatch();
+        document.addEventListener('DOMContentLoaded', function () {
+            const signupForm = document.getElementById('signup-form');
+    
+            signupForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+    
+                const formData = new FormData(signupForm);
+                const email = formData.get('email');
+                const password = formData.get('password');
+                const name = formData.get('name');
+    
+                try {
+                    // Sign up user using Netlify Identity
+                    const user = await netlifyIdentity.createUser({
+                        email: email,
+                        password: password,
+                        name: name
+                    });
+    
+                    console.log('User signed up:', user);
+    
+                    // After successful signup, validate fields
+                    if (validatePasswordMatch()) {
+                        // You can redirect the user to a new page upon successful signup and validation.
+                        // window.location.href = 'success.html';
+                    } else {
+                        // Handle validation errors
+                    }
+                } catch (error) {
+                    console.error('Error signing up:', error.message);
+                    // Handle signup errors here, like displaying error messages to the user.
                 }
             });
+    
+            document.querySelectorAll(".form-container input[required]").forEach(function(input) {
+                input.addEventListener("input", function() {
+                    validateField(this);
+                    // Check if the password and confirm password fields match
+                    if (this.id === 'password' || this.id === 'confirm_password') {
+                        validatePasswordMatch();
+                    }
+                });
+            });
+    
+            function validateField(input) {
+                const isValid = input.checkValidity();
+    
+                if (isValid) {
+                    input.classList.remove("is-invalid");
+                } else {
+                    input.classList.add("is-invalid");
+                }
+            }
+    
+            function validatePasswordMatch() {
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirm_password').value;
+                const matchError = document.getElementById('matchError');
+                const submitButton = document.querySelector(".form-container button[type='submit']");
+    
+                if (password === confirmPassword) {
+                    matchError.textContent = '';
+                    submitButton.disabled = false;
+                    return true;
+                } else {
+                    matchError.textContent = 'Passwords do not match';
+                    submitButton.disabled = true;
+                    return false;
+                }
+            }
         });
-
-        function validateField(input) {
-            const isValid = input.checkValidity();
-
-            if (isValid) {
-                input.classList.remove("is-invalid");
-            } else {
-                input.classList.add("is-invalid");
-            }
-        }
-
-        function validatePasswordMatch() {
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirm_password').value;
-            const matchError = document.getElementById('matchError');
-            const submitButton = document.querySelector(".form-container button[type='submit']");
-
-            if (password === confirmPassword) {
-                matchError.textContent = '';
-                submitButton.disabled = false;
-                return true;
-            } else {
-                matchError.textContent = 'Passwords do not match';
-                submitButton.disabled = true;
-                return false;
-            }
-        }
     </script>
+    
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
