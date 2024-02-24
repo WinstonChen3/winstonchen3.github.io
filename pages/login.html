@@ -7,7 +7,6 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
     <title>Login</title>
-    <script src="https://cdn.jsdelivr.net/npm/netlify-identity-widget/dist/netlify-identity.js"></script>
     <link rel="icon" href="../images/3.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
@@ -81,56 +80,68 @@
           </form>
       </div>
   </main>
-  <script src="node_modules/gotrue-js/lib/index.js/"></script>
-  <script>
+
+  <script type="module">
+    import GoTrue from './gotrue-js';
+
     // Initialize GoTrue client
     const auth = new GoTrue({
-        APIUrl: 'https://winstonchen3.netlify.app/',
+        APIUrl: 'https://winstonchen3.netlify.app/', // Replace with your GoTrue server URL
         setCookie: true,
     });
 
-    // Handle form submission
-    async function login() {
-        const email = document.getElementById('floatingEmail').value;
-        const password = document.getElementById('password').value;
+    // Example usage: Signup a new user
+    const signupUser = async () => {
+        const email = 'example@example.com'; // Replace with user's email
+        const password = 'password123'; // Replace with user's password
 
         try {
-            // Authenticate user
-            const user = await auth.login(email, password, true);
-            console.log('User:', user);
-            
-            // Redirect to success page or perform other actions
-            window.location.href = '/success';
+            const { user } = await auth.signup(email, password);
+            console.log('User signed up:', user);
         } catch (error) {
-            console.error('Login error:', error);
-            alert('Login failed. Please check your credentials.');
+            console.error('Error signing up:', error.message);
         }
-    }
+    };
+
+    // Example usage: Login an existing user
+    const loginUser = async () => {
+        const email = 'example@example.com'; // Replace with user's email
+        const password = 'password123'; // Replace with user's password
+
+        try {
+            const { user } = await auth.login(email, password);
+            console.log('User logged in:', user);
+        } catch (error) {
+            console.error('Error logging in:', error.message);
+        }
+    };
+
+    // Example usage: Logout the current user
+    const logoutUser = async () => {
+        try {
+            await auth.currentUser().logout();
+            console.log('User logged out');
+        } catch (error) {
+            console.error('Error logging out:', error.message);
+        }
+    };
+
+    // Example usage: Get the current user
+    const getCurrentUser = async () => {
+        try {
+            const user = await auth.currentUser();
+            console.log('Current user:', user);
+        } catch (error) {
+            console.error('Error getting current user:', error.message);
+        }
+    };
+
+    // You can call these functions as needed in your application
+    // signupUser();
+    // loginUser();
+    // logoutUser();
+    // getCurrentUser();
 </script>
-  <script>
-    const handleSubmit = (event) => {
-  event.preventDefault();
-
-  const myForm = event.target;
-  const formData = new FormData(myForm);
-  
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => {
-      alert("Thank you for your submission");
-      window.location.href = "equipment.html"; // Redirect to equipment.html
-    })
-    .catch((error) => alert(error));
-};
-
-document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
-
-  </script>
     
 
 
