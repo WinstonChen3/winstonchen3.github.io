@@ -1,28 +1,77 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-const PORT = process.env.PORT || 3000;
+const router = express.Router();
+const passport = require('passport');
+const User = require('../models/user.js');
 
-// Parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+// POST /api/auth/register
+router.post('/register', async (req, res) => {
+    const { username, email, password } = req.body;
 
-// Parse application/json
-app.use(bodyParser.json());
+    // TODO check if each username is present
+    // TODO check if each email is present and valid
+    // TODO check if each password is present
 
-// Handle login form submission
-app.post('/login', (req, res) => {
-    const { email, password } = req.body;
+    try {
+        // Check if the username or email already exists in the database
+        const existingUser = await User.findOne({ where: { email } });
+        if (existingUser) {
+            return res.status(400).json({ error: 'Username or email already exists' });
+        }
 
-    // Your authentication logic goes here
+        // Create a new user instance
+        const newUser = new User({ username, email, password });
 
-    // Example: Authenticate based on dummy credentials
-    if (email === 'user@example.com' && password === 'password') {
-        return res.status(200).json({ message: 'Login successful' });
-    } else {
-        return res.status(401).json({ message: 'Invalid credentials' });
+        // Save the new user to the database
+        await newUser.save();
+
+        res.status(201).json({ message: 'Registration successful' });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: 'Registration failed' });
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+router.get('/login', (req, resp) =>{
+    if (req.session.passport && req.session.passport.user) {
+        // resp.render('../makerspace/views/index.ejs');
+        resp.render('index.html');
+    }
+    else {
+        // resp.render('../makerspace/views/login.ejs');
+        resp.render('login.ejs');
+    }
+})
+
+// POST /api/auth/login
+router.post('/login', passport.authenticate('local', 
+    { 
+        successRedirect: '/', 
+        failureRedirect:'/api/auth/login', 
+        failureFlash:true 
+    }
+)); 
+
+// POST /api/auth/logout
+router.post('/logout', async (req, res) => {
+    res.logout();
+    res.redirect('/');
+    // const { email } = req.body;
+
+    // TODO check if each email is present and valid
+    // TODO check if each password is present
+
+    try {
+    // Check if email already exists in the database
+    const existingUser = await User.findOne({ where: { email } });
+  if (!existingUser) {
+    return res.status(400).json({ error: 'user not found' });
+}
+
+    res.status(200).json({ message: 'Logout successful' });
+    } catch (error) {
+  console.log(error);
+   res.status(500).json({ error: 'Logout failed' });
+    }
 });
+
+module.exports = router;

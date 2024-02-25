@@ -132,6 +132,52 @@ fill: white;
     .navbar-brand img {
       max-height: 75px; /* Adjust the max-height as needed */
     }
+    body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Add modern styling for sections and buttons */
+        section {
+            padding: 80px 0;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .btn {
+            font-size: 18px;
+            padding: 12px 32px;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
   </style>
 </head>
 <body>
@@ -180,44 +226,53 @@ fill: white;
   </div>
   </header>
   <main>
-        <!-- Features Section -->
-        <section class="features">
-          <h2 style="align-self: center;" >Our Services</h2>
-            <div class="container">
+        <!-- About Techlab Section -->
+        <section class="about-techlab">
+          <div class="container">
+              <h2>About Techlab</h2>
               <div class="row">
-              <div class="col-md-4">
-              <div class="card highlightable-card"  style="height: 30rem;">
-                <img src="./images/3d.jpeg" class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">3D Printing</h5>
-                  <p class="card-text">Utilize our state-of-the-art 3D printers to bring your digital designs to life with precision and accuracy.</p>
-                </div>
-              </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card highlightable-card"  style="height: 30rem;">
-                  <img src="./images/wood.jpeg" class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
-                  <div class="card-body">
-                    <h5 class="card-title">Woodworking</h5>
-                    <p class="card-text">Learn woodworking techniques and access our fully equipped woodworking shop to create custom furniture, crafts, and more.</p>
+                  <div class="col-md-6">
+                      <p>Techlab is a leading organization providing cutting-edge equipment rental and services across the globe. With a network of locations worldwide, we empower individuals, businesses, and innovators to bring their ideas to life.</p>
+                      <p>At Techlab, we offer a wide range of high-quality equipment for various industries, along with expert services to support your projects and ventures.</p>
                   </div>
-                </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card highlightable-card"  style="height: 30rem;">
-                    <img src="./images/electric.jpeg"class="card-img-top" alt="" style="height: 20rem; width: 100%; object-fit: cover;" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title">Electronics Prototyping</h5>
-                      <p class="card-text">Experiment with circuits, microcontrollers, and sensors to test your projects and innovations.</p>
-                    </div>
-                  </div>
+                  <div class="col-md-6">
+                      <!-- You can add an image or video here to showcase Techlab's global presence -->
                   </div>
               </div>
-            </div>
-            <br>
-            <div class="row justify-content-center">
-              <a href="/clone/servicesclone.html" class="btn btn-dark w-25 text-white" role="button">See More</a>
-            </div>
+          </div>
+      </section>
+
+      <!-- Equipment Rental Section -->
+      <section class="equipment-rental">
+          <div class="container">
+              <h2>Equipment Rental</h2>
+              <p>Explore our extensive collection of state-of-the-art equipment available for rent at Techlab. From 3D printers to woodworking tools, we have everything you need to turn your vision into reality.</p>
+              <p>Renting equipment from Techlab is easy and convenient. Simply browse our catalog, select your desired items, and pick them up from the nearest Techlab location.</p>
+              <a href="./clone/equipmentclone.html" class="btn">Browse Equipment</a>
+          </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="services">
+          <div class="container">
+              <h2>Our Services</h2>
+              <p>Discover the range of services offered by Techlab to support your projects and endeavors. From technical assistance to specialized training, we're here to help you succeed.</p>
+              <p>Explore our service offerings and take advantage of our expertise and resources to achieve your goals.</p>
+              <a href="./clone/servicesclone.html" class="btn">Explore Services</a>
+          </div>
+      </section>
+
+      <!-- Locations Section -->
+      <section class="locations">
+          <div class="container">
+              <h2>Our Locations</h2>
+              <p>Find a Techlab location near you and access our comprehensive range of equipment and services. With multiple locations worldwide, Techlab is your trusted partner for innovation and creativity.</p>
+              <p>Visit us at one of our convenient locations and unleash your potential with Techlab.</p>
+              <a href="./pages/locations.html" class="btn">Find Locations</a>
+          </div>
+      </section>
+  </main>
+
                 </section>
   <div class="divider"></div>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
