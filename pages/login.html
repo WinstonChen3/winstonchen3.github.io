@@ -24,25 +24,6 @@
           font-size: 3.5rem;
         }
       }
-      .btn-dark {
-    position: relative;
-    transition: all 0.3s; /* Transition effect for all properties */
-  }
-  
-  .btn-dark::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #fff; /* Underline color */
-    transition: width 0.3s; /* Transition effect for the underline width */
-  }
-  
-  .btn-dark:hover::after {
-    width: 100%; /* Change the underline width on hover */
-  }
     </style>
 
     
@@ -52,9 +33,11 @@
   <body>
     <main class="form-signin bg-dark" style="top: 50%;">
       <form id="login-form" class="form" method="POST" name="login" action="/success" data-netlify="true">
+        <div class="col-12 align-items-center mb-3 center-icon cont">
           <a class="navbar-brand d-flex justify-content-center align-items-center" href="../index.html">
-              <img src="/images/3.png" alt="image/png">
+              <img src="/images/3.png" alt="image/png"  >
           </a>
+      </div>
           <h1 class="h3 mb-3 fw-normal text-white text-center">Please Sign In</h1>
         </div>
         <h3 class="text-white mb-0" style="text-align: center; margin-bottom: 0%;">Login</h3>
@@ -62,6 +45,10 @@
           <form id="login-form" class="form" method="POST" name="login" action="/success" data-netlify="true">
                        <div class="row mb-3">
                     <div class="col">
+                      <div class="form-group">
+                        <label for="floatingEmail" class="text-white">Email</label>
+                        <input type="email" class="form-control" id="floatingEmail" name="email" placeholder="Email" required>
+                    </div>
           <div class="form-group">
               <label for="floatingPassword" class="text-white">Password</label>
               <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password" required>
@@ -73,8 +60,8 @@
               </label>
           </div>
           
-          <button class="w-100 btn btn-lg btn-dark" type="submit">Sign in</button>
-          <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+          <button class="col-3 mb-2 w-25 btn btn-dark" type="submit">Sign in</button>
+          <p class="mt-5 mb-3 text-white"><a class="text-white" href="signup.html">Go Back</a></p>
       </form>
   </main>
   
