@@ -10,176 +10,210 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
 
         <style>
-            .navbar-brand img {
-  max-width: 13%;
-  height: auto;
-  object-fit: contain;
-  padding: 0;
+.nav-link {
+  position: relative;
+  transition: 0.3s;
 }
-            .nav-link {
-              position: relative;
-              transition: 0.3s;
-            }
-            
-            .nav-link::after {
-              content: '';
-              position: absolute;
-              left: 0;
-              bottom: -2px;
-              width: 100%;
-              height: 4px;
-              background-color: #ffffff;
-              transform: scaleX(0);
-              transition: transform 0.3s ease-in-out;
-            }
-            
-            .nav-link:hover::after {
-              transform: scaleX(1);
-            }
-            .dropdown-item.btn {
-              padding: 0;
-              background-color: transparent;
-              border: none;
-            }
-            
-            .dropdown-item.btn:focus {
-              outline: none;
-              box-shadow: none;
-            }
-            
-            .svg-large{
-              height: 50%;
-              width:50%;
-            }
-            .bd-placeholder-img {
-                font-size: 1.125rem;
-                text-anchor: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
-              }
-            
-              @media (min-width: 768px) {
-                .bd-placeholder-img-lg {
-                  font-size: 3.5rem;
-                }
-              }
-              .divider {
-                width: 100%;
-                height: 2rem;
-                background-color: rgba(0, 0, 0, .1);
-                border: solid rgb(255, 255, 255);
-                border-width: 1px 0;
-                box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-              }
-              .divider2 {
-                width: 100%;
-                height: auto;
-                background-color: rgba(0, 0, 0, .1);
-                border: solid rgb(255, 255, 255);
-                border-width: 1px 0;
-                box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-              }
-            
-              .b-example-vr {
-                flex-shrink: 0;
-                width: 1.5rem;
-                height: 100vh;
-              }
-              .bi {
-                vertical-align: -.125em;
-                fill: currentColor;
-              }
-            
-              .nav-scroller {
-                position: relative;
-                z-index: 2;
-                height: 2.75rem;
-                overflow-y: hidden;
-              }
-            
-              .nav-scroller .nav {
-                display: flex;
-                flex-wrap: nowrap;
-                padding-bottom: 1rem;
-                margin-top: -1px;
-                overflow-x: auto;
-                text-align: center;
-                white-space: nowrap;
-                -webkit-overflow-scrolling: touch;
-              }
-            
-            
-              .bd-mode-toggle {
-                z-index: 1500;
-              }
-            
-              .bd-mode-toggle .dropdown-menu .active .bi {
-                display: block !important;
-              }
-              .white {
-            fill: white;
-            }
-            .centered{
-              align-self: center !important;
-            }
-            .accordion-button {
-                background-color: #343a40; /* Dark background color */
-                color: #fff !important; /* White text color */
-                transition: none; /* Disable color change on click */
-              }
-          
-          .accordion-button.active, 
-          .accordion-button:active {
-            border-bottom: 1px solid #fff;
-          }
-              </style>
-            </head>
-            <body>
-              <header>
-                <nav class="navbar navbar-expand-lg bg-dark navbar-inverse" role="navigation">
-                  <div class="container-fluid bg-dark py-2">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <a class="navbar-brand bg-transparent text-white" href="/index.html">
-                          <img src="../images/3.png" alt="image/png"> 
-                        </a>
-                      </div>
-                      <div class="col">
-                        <ul class="navbar-nav justify-content-center">
-                          <li class="nav-item">
-                            <a class="nav-link text-white" href="/index.html">Home</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link text-white" href="../pages/events.html">Events</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link text-white" href="/clone/equipmentclone.html">Equipment</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link text-white" href="/clone/servicesclone.html">Services</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link text-white" href="/pages/locations.html">Locations</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link text-white" href="/pages/aboutus.html">About Us</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-              
-                    <!-- Right-aligned content -->
-                    <ul class="navbar-nav ml-auto">
-                      <li class="nav-item">
-                        <a class="nav-link text-white" href="../pages/signup.html">Get Started</a>
-                      </li>
-                    </ul>
-                  </div>
-                </nav>
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+.dropdown-item.btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.dropdown-item.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.svg-large{
+  height: 50%;
+  width:50%;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  .divider {
+    width: 100%;
+    height: 2rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgb(255, 255, 255);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  .divider2 {
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgb(255, 255, 255);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }
+  .white {
+fill: white;
+}
+.centered{
+  align-self: center !important;
+}
+.jumbotron {
+            background: linear-gradient(to bottom, #000, #333); /* Gradient background */
+            color: #fff; /* White text for jumbotron */
+            padding: 300px 0; /* Increase padding for a larger visual impact */
+            text-align: center;
+            vertical-align: center;
+        }
+
+    /* Custom CSS for centering the logo */
+    .navbar-brand-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand img {
+      max-height: 75px; /* Adjust the max-height as needed */
+    }
+    body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Add modern styling for sections and buttons */
+        section {
+            padding: 80px 0;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" role="navigation">
+    <div class="container-fluid bg-dark py-2">
+      <div class="row align-items-center">
+        <div class="col-auto mx-auto navbar-brand-container">
+          <a class="navbar-brand bg-transparent text-white" href="/index.html">
+            <img src="../images/3.png" style="padding-right: 1rem;" alt="image/png">
+          </a>
+        </div>
+        <div class="col">
+          <ul class="navbar-nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="../pages/events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="../clone/equipmentclone.html">Equipment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="../clone/servicesclone.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="../pages/locations.html">Locations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="../pages/aboutus.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Right-aligned content -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/pages/signup.html">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
             </header>
     <!-- Main Content Section -->
     <div class="container">
+      <br><br><br>
         <section>
             <h2>Our Mission</h2>
             <p>At the core of Techlab's mission is the belief that everyone deserves access to the tools and resources

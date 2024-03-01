@@ -159,20 +159,6 @@ fill: white;
             color: #555;
         }
 
-        .btn {
-            font-size: 18px;
-            padding: 12px 32px;
-            border-radius: 8px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -186,7 +172,7 @@ fill: white;
     <div class="container-fluid bg-dark py-2">
       <div class="row align-items-center">
         <div class="col-auto mx-auto navbar-brand-container">
-          <a class="navbar-brand bg-transparent text-white" href="../clone/a.html">
+          <a class="navbar-brand bg-transparent text-white" href="/index.html">
             <img src="./images/3.png" style="padding-right: 1rem;" alt="image/png">
           </a>
         </div>
@@ -207,6 +193,9 @@ fill: white;
             <li class="nav-item">
               <a class="nav-link text-white" href="./pages/locations.html">Locations</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./pages/aboutus.html">About</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -226,6 +215,8 @@ fill: white;
   </div>
   </header>
   <main>
+    <div class="divider"></div>
+
         <!-- About Techlab Section -->
         <section class="about-techlab">
           <div class="container">
@@ -241,6 +232,7 @@ fill: white;
               </div>
           </div>
       </section>
+      <div class="divider"></div>
 
       <!-- Equipment Rental Section -->
       <section class="equipment-rental">
@@ -248,9 +240,12 @@ fill: white;
               <h2>Equipment Rental</h2>
               <p>Explore our extensive collection of state-of-the-art equipment available for rent at Techlab. From 3D printers to woodworking tools, we have everything you need to turn your vision into reality.</p>
               <p>Renting equipment from Techlab is easy and convenient. Simply browse our catalog, select your desired items, and pick them up from the nearest Techlab location.</p>
-              <a href="./clone/equipmentclone.html" class="btn">Browse Equipment</a>
+              <div class="row justify-content-center">
+              <a href="./clone/equipmentclone.html" class="btn btn-dark w-25 text-white">Browse Equipment</a>
+              </div>
           </div>
       </section>
+      <div class="divider"></div>
 
       <!-- Services Section -->
       <section class="services">
@@ -258,9 +253,12 @@ fill: white;
               <h2>Our Services</h2>
               <p>Discover the range of services offered by Techlab to support your projects and endeavors. From technical assistance to specialized training, we're here to help you succeed.</p>
               <p>Explore our service offerings and take advantage of our expertise and resources to achieve your goals.</p>
-              <a href="./clone/servicesclone.html" class="btn">Explore Services</a>
+              <div class="row justify-content-center">
+              <a href="./clone/servicesclone.html" class="btn btn-dark w-25 text-white">Explore Services</a>
+              </div>
           </div>
       </section>
+      <div class="divider"></div>
 
       <!-- Locations Section -->
       <section class="locations">
@@ -268,8 +266,10 @@ fill: white;
               <h2>Our Locations</h2>
               <p>Find a Techlab location near you and access our comprehensive range of equipment and services. With multiple locations worldwide, Techlab is your trusted partner for innovation and creativity.</p>
               <p>Visit us at one of our convenient locations and unleash your potential with Techlab.</p>
-              <a href="./pages/locations.html" class="btn">Find Locations</a>
-          </div>
+              <div class="row justify-content-center">
+              <a href="./pages/locations.html" class="btn btn-dark w-25 text-white">Find Locations</a>
+              </div>
+            </div>
       </section>
   </main>
 
