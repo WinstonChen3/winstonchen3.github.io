@@ -1,104 +1,41 @@
-#sideA{
-  align-content: left;
-  float: left;
+
+ 
+  #sideA{
+    align-content: left;
+    float: left;
+  
+    
+}
+
+#sideB{
+  align-content: center;
+  text-align: center;
 
   
-}
-#sideC{
-align-content: left;
-  float: left;
-  
-  
-}
-#sideE{
-  width: 250px;
-  padding-left: 10px;
-  padding-right: 5px;
-  color:#C0C0C0;
-  top:50%;
-  text-align:center;
-  border-bottom:2px solid #C0C0C0 ;
-}
-
-.navbar-brand img {
-  max-width: 120%;
-  height: auto;
-  object-fit: contain;
-  padding: 0;
-}
-
-main {
-padding: 20px;
-align-content: center;
-
-}
-
-
-
-section {
-margin-bottom: 40px;
-}
-
-h2 {
-font-size: 20px;
-margin: 0;
-}
-
-p {
-font-size: 16px;
-line-height: 1.5;
-font-family:'Raleway';
-
-
-}
-
-header p{
-
-font-size: 50%;
-
-
-
-}
-body {
-margin: 0;
-padding: 0;
-
 }
 
 header {
-background-color: #fff;
-padding: 20px;
-text-align: center;
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
 }
-
-h1 {
-font-size: 24px;
-margin: 0;
-}
-
 
 main{
-background-color: #ffffff;
-padding: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  
+  
+ }
 
-
+ * {
+  box-sizing: border-box;
 }
-
-* {
-box-sizing: border-box;
-}
-
-
-
-
-
-
 
 /* Clear floats after the columns */
 section::after {
-content: "";
-display: table;
-clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Style the footer */
@@ -112,63 +49,60 @@ color: white;
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
-nav, article {
-  width: 100%;
-  height: auto;
-}
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .zoekResultatLine{     
-display: block;
+  display: block;
 }
 
 .zoekResultat{
-color : rgb(0, 0, 0);
-border-top: 1px solid #000000;
-
-
+  color : rgb(0, 0, 0);
+  border-top: 1px solid #000000;
+  
+  
 }
-div{
-  margin-left: 0;
-  margin-right: 0;
-}
+
 main u{
-font-size: 300%;
-color: black;
-
+  font-size: 300%;
+  color: black;
+  
 }
 
 u{
-font-size: 400%;
+  font-size: 400%;
 }
 
 .thethe{
-border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 header h1{
 font-size: 28px;
 margin-bottom: 10px;
 }
 
-h2{
+ h2{
 font-size: 20px;
 
 text-align: center;
 }
 
 b{
-text-align: center;
+  text-align: center;
 }
 
 header{
-text-align: center;
+  text-align: center;
 }
 
 
 img {
-display: block;
-margin-left: auto;
-margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -177,73 +111,96 @@ margin-right: auto;
 
 
 
-.price_title {
-background:#ffffff;
-padding:16px 24px;
-border-radius:0 0 10px 10px;
-font-size:32px;
-color:#E72404;
-font-weight:600;
-}
 
-             
 
-.middle_cta {
-                
-                
-                
-  width:fit-content;
-  margin:0 auto 24px;
-  padding:8px 16px;
-  border-radius:30px;
-  font-weight:bold;
-  color:#000000;
+.price_sec {
+  flex:1 1 30%;
+  text-align:center;
+  padding:0 24px 24px 24px;
+  box-shadow:0 4px 20px hsl(0deg 0% 0%/10%);
+  border-radius:10px;
+  border:solid 1px #ffffff;
   }
 
-  .price__inner_list ul {
-    padding:0;
-    margin:0;
-    list-style:none;
-    display:flex;
-    justify-content:space-between;
-    gap:16px;
-    flex-wrap:wrap;
-    }
 
 
 
-    .small-price { font-size:24px; }
 
-    .bottom__Cta a.button.button-animation { display:block; }
+         
 
+            .middle_cta {
+              
+              
+              
+              width:fit-content;
+              margin:0 auto 24px;
+              padding:8px 16px;
+              border-radius:30px;
+              font-weight:bold;
+              color:#000000;
+              }
+
+                   .price__inner_list ul {
+                    
+                      padding:0;
+                      margin:0;
+                      list-style:none;
+                      display:flex;
+                      justify-content:space-between;
+                      gap:16px;
+                      flex-wrap:wrap;
+                      }
+
+                       
+
+                         /* animation */
                         
-                           /* animation */
-                          
-                           .button-animation {
-                            overflow: hidden;
-                            position: relative;
-                            transition: all 0.3s cubic-bezier(0.1, 0.3, 0.3, 0.1);
-                            z-index: 9;
-                          }
+                         .button-animation {
+                          overflow: hidden;
+                          position: relative;
+                          transition: all 0.3s cubic-bezier(0.1, 0.3, 0.3, 0.1);
+                          z-index: 9;
+                        }
 
-                          .button-animation::before{
-                            bottom: 0;
-                            content: '';
-                            width: 100%;
-                            right: 0;
-                            position: absolute;
-                            top: 0;
-                            transition: all 0.3s cubic-bezier(0.1, 0.3, 0.3, 0.1);
-                            height: 0;
-                            z-index: -1;
-                          }
+                        .button-animation::before{
+                          bottom: 0;
+                          content: '';
+                          width: 100%;
+                          right: 0;
+                          position: absolute;
+                          top: 0;
+                          transition: all 0.3s cubic-bezier(0.1, 0.3, 0.3, 0.1);
+                          height: 0;
+                          z-index: -1;
+                        }
 
-                          .button-animation:hover::before{
-                            bottom: 0;
-                            transition: all 0.3s cubic-bezier(0.1, 0.3, 0.3, 0.1);
-                            height: 100%;
-                          }
+                        .button-animation:hover::before{
+                          bottom: 0;
+                          transition: all 0.3s cubic-bezier(0.1, 0.3, 0.3, 0.1);
+                          height: 100%;
+                        }
 
-                          
+                       
 
-                         
+                     .button,.button-2,button{
+                      fill:#fff;
+                      background-color:#333;
+                      border:3px solid #333;
+                      border-radius:5px;color:#fff;
+                      font-family:Roboto,sans-serif;
+                      font-style:normal;
+                      font-weight:700;
+                      padding:16px 50px ;
+                      text-decoration:none;
+                      text-transform:none
+                    }
+                        .button-2:active,.button-2:focus,.button-2:hover,.button:active,.button:focus,.button:hover,button:active,button:focus,button:hover{fill:#e72404;
+                          background-color:#f3f4f6;
+                          border:3px solid #333;
+                          color:#333;
+                          font-family:Roboto,sans-serif;
+                          font-style:normal;
+                          font-weight:700;
+                          text-decoration:none
+                        
+                        }
