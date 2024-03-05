@@ -142,17 +142,16 @@ label {
 }
 /* Example styles for the navigation bar */
 .navbar {
-  background-color: #333;
-  height: 100px;
+  background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+
+height: 80px;
 }
 
 .btn {
   border-color: #222;
 }
 
-.mr-0 {
-  margin-right: 0;
-}
+
 .dropdown-toggle:focus {
   box-shadow: none;
   outline: none;
@@ -199,7 +198,7 @@ button:hover {
 
 .navbar-nav {
   list-style-type: none;
-  margin: 0;
+  
   padding: 0;
 }
 
@@ -224,7 +223,7 @@ button:hover {
 .navbar-brand {
   width: fit-content;
   height: fit-content;
-  margin: 0;
+  
   padding: 0;
 }
 
