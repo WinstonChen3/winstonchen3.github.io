@@ -54,7 +54,7 @@ body {
     border-color: #333;
   }
   .navbar-brand img {
-    max-width: 13%;
+    max-width: 40%;
     height: auto;
     object-fit: contain;
     padding: 0;
