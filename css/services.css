@@ -26,6 +26,7 @@ header {
 }
 
 .container {
+  margin-left: auto;
   max-width: 100%; /* Take up the full width of the column */
   max-height: 40%; /* Set the height to occupy the full viewport height */
 }
