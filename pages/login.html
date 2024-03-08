@@ -71,56 +71,34 @@
   </main>
   
   
-  <script src="node_modules/gotrue-js/dist/index.umd.js"></script>
   <script>
-// Create an instance of GoTrue
-const auth = new GoTrue({
-    APIUrl: 'https://winstonchen3.netlify.app/.netlify/identity',
-    audience: '',
-    setCookie: false,
-});
-// Add event listener to the login form
-document.addEventListener('DOMContentLoaded', function () {
-    const loginForm = document.getElementById('login-form');
-    loginForm.addEventListener('submit', async (event) => {
+    document.getElementById('login-form').addEventListener('submit', function(event) {
         event.preventDefault();
-        const formData = new FormData(loginForm);
-        const email = formData.get('email');
-        const password = formData.get('password');
-        try {
-            const { user } = await auth.login(email, password);
-            console.log('User logged in:', user);
-            // After successful login, you can redirect the user to a new page.
-          window.location.href = 'equipment.html';
-        } catch (error) {
-            console.error('Error logging in:', error.message);
-            // Handle login errors here, like displaying error messages to the user.
-        }
+
+        const email = document.getElementById('floatingEmail').value;
+        const password = document.getElementById('password').value;
+
+        fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Store JWT token securely on the client-side (e.g., localStorage)
+                localStorage.setItem('token', data.token);
+                // Redirect or perform other actions after successful login
+                window.location.href = 'equipment.html';
+            } else {
+                // Handle login failure
+                alert(data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
     });
-});
-  </script>
-  <script>
-    const handleSubmit = (event) => {
-  event.preventDefault();
-
-  const myForm = event.target;
-  const formData = new FormData(myForm);
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => {
-      alert("Thank you for your submission");
-      window.location.href = "equipment.html"; // Redirect to equipment.html
-    })
-    .catch((error) => alert(error));
-};
-
-document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
 
   </script>
 
