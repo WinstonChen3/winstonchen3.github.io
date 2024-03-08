@@ -163,7 +163,14 @@ fill: white;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
+        }.active {
+          background-color: #717171; /* Change this to your desired active dot color */
         }
+  .carousel-inner .carousel-item img {
+    height: 1000px; /* Set the desired height for the images */
+    object-fit: cover; /* Ensure the images cover the fixed height */
+  }
+
   </style>
 </head>
 <body>
@@ -173,7 +180,7 @@ fill: white;
       <div class="row align-items-center">
         <div class="col-auto mx-auto navbar-brand-container">
           <a class="navbar-brand bg-transparent text-white" href="/index.html">
-            <img src="./images/3.png" style="padding-right: 1rem;" alt="image/png">
+            <img src="../images/3.png" style="padding-right: 1rem;" alt="image/png">
           </a>
         </div>
         <div class="col">
@@ -182,19 +189,19 @@ fill: white;
               <a class="nav-link text-white" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="./pages/events.html">Events</a>
+              <a class="nav-link text-white" href="../pages/events.html">Events</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="/pagination/pagination1.html">Equipments</a>
+              <a class="nav-link text-white" href="../clone/equipmentclone.html">Equipments</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="./clone/servicesclone.html">Services</a>
+              <a class="nav-link text-white" href="../clone/servicesclone.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="./pages/locations.html">Locations</a>
+              <a class="nav-link text-white" href="../pages/locations.html">Locations</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="./pages/aboutus.html">About Us</a>
+              <a class="nav-link text-white" href="../pages/aboutus.html">About</a>
             </li>
           </ul>
         </div>
@@ -208,12 +215,50 @@ fill: white;
       </ul>
     </div>
   </nav>
-    <div class="jumbotron">
-      
-  </div>
   </header>
   <main>
-    <div class="divider"></div>
+    <br><br><br>
+<!-- Updated Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/background1.png" alt="Los Angeles" class="d-block w-100">
+      <div class="carousel-caption">
+        <h3>Los Angeles</h3>
+        <p>Discover the beauty of the city</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/images/background2.png" alt="Chicago" class="d-block w-100">
+      <div class="carousel-caption">
+        <h3>Chicago</h3>
+        <p>Explore the vibrant city life</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/images/background3.png" alt="New York" class="d-block w-100">
+      <div class="carousel-caption">
+        <h3>New York</h3>
+        <p>Experience the city that never sleeps</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon">Next</span>
+  </button>
+</div>
+
 
         <!-- About Techlab Section -->
         <section class="about-techlab">
