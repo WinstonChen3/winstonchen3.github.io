@@ -38,12 +38,12 @@ app.use(session({
   store : store
 }));
 
-const local = require('./strategies/local.js');
+const local = require('../strategies/local.js');
 app.use(passport.initialize());
 app.use(passport.session());
 
-const authRoute = require('./api/auth.js');
-const equipmentRoute = require('./api/equipment.js');
+const authRoute = require('../api/auth.js');
+const equipmentRoute = require('../api/equipment.js');
 
 // Mount the router under the '/api/auth' prefix
 app.use('/api/auth', authRoute);
