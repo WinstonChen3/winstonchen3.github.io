@@ -32,43 +32,42 @@
   </head>
   <body>
     <main class="form-signin bg-dark align-items-center" style="top: 50%;">
-      <form id="login-form" class="form" method="POST" name="login" action="/success" data-netlify="true">
-        <div class="col-12 align-items-center mb-3 center-icon cont">
-          <a class="navbar-brand d-flex justify-content-center align-items-center" href="../index.html">
-              <img src="/images/3.png" alt="image/png"  >
-          </a>
-      </div>
+      <form id="login-form" class="form" method="POST" name="login" action="/api/login" data-netlify="true">
+          <div class="col-12 align-items-center mb-3 center-icon cont">
+              <a class="navbar-brand d-flex justify-content-center align-items-center" href="../index.html">
+                  <img src="/images/3.png" alt="image/png">
+              </a>
+          </div>
           <h1 class="h3 mb-3 fw-normal text-white text-center">Please Sign In</h1>
-        </div>
-        <h3 class="text-white mb-0" style="text-align: center; margin-bottom: 0%;">Login</h3>
-        <div class="container">
-          <form name="signup" class="form-container mt-1" method="POST" id="signup-form">
-              <div class="row mb-3">
-                  <div class="col">
-                      <div class="form-group">
-                          <label for="floatingEmail" class="text-white">Email</label>
-                          <input type="email" class="form-control" id="floatingEmail" name="email" placeholder="Email" required>
+          <div class="container">
+              <div class="form-container mt-1">
+                  <div class="row mb-3">
+                      <div class="col">
+                          <div class="form-group">
+                              <label for="floatingEmail" class="text-white">Email</label>
+                              <input type="email" class="form-control" id="floatingEmail" name="email" placeholder="Email" required>
+                          </div>
                       </div>
                   </div>
-              </div>
-              <div class="row mb-3">
-                  <div class="col">
-                      <div class="form-group">
-                          <label for="password" class="text-white">Password</label>
-                          <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                  <div class="row mb-3">
+                      <div class="col">
+                          <div class="form-group">
+                              <label for="password" class="text-white">Password</label>
+                              <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                          </div>
                       </div>
                   </div>
+                  <div class="row">
+                      <div class="col"></div>
+                      <button class="w-25 btn btn-lg btn-dark" type="submit">Login</button>
+                  </div>
               </div>
-              <div class="row">
-                <div class="col"></div>
-              <button class="w-25 btn btn-lg btn-dark" type="submit">Sign up</button>
-              </div>
-            </div>
               <p class="mt-3 text-white text-center"><a class="mt-3 text-white" href="signup.html">Go Back</a></p>
               <p class="mt-3 text-muted text-center">&copy; 2017–2021</p>
-          </form>
-      </div>
+          </div>
+      </form>
   </main>
+  
   
   
   <script>
