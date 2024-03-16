@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Initialize Firebase Admin SDK with the service account key file
-const serviceAccount = require('./path/to/goffy.json'); // Replace 'path/to/goffy.json' with the actual path
+const serviceAccount = require('./goffy.json'); // Replace 'path/to/goffy.json' with the actual path
 firebaseAdmin.initializeApp({
   credential: firebaseAdmin.credential.cert(serviceAccount),
   // Other Firebase configurations if needed...
