@@ -8,10 +8,6 @@
   <link rel="icon" href="../images/3.png" type="image/png">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
-  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.1firebase-auth.js"></script>
-  <!-- Include your Firebase configuration and sign-up script -->
-  <script src="/src/firebase.js" type="module"></script>
   <style> 
 
 
@@ -42,7 +38,7 @@
         </div>
         <h3 class="text-white mb-0" style="text-align: center; margin-bottom: 0%;">Sign Up</h3>
         <div class="container">
-            <form id="signup-form" class="form" method="POST">
+            <form id="signup-form" class="form" method="POST" action="/signup"> <!-- Modified action attribute -->
                 <div class="row mb-3">
                     <div class="col">
                         <div class="form-group">
@@ -69,7 +65,6 @@
                             <label for="confirm_password" class="text-white">Confirm Password</label>
                             <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
                             <div id="matchError" class="invalid-feedback"></div>
-                            
                         </div>
                     </div>
                 </div>
