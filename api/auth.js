@@ -1,59 +1,55 @@
+// auth.js
+
 const express = require('express');
+const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 
 const router = express.Router();
+router.use(bodyParser.urlencoded({ extended: true }));
+router.use(bodyParser.json());
 
-// Replace this with your actual secret key (keep it secure!)
-const secretKey = 'b8c1f3d2f2a33c93561d4b14b06d4a6edc52c049e2f0ebd50e833cfb038c07d9';
+// Secret key for JWT
+const secretKey = 'your-secret-key'; // Replace with your actual secret key
 
-// Example user database (replace with your actual user authentication logic)
-const users = [
-  { id: 1, username: 'user1', password: 'password1' },
-  { id: 2, username: 'user2', password: 'password2' }
-];
+// Dummy database to store user information (replace with your database)
+const users = [];
 
-// Route for user login and JWT token generation
-router.post('/login', (req, res) => {
-  const { username, password } = req.body;
+// Handle POST request for user sign-up
+router.post('/signup', (req, res) => {
+  const { name, email, password } = req.body;
 
-  // Example: Check if the username and password are valid
-  const user = users.find(u => u.username === username && u.password === password);
-
-  if (!user) {
-    return res.status(401).json({ message: 'Invalid username or password' });
+  // Check if user with the same email already exists
+  const existingUser = users.find(user => user.email === email);
+  if (existingUser) {
+    return res.status(400).json({ error: 'Email already registered' });
   }
 
-  // Generate JWT token
-  const token = jwt.sign({ id: user.id, username: user.username }, secretKey, { expiresIn: '1h' });
+  // Create a new user object and add it to the database
+  const newUser = { id: users.length + 1, name, email, password };
+  users.push(newUser);
 
-  // Send the token as a response
+  // Generate JWT for the new user
+  const token = jwt.sign({ id: newUser.id, email: newUser.email }, secretKey);
+
+  // Return the token in the response
   res.json({ token });
 });
 
-// Middleware to authenticate JWT tokens
-function authenticateToken(req, res, next) {
-  // Get the token from the authorization header
-  const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1];
+// Handle POST request for user login
+router.post('/login', (req, res) => {
+  const { email, password } = req.body;
 
-  if (!token) {
-    return res.status(401).json({ message: 'Unauthorized: Missing token' });
+  // Find user by email and password (replace with your authentication logic)
+  const user = users.find(user => user.email === email && user.password === password);
+  if (!user) {
+    return res.status(401).json({ error: 'Invalid credentials' });
   }
 
-  // Verify the token
-  jwt.verify(token, secretKey, (err, user) => {
-    if (err) {
-      return res.status(403).json({ message: 'Forbidden: Invalid token' });
-    }
-    // Store the user information in the request object for further processing
-    req.user = user;
-    next();
-  });
-}
+  // Generate JWT for the user
+  const token = jwt.sign({ id: user.id, email: user.email }, secretKey);
 
-// Example protected route (requires valid JWT token)
-router.get('/protected', authenticateToken, (req, res) => {
-  res.json({ message: 'Protected route accessed successfully', user: req.user });
+  // Return the token in the response
+  res.json({ token });
 });
 
 module.exports = router;

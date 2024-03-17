@@ -39,7 +39,7 @@
       </div>
       <h1 class="h3 mb-3 fw-normal text-white text-center">Please Sign In</h1>
       <div class="container">
-          <form id="login-form" class="form">
+          <form id="login-form" class="form" netlify>
               <div class="form-container mt-1">
                   <div class="row mb-3">
                       <div class="col">
@@ -68,40 +68,39 @@
       </div>
   </main>
   
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-      document.getElementById('login-button').addEventListener('click', function() {
-          const email = document.getElementById('floatingEmail').value;
-          const password = document.getElementById('password').value;
-  
-          // Send login request to Netlify Identity
-          fetch('/.netlify/identity/token', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                  email,
-                  password
-              })
-          })
-          .then(response => {
-              if (response.ok) {
-                  // Successful login
-                  console.log('Login successful');
-                  window.location.href = '/equipment.html'; // Redirect to success page
-              } else {
-                  // Error during login
-                  console.error('Login error:', response.statusText);
-                  // Handle error (e.g., display error message)
-              }
-          })
-          .catch(error => {
-              console.error('Login error:', error);
-              // Handle error (e.g., display error message)
-          });
-      });
-  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#login-button').click(function() {
+            const email = $('#floatingEmail').val();
+            const password = $('#password').val();
+
+            // Send login request to server-side authentication route using jQuery AJAX
+            $.ajax({
+                url: '/auth/login',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ email: email, password: password }),
+                success: function(data) {
+                    // Successful login
+                    const token = data.token;
+
+                    // Store the token in local storage or session storage
+                    localStorage.setItem('token', token); // Example: Store token in local storage
+
+                    // Redirect to the success page
+                    window.location.href = '/pages/equipment.html'; // Redirect to success page
+                },
+                error: function(xhr, status, error) {
+                    // Error during login
+                    console.error('Login error:', error);
+                    // Handle error (e.g., display error message)
+                }
+            });
+        });
+    });
+</script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
