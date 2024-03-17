@@ -1,55 +1,61 @@
-// auth.js
-
 const express = require('express');
-const bodyParser = require('body-parser');
-const jwt = require('jsonwebtoken');
-
 const router = express.Router();
-router.use(bodyParser.urlencoded({ extended: true }));
-router.use(bodyParser.json());
+const passport = require('passport');
+const bcrypt = require('bcrypt');
+const { body, validationResult } = require('express-validator');
+const User = require('../models/user.js');
 
-// Secret key for JWT
-const secretKey = 'your-secret-key'; // Replace with your actual secret key
+// Password hashing parameters
+const saltRounds = 10;
 
-// Dummy database to store user information (replace with your database)
-const users = [];
+// Registration route
+router.post('/register', [
+    body('username').notEmpty().trim(),
+    body('email').isEmail().normalizeEmail(),
+    body('password').isLength({ min: 6 }),
+], async (req, res) => {
+    const { username, email, password, membershipType } = req.body;
 
-// Handle POST request for user sign-up
-router.post('/signup', (req, res) => {
-  const { name, email, password } = req.body;
+    // Validate input
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
 
-  // Check if user with the same email already exists
-  const existingUser = users.find(user => user.email === email);
-  if (existingUser) {
-    return res.status(400).json({ error: 'Email already registered' });
-  }
+    try {
+        // Check if the user already exists
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ error: 'Username or email already exists' });
+        }
 
-  // Create a new user object and add it to the database
-  const newUser = { id: users.length + 1, name, email, password };
-  users.push(newUser);
+        // Hash the password
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
 
-  // Generate JWT for the new user
-  const token = jwt.sign({ id: newUser.id, email: newUser.email }, secretKey);
+        // Create a new user
+        const newUser = new User({ username, email, password: hashedPassword, membershipType });
 
-  // Return the token in the response
-  res.json({ token });
+        // Save the user to the database
+        await newUser.save();
+
+        res.status(201).json({ message: 'Registration successful' });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: 'Registration failed' });
+    }
 });
 
-// Handle POST request for user login
-router.post('/login', (req, res) => {
-  const { email, password } = req.body;
+// Login route
+router.post('/login', passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login',
+    failureFlash: true
+}));
 
-  // Find user by email and password (replace with your authentication logic)
-  const user = users.find(user => user.email === email && user.password === password);
-  if (!user) {
-    return res.status(401).json({ error: 'Invalid credentials' });
-  }
-
-  // Generate JWT for the user
-  const token = jwt.sign({ id: user.id, email: user.email }, secretKey);
-
-  // Return the token in the response
-  res.json({ token });
+// Logout route
+router.post('/logout', async (req, res) => {
+    req.logout();
+    res.redirect('/');
 });
 
 module.exports = router;
