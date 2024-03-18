@@ -36,7 +36,7 @@
     <div id="verificationCode" class="bg-dark"></div>
 
     <div id="thankYouMessage">
-        <p>Thank you for reserving with us,<div id="user-greeting"></div></p>
+        <span id="user-greeting"></span>
         <p>Use this code at your nearest <a href="/pages/locations.html">Techlab Center!</a></p>
         <p>Look at our <a href="/pages/events.html">Calendar</a></p>
         <p>Go back to our <a href="/index.html">Home Page</a></p>
@@ -60,7 +60,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const userName = localStorage.getItem('userName');
             if (userName) {
-                document.getElementById('user-greeting').textContent = ` ${userName}!`;
+                document.getElementById('user-greeting').textContent = `Thank you for reserving with us, ${userName}!`;
             }
         });
     </script>

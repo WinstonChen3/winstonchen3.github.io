@@ -25,7 +25,6 @@
     "firebase": "^10.9.0",
     "firebase-admin": "^12.0.0",
     "git": "^0.1.5",
-    "gotrue-js": "^0.9.29",
     "jsonwebtoken": "^9.0.2",
     "mariadb": "^3.2.2",
     "mongodb": "^6.3.0",
