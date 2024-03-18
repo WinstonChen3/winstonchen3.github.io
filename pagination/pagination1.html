@@ -10,9 +10,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
     <style> 
+    .center {
+  margin: auto;
+  
+}
     
-    a img{
-      width: 50%;
+    .row{
+      display: inline-block;
     }
 
       h3{
@@ -51,8 +55,8 @@
       }
   
       .nav-link {
-        padding: 0%;
-      position: relative;
+        margin-top: 1rem;
+        position: relative;
       transition: 0.3s;
   }
   
@@ -164,50 +168,52 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" role="navigation">
-    <div class="container-fluid bg-dark py-2">
-      <div class="row align-items-center">
-        <div class="col-auto mx-auto navbar-brand-container">
-          <a class="navbar-brand bg-transparent text-white" href="/index.html">
-            <img src="../images/3.png" style="float: left;" alt="image/png">
-          </a>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark bg-gradient navbar-inverse" role="navigation">
+      <div class="container-fluid bg-dark bg-gradient py-2"> <!-- Added padding to vertically center -->
+        <div class="row align-items-center justify-content-center">
+          <div class="col-auto">
+            <a class="navbar-brand bg-transparent text-white" href="/index.html">
+              <img  style="float: left;"  src="../images/3.png" width="19%"> <!-- Your icon or logo -->
+            </a>
+          </div>
+          <div class="col">
+             
+            <ul class="navbar-nav ">
+              <li style="padding-left: 1.5rem;" class="nav-item">
+               <a  class="nav-link text-white" href="/pages/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a   class="nav-link text-white" href="#">Events</a>
+              </li>
+              <li class="nav-item">
+                <a   class="nav-link text-white" href="#">Equipment</a>
+              </li>
+              <li class="nav-item">
+                <a   class="nav-link text-white" href="#">Services</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a   class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About Us
+                </a>
+                <ul class="dropdown-menu bg-dark">
+                  <li><a class="dropdown-item text-white" href="/pages/contacts.html">Contact Us</a></li>
+                  <li><a class="dropdown-item text-white" href="/pages/locations.html">Locations</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col">
-                 
-          <ul class="navbar-nav ml-auto">
-            <li style="padding-left: 5rem;" class="nav-item">
-             <a  class="nav-link text-white" href="/pages/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a   class="nav-link text-white" href="#">Events</a>
-            </li>
-            <li class="nav-item">
-              <a   class="nav-link text-white" href="#">Equipment</a>
-            </li>
-            <li class="nav-item">
-              <a   class="nav-link text-white" href="#">Services</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a   class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                About Us
-              </a>
-              <ul class="dropdown-menu bg-dark">
-                <li><a class="dropdown-item text-white" href="/pages/contacts.html">Contact Us</a></li>
-                <li><a class="dropdown-item text-white" href="/pages/locations.html">Locations</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
   
-      <!-- Right-aligned content -->
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link text-white" href="/pages/signup.html">Get Started</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        <!-- Right-aligned content -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a   class="nav-link text-white" href="../pages/signup.html">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
       <br><br>
       <div class="middle_cta" style="background:rgb(173, 173, 173);">
         <div class="middle_text">

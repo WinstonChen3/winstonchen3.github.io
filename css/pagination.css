@@ -215,10 +215,11 @@ button:hover {
 }
 
 .navbar-brand img {
-  max-width: 20%;
+  max-width: 21%;
   height: auto;
   object-fit: contain;
-  padding: 0;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
 }
 .navbar-brand {
   width: fit-content;
