@@ -78,39 +78,37 @@
 </main>
 <script type="module" src="https://cdn.jsdelivr.net/npm/react-netlify-identity-gotrue@0.3.5/build/index.min.js"></script>
 <script>
-        const auth = new GoTrue({
-            APIUrl: 'https://techlabedu.netlify.app//.netlify/identity',
-            audience: '',
-            setCookie: false,
-        });
+    const auth = new GoTrue({
+        APIUrl: 'https://techlabedu.netlify.app//.netlify/identity',
+        audience: '',
+        setCookie: false,
+    });
 
-        const signupForm = document.getElementById('signup-form');
+    const signupForm = document.getElementById('signup-form');
 
-        signupForm.addEventListener('submit', async (event) => {
-            event.preventDefault();
+    signupForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
 
-            const formData = new FormData(signupForm);
-            const email = formData.get('email');
-            const password = formData.get('password');
-            const name = formData.get('name');
+        const formData = new FormData(signupForm);
+        const email = formData.get('email');
+        const password = formData.get('password');
+        const name = formData.get('name');
 
-            try {
-                const { user } = await auth.signup(email, password, { fullName: name });
-                console.log('User signed up:', user);
+        try {
+            const { user } = await auth.signup(email, password, { fullName: name });
+            console.log('User signed up:', user);
 
-                // After successful signup, validate fields
-                if (validatePasswordMatch()) {
-                    // You can redirect the user to a new page upon successful signup and validation.
-                    // window.location.href = 'success.html';
-                } else {
-                    // Handle validation errors
-                }
-            } catch (error) {
-                console.error('Error signing up:', error.message);
-                // Handle signup errors here, like displaying error messages to the user.
-            }
-        });
-    </script>
+            // Display the user's name
+            alert(`Welcome, ${name}!`);
+
+            // You can redirect the user to a new page upon successful signup.
+            // window.location.href = 'success.html';
+        } catch (error) {
+            console.error('Error signing up:', error.message);
+            // Handle signup errors here, like displaying error messages to the user.
+        }
+    });
+</script>
 
     <script>
         document.querySelectorAll(".form-container input[required]").forEach(function(input) {

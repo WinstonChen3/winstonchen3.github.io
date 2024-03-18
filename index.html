@@ -7,8 +7,64 @@
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/test.css">
   <link rel="icon" href="../images/3.png" type="image/png">
-  <style> 
-.nav-link {
+  <style>
+    /* Add custom styles here */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Adjust margin and padding for main content */
+    main {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    /* Add style for the user greeting */
+    #user-greeting {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Adjust spacing between sections */
+    section {
+      margin-bottom: 50px;
+    }
+
+    /* Style for the footer */
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+    }
+
+    /* Add styles for social media icons */
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .social-icons li:last-child {
+      margin-right: 0;
+    }
+
+    .social-icons a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .nav-link {
   position: relative;
   transition: 0.3s;
 }
@@ -167,10 +223,9 @@ fill: white;
           background-color: #717171; /* Change this to your desired active dot color */
         }
   .carousel-inner .carousel-item img {
-    height: 900px; /* Set the desired height for the images */
+    height: 950px; /* Set the desired height for the images */
     object-fit: cover; /* Ensure the images cover the fixed height */
   }
-
   </style>
 </head>
 <body>
@@ -215,44 +270,42 @@ fill: white;
       </ul>
     </div>
   </nav>
-  </header>
+
   <main>
-    <br><br><br>
-<!-- Updated Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <!-- User greeting section -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
-
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/images/background1.png" alt="Los Angeles" class="d-block w-100">
-      <div class="carousel-caption">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
       </div>
-    </div>
-    <div class="carousel-item">
-      <img src="/images/background2.png" alt="Chicago" class="d-block w-100">
-      <div class="carousel-caption">
+    
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/images/background1.png" alt="Los Angeles" class="d-block w-100">
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/images/background2.png" alt="Chicago" class="d-block w-100">
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/images/background3.png" alt="New York" class="d-block w-100">
+          <div class="carousel-caption">
+          </div>
+        </div>
       </div>
+    
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
-    <div class="carousel-item">
-      <img src="/images/background3.png" alt="New York" class="d-block w-100">
-      <div class="carousel-caption">
-      </div>
-    </div>
-  </div>
-
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-
 
         <!-- About Techlab Section -->
         <section class="about-techlab">
@@ -263,9 +316,6 @@ fill: white;
                       <p>Techlab is a leading organization providing cutting-edge equipment rental and services across the globe. With a network of locations worldwide, we empower individuals, businesses, and innovators to bring their ideas to life.</p>
                       <p>At Techlab, we offer a wide range of high-quality equipment for various industries, along with expert services to support your projects and ventures.</p>
                   </div>
-                  <div class="col-md-6">
-                      <!-- You can add an image or video here to showcase Techlab's global presence -->
-                  </div>
               </div>
           </div>
       </section>
@@ -273,44 +323,45 @@ fill: white;
 
       <!-- Equipment Rental Section -->
       <section class="equipment-rental">
-          <div class="container">
-              <h2>Equipment Rental</h2>
-              <p>Explore our extensive collection of state-of-the-art equipment available for rent at Techlab. From 3D printers to woodworking tools, we have everything you need to turn your vision into reality.</p>
-              <p>Renting equipment from Techlab is easy and convenient. Simply browse our catalog, select your desired items, and pick them up from the nearest Techlab location.</p>
-              <div class="row justify-content-center">
-              <a href="./clone/equipmentclone.html" class="btn btn-dark w-25 text-white">Browse Equipment</a>
-              </div>
-          </div>
-      </section>
-      <div class="divider"></div>
-
-      <!-- Services Section -->
-      <section class="services">
-          <div class="container">
-              <h2>Our Services</h2>
-              <p>Discover the range of services offered by Techlab to support your projects and endeavors. From technical assistance to specialized training, we're here to help you succeed.</p>
-              <p>Explore our service offerings and take advantage of our expertise and resources to achieve your goals.</p>
-              <div class="row justify-content-center">
-              <a href="./clone/servicesclone.html" class="btn btn-dark w-25 text-white">Explore Services</a>
-              </div>
-          </div>
-      </section>
-      <div class="divider"></div>
-
-      <!-- Locations Section -->
-      <section class="locations">
-          <div class="container">
-              <h2>Our Locations</h2>
-              <p>Find a Techlab location near you and access our comprehensive range of equipment and services. With multiple locations worldwide, Techlab is your trusted partner for innovation and creativity.</p>
-              <p>Visit us at one of our convenient locations and unleash your potential with Techlab.</p>
-              <div class="row justify-content-center">
-              <a href="./pages/locations.html" class="btn btn-dark w-25 text-white">Find Locations</a>
-              </div>
+        <div class="container">
+            <h2>Equipment Rental</h2>
+            <p>Explore our extensive collection of state-of-the-art equipment available for rent at Techlab. From 3D printers to woodworking tools, we have everything you need to turn your vision into reality.</p>
+            <p>Renting equipment from Techlab is easy and convenient. Simply browse our catalog, select your desired items, and pick them up from the nearest Techlab location.</p>
+            <div class="row justify-content-center">
+            <a href="./clone/equipmentclone.html" class="btn btn-dark w-25 text-white">Browse Equipment</a>
             </div>
-      </section>
+        </div>
+    </section>
+    <div class="divider"></div>
+
+       <!-- Services Section -->
+       <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>Discover the range of services offered by Techlab to support your projects and endeavors. From technical assistance to specialized training, we're here to help you succeed.</p>
+            <p>Explore our service offerings and take advantage of our expertise and resources to achieve your goals.</p>
+            <div class="row justify-content-center">
+            <a href="./clone/servicesclone.html" class="btn btn-dark w-25 text-white">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Locations Section -->
+    <section class="locations">
+        <div class="container">
+            <h2>Our Locations</h2>
+            <p>Find a Techlab location near you and access our comprehensive range of equipment and services. With multiple locations worldwide, Techlab is your trusted partner for innovation and creativity.</p>
+            <p>Visit us at one of our convenient locations and unleash your potential with Techlab.</p>
+            <div class="row justify-content-center">
+            <a href="./pages/locations.html" class="btn btn-dark w-25 text-white">Find Locations</a>
+            </div>
+          </div>
+    </section>
+
   </main>
 
-                </section>
   <div class="divider"></div>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="bootstrap" viewBox="0 0 118 94">
@@ -345,6 +396,16 @@ fill: white;
     </ul>
   </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const userName = localStorage.getItem('userName');
+        if (userName) {
+            document.getElementById('user-greeting').textContent = `Welcome, ${userName}!`;
+        }
+    });
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
