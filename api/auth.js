@@ -1,59 +1,61 @@
 const express = require('express');
-const jwt = require('jsonwebtoken');
-
 const router = express.Router();
+const passport = require('passport');
+const bcrypt = require('bcrypt');
+const { body, validationResult } = require('express-validator');
+const User = require('../models/user.js');
 
-// Replace this with your actual secret key (keep it secure!)
-const secretKey = 'b8c1f3d2f2a33c93561d4b14b06d4a6edc52c049e2f0ebd50e833cfb038c07d9';
+// Password hashing parameters
+const saltRounds = 10;
 
-// Example user database (replace with your actual user authentication logic)
-const users = [
-  { id: 1, username: 'user1', password: 'password1' },
-  { id: 2, username: 'user2', password: 'password2' }
-];
+// Registration route
+router.post('/register', [
+    body('username').notEmpty().trim(),
+    body('email').isEmail().normalizeEmail(),
+    body('password').isLength({ min: 6 }),
+], async (req, res) => {
+    const { username, email, password, membershipType } = req.body;
 
-// Route for user login and JWT token generation
-router.post('/login', (req, res) => {
-  const { username, password } = req.body;
+    // Validate input
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
 
-  // Example: Check if the username and password are valid
-  const user = users.find(u => u.username === username && u.password === password);
+    try {
+        // Check if the user already exists
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ error: 'Username or email already exists' });
+        }
 
-  if (!user) {
-    return res.status(401).json({ message: 'Invalid username or password' });
-  }
+        // Hash the password
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
 
-  // Generate JWT token
-  const token = jwt.sign({ id: user.id, username: user.username }, secretKey, { expiresIn: '1h' });
+        // Create a new user
+        const newUser = new User({ username, email, password: hashedPassword, membershipType });
 
-  // Send the token as a response
-  res.json({ token });
+        // Save the user to the database
+        await newUser.save();
+
+        res.status(201).json({ message: 'Registration successful' });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: 'Registration failed' });
+    }
 });
 
-// Middleware to authenticate JWT tokens
-function authenticateToken(req, res, next) {
-  // Get the token from the authorization header
-  const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1];
+// Login route
+router.post('/login', passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login',
+    failureFlash: true
+}));
 
-  if (!token) {
-    return res.status(401).json({ message: 'Unauthorized: Missing token' });
-  }
-
-  // Verify the token
-  jwt.verify(token, secretKey, (err, user) => {
-    if (err) {
-      return res.status(403).json({ message: 'Forbidden: Invalid token' });
-    }
-    // Store the user information in the request object for further processing
-    req.user = user;
-    next();
-  });
-}
-
-// Example protected route (requires valid JWT token)
-router.get('/protected', authenticateToken, (req, res) => {
-  res.json({ message: 'Protected route accessed successfully', user: req.user });
+// Logout route
+router.post('/logout', async (req, res) => {
+    req.logout();
+    res.redirect('/');
 });
 
 module.exports = router;
