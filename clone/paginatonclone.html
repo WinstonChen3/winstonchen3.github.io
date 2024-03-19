@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techlab</title>
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link rel="stylesheet" href="/css/equipment.css">
+    <link rel="icon" href="../images/3.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <style> 
+    .center {
+  margin: auto;
+  
+}
+    
+    .row{
+      display: inline-block;
+    }
+
+      h3{
+          text-align: center;
+        }
+        b{
+          text-align: center;
+        }
+    .dropdown-toggle:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  .highlightable-card {
+    transition: box-shadow 0.3s;
+    
+  }
+  
+  .highlightable-card:hover,
+  .highlightable-card:focus {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+    .card{
+  
+      height: fit-content;
+      width: fit-content;
+      margin: 10px;
+      
+    }
+      .card-body.selected {
+      background-color: #f0f0f0; 
+    }
+        .card-body img {
+        
+        border-radius: 8px; 
+         
+      }
+  
+      .nav-link {
+        margin-top: 1rem;
+        position: relative;
+      transition: 0.3s;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+  .dropdown-item::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s;
+  }
+  
+  .dropdown-item:hover::after {
+    border-bottom-color: #ffffff;
+  }
+  
+  .svg-large{
+    height: 50%;
+    width:50%;
+  }
+  .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+  
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgb(255, 255, 255);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+  
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+  
+    .white {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+  
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+  
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  
+  
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+  
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+    .white {
+  fill: white;
+  }
+  .highlight {
+    outline: 2px solid yellow;
+  }
+        .accordion-button {
+            background-color: #343a40; /* Dark background color */
+            color: #fff !important; /* White text color */
+            transition: none; /* Disable color change on click */
+          }
+    </style>
+
+
+
+</head>
+<body>
+
+ 
+      <br><br>
+      <div class="middle_cta" style="background:rgb(173, 173, 173);">
+        <div class="middle_text">
+          All of these items will be a monthly payment
+        </div>  
+      </div>
+      
+    <br><br>
+    
+    <h1 style="text-align: center;">3d Printers</h1>  
+
+
+    
+    <div class="d-flex justify-content-end mt-5 ">
+
+       
+            
+     
+      </div>
+      
+    
+    
+    <div class=" d-flex flex-row ">
+        <div style=" padding-left: 3rem;">
+        <div style="padding-right: 2rem;">
+            <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+            <div class="text-center" >
+              
+              <img src="/images/cheap printer.png" width="100%" > 
+              <br>
+              <div class="middle_cta" style="background:rgb(173, 173, 173);">
+                <div class="middle_text">
+                  Creality Ender 3 3D Printer
+                </div>
+                
+              </div>
+              <h3>Rental</h3>
+              <h3>$9.99</h3>
+              
+            </div>
+          </div>
+          </div>
+          </div>
+       
+       
+       
+       
+       
+          <div style="padding-right: 2rem;">
+         <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+         <div class="text-center">
+          <br>
+          <img src="/images/median 3d printer.png" width="92.5%" > 
+          <br>
+          <div class="middle_cta" style="background:rgb(173, 173, 173);">
+            <div class="middle_text">
+              Anycubic Photon Mono M5
+            </div>  
+          </div>
+          <h3>Rental</h3>
+          <h3>$19.99</h3>
+        
+        
+        </div>
+       </div>
+       </div>
+
+
+
+       <div style="padding-right: 2rem;">
+        <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+        <div class="text-center">
+         <br><br>
+         <img src="/images/expensive printer.png" width="102.5%" > 
+         <br><br><br>
+         <div class="middle_cta" style="background:rgb(173, 173, 173);">
+           <div class="middle_text">
+            Snapmaker J1/J1S High Speed Idex
+           </div>  
+         </div>
+         <h3>Rental</h3>
+         <h3>$44.99</h3>
+       
+       
+       </div>
+      </div>
+      </div>
+
+       
+      <div style="padding-right: 2rem;">
+        <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+        <div class="text-center">
+         <br>
+         <img src="/images/medianprinter1.png" width="92.5%" > 
+         <br>
+         <div class="middle_cta" style="background:rgb(173, 173, 173);">
+           <div class="middle_text">
+            Flashforge Adventurer 5M Printer
+           </div>  
+         </div>
+         <h3>Rental</h3>
+         <h3>$29.99</h3>
+       
+       
+       </div>
+      </div>
+      </div>
+
+
+
+       
+      <div style="padding-right: 2rem;">
+        <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+        <div class="text-center">
+         <br><br>
+         <img src="/images/mimaki.png" width="96.5%" > 
+         <br><br><br>
+         <div class="middle_cta" style="background:rgb(173, 173, 173);">
+           <div class="middle_text">
+            Mimaki 3DUJ-533 Printer
+           </div>  
+         </div>
+         <h3>Rental</h3>
+         <h3>$139.99</h3>
+       
+       
+       </div>
+      </div>
+      </div>
+
+
+      </div>
+
+      
+      <div class=" d-flex flex-row ">
+        <div style=" padding-left: 3rem;">
+        <div style="padding-right: 2rem;">
+            <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+            <div class="text-center" >
+              
+              <img src="/images/printer 1.png" width="100%" > 
+              <br>
+              <div class="middle_cta" style="background:rgb(173, 173, 173);">
+                <div class="middle_text">
+                  K1 Speedy 3D Printer
+                </div>
+                
+              </div>
+              <h3>Rental</h3>
+              <h3>$32.99</h3>
+              
+            </div>
+          </div>
+          </div>
+          </div>
+       
+       
+       
+       
+       
+          <div style="padding-right: 2rem;">
+         <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+         <div class="text-center">
+          <br><br><br>
+          <img src="/images/printer 2.png" width="93.5%" > 
+          <br><br><br>
+          <div class="middle_cta" style="background:rgb(173, 173, 173);">
+            <div class="middle_text">
+              EVO R 3D Printers
+            </div>  
+          </div>
+          <h3>Rental</h3>
+          <h3>$119.99</h3>
+        
+        
+        </div>
+       </div>
+       </div>
+
+
+
+       <div style="padding-right: 2rem;">
+        <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+        <div class="text-center">
+         <br><br>
+         <img src="/images/printer 3.png" width="71%" > 
+         <br><br><br>
+         <div class="middle_cta" style="background:rgb(173, 173, 173);">
+           <div class="middle_text">
+            Print Maker 3D Printer
+           </div>  
+         </div>
+         <h3>Rental</h3>
+         <h3>$14.99</h3>
+       
+       
+       </div>
+      </div>
+      </div>
+
+       
+      <div style="padding-right: 2rem;">
+        <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+        <div class="text-center">
+         <br>
+         <img src="/images/anker.png" width="92.5%" > 
+         <br>
+         <div class="middle_cta" style="background:rgb(173, 173, 173);">
+           <div class="middle_text">
+            AnkerMake M5 3D Printer
+           </div>  
+         </div>
+         <h3>Rental</h3>
+         <h3>$39.99</h3>
+       
+       
+       </div>
+      </div>
+      </div>
+
+
+
+       
+      <div style="padding-right: 2rem;">
+        <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+        <div class="text-center">
+         <br>
+         <img src="/images/flash.png" width="93%" > 
+         <br>
+         <div class="middle_cta" style="background:rgb(173, 173, 173);">
+           <div class="middle_text">
+            Flsun V400 Large Delta 3D Printer
+           </div>  
+         </div>
+         <h3>Rental</h3>
+         <h3>$46.99</h3>
+       
+       
+       </div>
+      </div>
+      </div>
+
+
+      </div>
+
+
+
+<br><br><br>
+
+
+
+
+
+      <h1 style="text-align: center;">Laser Cutters</h1>
+      
+      <div class=" d-flex flex-row ">
+          <div style=" padding-left: 3rem;">
+          <div style="padding-right: 2rem;">
+              <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+              <div class="text-center" >
+                <br><br>
+                <img src="/images/cheap laser.png" width="94%" > 
+                <br><br>
+                <div class="middle_cta" style="background:rgb(173, 173, 173);">
+                  <div class="middle_text">
+                    TTS-55 PRO 5.5W Laser Engraver
+                  </div>
+                  
+                </div>
+                <h3>Rental</h3>
+                <h3>$14.99</h3>
+                
+              </div>
+            </div>
+            </div>
+            </div>
+         
+         
+         
+         
+         
+            <div style="padding-right: 2rem;">
+           <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+           <div class="text-center">
+            <br><br>
+            <img src="/images/laser cutter blue.png" width="95.5%" > 
+            <br>
+            <div class="middle_cta" style="background:rgb(173, 173, 173);">
+              <div class="middle_text">
+                US Stock SFX Co2 Laser Cutter
+              </div>  
+            </div>
+            <h3>Rental</h3>
+            <h3>$164.99</h3>
+          
+          
+          </div>
+         </div>
+         </div>
+  
+  
+  
+         <div style="padding-right: 2rem;">
+          <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+          <div class="text-center">
+           <br><br><br>
+           <img src="/images/expensive laser cutter.png" width="93%" > 
+           <br><br>
+           <div class="middle_cta" style="background:rgb(173, 173, 173);">
+             <div class="middle_text">
+              HP-3655 CO2 Laser Cutter
+             </div>  
+           </div>
+           <h3>Rental</h3>
+           <h3>$714.99</h3>
+         
+         
+         </div>
+        </div>
+        </div>
+  
+         
+        <div style="padding-right: 2rem;">
+          <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+          <div class="text-center">
+           <br>
+           <img src="/images/genesis.png" width="94%" > 
+           <br><br>
+           <div class="middle_cta" style="background:rgb(173, 173, 173);">
+             <div class="middle_text">
+              G139L – GENESIS Laser Cutter
+             </div>  
+           </div>
+           <h3>Rental</h3>
+           <h3>$641.99</h3>
+         
+         
+         </div>
+        </div>
+        </div>
+  
+  
+  
+         
+        <div style="padding-right: 2rem;">
+          <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+          <div class="text-center">
+           <br>
+           <img src="/images/mini laser.png" width="100%" > 
+           
+           <div class="middle_cta" style="background:rgb(173, 173, 173);">
+             <div class="middle_text">
+              Mini Laser Engraving Machines
+
+             </div>  
+           </div>
+           <h3>Rental</h3>
+           <h3>$11.99</h3>
+         
+         
+         </div>
+        </div>
+        </div>
+  
+  
+        </div>
+  
+        
+        <div class=" d-flex flex-row ">
+          <div style=" padding-left: 3rem;">
+          <div style="padding-right: 2rem;">
+              <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+              <div class="text-center" >
+                
+                <img src="/images/3020.png" width="100%" > 
+                <br>
+                <div class="middle_cta" style="background:rgb(173, 173, 173);">
+                  <div class="middle_text">
+                    3020 40w 50w CO2 Laser Cutter
+                  </div>
+                  
+                </div>
+                <h3>Rental</h3>
+                <h3>$18.99</h3>
+                
+              </div>
+            </div>
+            </div>
+            </div>
+         
+         
+         
+         
+         
+            <div style="padding-right: 2rem;">
+           <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+           <div class="text-center">
+            
+            <img src="/images/daja.png" width="100.5%" > 
+            <br>
+            <div class="middle_cta" style="background:rgb(173, 173, 173);">
+              <div class="middle_text">
+                DAJA DJ7 Laser Engraving Machine
+              </div>  
+            </div>
+            <h3>Rental</h3>
+            <h3>$16.99</h3>
+          
+          
+          </div>
+         </div>
+         </div>
+  
+  
+  
+         <div style="padding-right: 2rem;">
+          <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+          <div class="text-center">
+           <br>
+           <img src="/images/laser pecker.png" width="92.5%" > 
+           <br>
+           <div class="middle_cta" style="background:rgb(173, 173, 173);">
+             <div class="middle_text">
+              LaserPecker Laser Engraver
+             </div>  
+           </div>
+           <h3>Rental</h3>
+           <h3>$22.99</h3>
+         
+         
+         </div>
+        </div>
+        </div>
+  
+         
+        <div style="padding-right: 2rem;">
+          <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+          <div class="text-center">
+           
+           <img src="/images/red light cutter.png" width="100.5%" > 
+           <br>
+           <div class="middle_cta" style="background:rgb(173, 173, 173);">
+             <div class="middle_text">
+              1064NM Red Light Laser Cutter
+             </div>  
+           </div>
+           <h3>Rental</h3>
+           <h3>$104.99</h3>
+         
+         
+         </div>
+        </div>
+        </div>
+  
+  
+  
+         
+        <div style="padding-right: 2rem;">
+          <div class="card highlightable-card" style="width: 20rem" onclick="toggleHighlight(this)">
+          <div class="text-center">
+           <br>
+           <img src="/images/utech.png" width="100.5%" > 
+           
+           <div class="middle_cta" style="background:rgb(173, 173, 173);">
+             <div class="middle_text">
+              IIIUTECH Laser Cutter
+             </div>  
+           </div>
+           <h3>Rental</h3>
+           <h3>$71.99</h3>
+         
+         
+         </div>
+        </div>
+        </div>
+  
+  
+        </div>
+
+
+        <br><br>
+
+
+
+      <div class="d-flex flex-row">
+    <nav aria-label="Page navigation example">
+      <ul style="padding-left: 4rem;" class="pagination">
+        <li class="page-item">
+          <a  class="page-link" href="#" aria-label="Previous" >
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="/pagination/pagination1.html">1</a></li>
+        <li class="page-item"><a class="page-link" href="/pagination/pagination2.html">2</a></li>
+        <li class="page-item"><a class="page-link" href="/pagination/pagination3.html">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="/pagination/pagination2.html" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <div style="padding-right: 13rem;" class="text-center w-100">
+      <a  href="/pages/checkout.html" type="submit" class="btn btn-dark w-25 text-white" role="button">Buy Now</a>
+    </div>
+  </div>
+   
+ 
+
+
+  
+     
+
+
+
+<script>
+        function toggleHighlight(card) {
+          card.classList.toggle('highlight');}
+          </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
