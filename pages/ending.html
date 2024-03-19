@@ -42,7 +42,7 @@
         <p>Go back to our <a href="/index.html">Home Page</a></p>
     </div>
     <!-- Logout Button -->
-    <button class="btn btn-dark w-25 text-white" onclick="confirmLogout()">Logout</button>
+    <button  onclick="confirmLogout()">Logout</button>
 
     <!-- Netlify Identity Widget Script -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -65,11 +65,9 @@
             netlifyIdentity.logout();
 
             // Redirect to the login page
-            window.location.href = 'index.html'; // Change the path to your login page
+            window.location.href = '/index.html'; // Change the path to your login page
         }
     </script>
-
-
 
     <script>
         function generateVerificationCode() {
