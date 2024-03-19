@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Techlab</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../css/test.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link rel="preload" href="../css/test.css" as="style">
   <link rel="icon" href="../images/3.png" type="image/png">
   <style>
     /* Add custom styles here */
@@ -84,6 +85,12 @@
 .nav-link:hover::after {
   transform: scaleX(1);
 }
+section {
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
 .dropdown-item.btn {
   padding: 0;
   background-color: transparent;
@@ -208,7 +215,10 @@ fill: white;
             text-align: center;
             color: #333;
         }
-
+        section.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
         p {
             font-size: 18px;
             line-height: 1.6;
@@ -223,9 +233,48 @@ fill: white;
           background-color: #717171; /* Change this to your desired active dot color */
         }
   .carousel-inner .carousel-item img {
-    height: 950px; /* Set the desired height for the images */
+    height: 800px; /* Set the desired height for the images */
     object-fit: cover; /* Ensure the images cover the fixed height */
   }
+  
+/* Additional styles for specific sections */
+.about-techlab {
+  background-color: #ffffff;
+  padding: 30px;
+}
+
+.equipment-rental {
+  background-color: #ffffff;
+  padding: 30px;
+}
+
+.services {
+  background-color: #fff;
+  padding: 30px;
+}
+
+.locations {
+  background-color: #fff;
+  padding: 30px;
+}
+
+/* Additional styles for responsive design */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}/* Adjust the z-index of the icon */
+.carousel-caption img {
+  z-index: 1000 !important;
+}
   </style>
 </head>
 <body>
@@ -308,104 +357,109 @@ fill: white;
     </div>
 
         <!-- About Techlab Section -->
-        <section class="about-techlab">
+        <section class="about-techlab animate">
           <div class="container">
               <h2>About Techlab</h2>
               <div class="row">
-                  <div class="col-md-6">
-                      <p>Techlab is a leading organization providing cutting-edge equipment rental and services across the globe. With a network of locations worldwide, we empower individuals, businesses, and innovators to bring their ideas to life.</p>
-                      <p>At Techlab, we offer a wide range of high-quality equipment for various industries, along with expert services to support your projects and ventures.</p>
-                  </div>
+                  <p>Techlab is a leading organization providing cutting-edge equipment rental and services across
+                      the globe. With a network of locations worldwide, we empower individuals, businesses, and
+                      innovators to bring their ideas to life.</p>
+                  <p>At Techlab, we offer a wide range of high-quality equipment for various industries, along with
+                      expert services to support your projects and ventures.</p>
               </div>
           </div>
       </section>
-      <div class="divider"></div>
 
       <!-- Equipment Rental Section -->
-      <section class="equipment-rental">
-        <div class="container">
-            <h2>Equipment Rental</h2>
-            <p>Explore our extensive collection of state-of-the-art equipment available for rent at Techlab. From 3D printers to woodworking tools, we have everything you need to turn your vision into reality.</p>
-            <p>Renting equipment from Techlab is easy and convenient. Simply browse our catalog, select your desired items, and pick them up from the nearest Techlab location.</p>
-            <div class="row justify-content-center">
-            <a href="./clone/equipmentclone.html" class="btn btn-dark w-25 text-white">Browse Equipment</a>
-            </div>
-        </div>
-    </section>
-    <div class="divider"></div>
-
-       <!-- Services Section -->
-       <section class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <p>Discover the range of services offered by Techlab to support your projects and endeavors. From technical assistance to specialized training, we're here to help you succeed.</p>
-            <p>Explore our service offerings and take advantage of our expertise and resources to achieve your goals.</p>
-            <div class="row justify-content-center">
-            <a href="./clone/servicesclone.html" class="btn btn-dark w-25 text-white">Explore Services</a>
-            </div>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Locations Section -->
-    <section class="locations">
-        <div class="container">
-            <h2>Our Locations</h2>
-            <p>Find a Techlab location near you and access our comprehensive range of equipment and services. With multiple locations worldwide, Techlab is your trusted partner for innovation and creativity.</p>
-            <p>Visit us at one of our convenient locations and unleash your potential with Techlab.</p>
-            <div class="row justify-content-center">
-            <a href="./pages/locations.html" class="btn btn-dark w-25 text-white">Find Locations</a>
-            </div>
+      <section class="equipment-rental animate">
+          <div class="container">
+              <h2>Equipment Rental</h2>
+              <p>Explore our extensive collection of state-of-the-art equipment available for rental. Whether you're a filmmaker, a researcher, or a hobbyist, we have the tools you need to bring your vision to life. From cameras and drones to 3D printers and virtual reality headsets, we've got you covered.</p>
+              <p>Our rental process is simple and hassle-free. Just browse our inventory, select the equipment you need, and choose your rental period. We offer flexible rental options to suit your schedule and budget.</p>
+              <p>With Techlab, you can access the latest technology without breaking the bank. Renting equipment allows you to experiment, innovate, and create without the upfront cost of ownership. Plus, our team of experts is always available to provide support and guidance along the way.</p>
+              </div>
+              </section>
+              <!-- Services Section -->
+    <section class="services animate">
+      <div class="container">
+          <h2>Services</h2>
+          <p>In addition to equipment rental, Techlab offers a range of services to help you succeed. Whether you need technical support, training, or custom solutions, our team is here to assist you every step of the way.</p>
+          <p>We understand that every project is unique, which is why we tailor our services to meet your specific needs. From equipment setup and calibration to troubleshooting and maintenance, we've got you covered.</p>
+          <p>At Techlab, we're committed to your success. Our goal is to provide you with the tools and support you need to bring your ideas to life. Let us help you unleash your creativity and achieve your goals.</p>
+      </div>
+  </section>
+</main>
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="bootstrap" viewBox="0 0 118 94">
+    <title>Bootstrap</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+  </symbol>
+  <symbol id="facebook" viewBox="0 0 16 16">
+    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+  </symbol>
+  <symbol id="instagram" viewBox="0 0 16 16">
+      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+  </symbol>
+  <symbol id="twitter" viewBox="0 0 16 16">
+    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+  </symbol>
+</svg>
+<footer>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <h3>Contact Us</h3>
+              <p class="text-white">If you have any questions or inquiries, feel free to contact us. Our team is always ready to assist you.</p>
+              <ul class="nav col-md-3 col-6 justify-content-end">
+                <li class="ms-3"><a class="link-body-emphasis fa-3x" href="https://twitter.com"><svg style="fill: white;"  width="30" height="30"><use xlink:href="#twitter"/></svg></a></li>
+                <li class="ms-3"><a class="link-body-emphasis fa-3x" href="https://instagram.com"><svg style="fill: white;"  width="30" height="30"><use xlink:href="#instagram"/></svg></a></li>
+                <li class="ms-3"><a class="link-body-emphasis fa-3x" href="https://facebook.com"><svg style="fill: white;" width="30" height="30"><use xlink:href="#facebook"/></svg></a></li>
+              </ul>          
           </div>
-    </section>
-
-  </main>
-
-  <div class="divider"></div>
-  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-    <symbol id="bootstrap" viewBox="0 0 118 94">
-      <title>Bootstrap</title>
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
-    </symbol>
-    <symbol id="facebook" viewBox="0 0 16 16">
-      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-    </symbol>
-    <symbol id="instagram" viewBox="0 0 16 16">
-        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-    </symbol>
-    <symbol id="twitter" viewBox="0 0 16 16">
-      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-    </symbol>
-  </svg>
-
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
-    <div class="container-fluid d-flex flex-column min-vh-60 " ></div>
-    <p class="col-md-2 col-6 mb-0 text-white">&copy; 2023 Techlab</p>
-
-    <div class="container1 col-md-2 col-6 mx-auto">
-      <a href="index.html" class="d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <img src="/images/3.png" alt="">
-      </a>
-    </div>
-
-    <ul class="nav col-md-2 col-6 justify-content-end">
-      <li class="ms-3"><a class="link-body-emphasis fa-3x" href="twitter.com"><svg style="fill: white;"  width="30" height="30"><use xlink:href="#twitter"/></svg></a></li>
-      <li class="ms-3"><a class="link-body-emphasis fa-3x" href="instagram.com"><svg style="fill: white;"  width="30" height="30"><use xlink:href="#instagram"/></svg></a></li>
-      <li class="ms-3"><a class="link-body-emphasis fa-3x" href="facebook.com"><svg style="fill: white;" width="30" height="30"><use xlink:href="#facebook"/></svg></a></li>
-    </ul>
+          <div class="col-md-6">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a class="nav-item text-white" href="/index.html">Home</a></li>
+                  <li><a class="nav-item text-white" href="/pages/events.html">Events</a></li>
+                  <li><a class="nav-item text-white" href="/clone/equipmentclone.html">Equipments</a></li>
+                  <li><a class="nav-item text-white" href="./clone/servicesclone.html">Services</a></li>
+                  <li><a class="nav-item text-white" href="/pages/locations.html">Locations</a></li>
+                  <li><a class="nav-item text-white" href="/pages/aboutus.html">About</a></li>
+              </ul>
+          </div>
+      </div>
   </div>
-  </footer>
+</footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const userName = localStorage.getItem('userName');
-        if (userName) {
-            document.getElementById('user-greeting').textContent = `Welcome, ${userName}!`;
-        }
+
+<script>
+  // Function to check if an element is in viewport
+  function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Function to add active class to sections in viewport
+  function slideSections() {
+    var sections = document.querySelectorAll('.slide-in');
+    sections.forEach(function(section) {
+      if (isInViewport(section)) {
+        section.classList.add('active');
+      }
     });
-  </script>
+  }
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  // Initial call to slideSections to check sections on page load
+  slideSections();
+
+  // Event listener for scroll to trigger slideSections
+  window.addEventListener('scroll', slideSections);
+</script>
+  
 </body>
 </html>
