@@ -40,13 +40,13 @@
         <h3 class="text-white mb-0" style="text-align: center; margin-bottom: 0%;">Sign Up</h3>
         <br>
         <div class="container">
-            <form class='form-container mt-1' id='signup-form' method='POST' name='signup' >
+            <form class='form-container mt-1' id='signup-form' method='POST' name='signup' data-netlify="false">
                 <input type='hidden' name='form-name' value='signup' />
             
                 <!-- Dropdown menu -->
                 <div class="form-group">
                     <label for="membershipType" class="text-white">Membership Type</label>
-                    <select class="form-select" id="membershipType" name="membershipType" onchange="checkDropdown()" required>
+                    <select class="form-select" id="membershipType" name="membershipType" onchange="checkDropdown()" required >
                         <option value="" selected disabled>Select Membership Type</option>
                         <option value="basic">Basic</option>
                         <option value="premium">Pro</option>
@@ -59,7 +59,6 @@
                 <p class="mt-3 text-white text-center"><a class='mt-3 text-white' href='/pages/membership.html'>Membership Info</a></p>
                 <p class="mt-3 text-muted text-center">&copy; 2017–2021</p>
             </form>
-            
             
     
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
