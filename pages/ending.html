@@ -41,34 +41,6 @@
         <p>Look at our <a href="/pages/events.html">Calendar</a></p>
         <p>Go back to our <a href="/index.html">Home Page</a></p>
     </div>
-    <!-- Logout Button -->
-    <button class="btn btn-dark w-25 text-white" onclick="confirmLogout()">Logout</button>
-
-    <!-- Netlify Identity Widget Script -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-        // Initialize Netlify Identity
-        netlifyIdentity.init();
-
-        // Function to confirm logout
-        function confirmLogout() {
-            // Display a confirmation dialog
-            if (confirm("Are you sure you want to logout?")) {
-                // If the user confirms, proceed with logout
-                handleLogout();
-            }
-        }
-
-        // Function to handle logout
-        function handleLogout() {
-            // Log out the user
-            netlifyIdentity.logout();
-
-            // Redirect to the login page
-            window.location.href = '/index.html'; // Change the path to your login page
-        }
-    </script>
-
     <script>
         function generateVerificationCode() {
             // Function to generate a random combination of letters and numbers
