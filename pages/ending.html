@@ -41,6 +41,18 @@
         <p>Look at our <a href="/pages/events.html">Calendar</a></p>
         <p>Go back to our <a href="/index.html">Home Page</a></p>
     </div>
+    <button onclick="handleLogout()">Logout</button>
+    <script>
+                // Function to handle logout
+                function handleLogout() {
+            // Log out the user
+            netlifyIdentity.logout().then(() => {
+                console.log('User logged out');
+                // Redirect to the login page after logout
+                window.location.href = '/index.html'; // Change the path to your login page
+            });
+        }
+    </script>
     <script>
         function generateVerificationCode() {
             // Function to generate a random combination of letters and numbers
